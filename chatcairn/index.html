@@ -152,7 +152,7 @@
           </div>
           <div class="btns" data-waitlist>
             <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=ChatCairn%20Pro%20waitlist&amp;body=Please%20let%20me%20know%20when%20ChatCairn%20Pro%20is%20available."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
-            <p class="waitnote">Pro opens with the Chrome Web Store launch. One email when it's ready, nothing else.</p>
+            <p class="waitnote"><span data-when="soon">Pro launches in a few days, right after the Chrome Web Store release. One email when it's ready.</span><span data-when="live" hidden>Pro launches in a few days. Free works now.</span></p>
           </div>
         </article>
       </div>
@@ -209,6 +209,7 @@
     document.querySelectorAll('[data-buyset]').forEach(function (e) { e.hidden = false; });
     document.querySelectorAll('[data-waitlist]').forEach(function (e) { e.hidden = true; });
   }
+  if (C.STORE_URL) document.querySelectorAll('.waitnote [data-when]').forEach(function (s) { s.hidden = s.getAttribute('data-when') !== 'live'; });
   document.querySelectorAll('[data-install]').forEach(function (a) {
     if (C.STORE_URL) {
       a.href = C.STORE_URL; a.rel = 'noopener'; a.removeAttribute('aria-disabled');
