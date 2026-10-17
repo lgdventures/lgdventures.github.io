@@ -1,7 +1,7 @@
 {
   "name": "LGD Ventures",
   "short_name": "LGD Ventures",
-  "description": "Focused tools for AI power users.",
+  "description": "Small software that does one thing well.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#07070c",
