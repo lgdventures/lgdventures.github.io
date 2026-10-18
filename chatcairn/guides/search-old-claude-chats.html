@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How to Search Old Claude Chats (and ChatGPT, Gemini, Grok) · ChatCairn</title>
+<meta name="description" content="Claude&#x27;s built-in search only goes so far. Here&#x27;s how to find any old Claude conversation fast — and search all your AI assistants in one place.">
+<link rel="canonical" href="https://lgdventures.github.io/chatcairn/guides/search-old-claude-chats.html">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-18">
+<meta property="article:modified_time" content="2026-10-18">
+<meta property="og:site_name" content="LGD Ventures">
+<meta property="og:title" content="How to Search Old Claude Chats (and ChatGPT, Gemini, Grok)">
+<meta property="og:description" content="Claude&#x27;s built-in search only goes so far. Here&#x27;s how to find any old Claude conversation fast — and search all your AI assistants in one place.">
+<meta property="og:url" content="https://lgdventures.github.io/chatcairn/guides/search-old-claude-chats.html">
+<meta property="og:image" content="https://lgdventures.github.io/chatcairn/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChatCairn — your AI conversations, saved and searchable">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Search Old Claude Chats (and ChatGPT, Gemini, Grok)">
+<meta name="twitter:description" content="Claude&#x27;s built-in search only goes so far. Here&#x27;s how to find any old Claude conversation fast — and search all your AI assistants in one place.">
+<meta name="twitter:image" content="https://lgdventures.github.io/chatcairn/og.png">
+<link rel="icon" href="/chatcairn/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/chatcairn/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/chatcairn/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Search Old Claude Chats (and ChatGPT, Gemini, Grok)",
+  "dateModified": "2026-10-18",
+  "author": {
+   "@type": "Organization",
+   "name": "LGD Ventures",
+   "url": "https://lgdventures.github.io/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lgdventures.github.io/chatcairn/logo.png"
+   }
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "LGD Ventures",
+   "url": "https://lgdventures.github.io/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lgdventures.github.io/chatcairn/logo.png"
+   }
+  },
+  "mainEntityOfPage": {
+   "@type": "WebPage",
+   "@id": "https://lgdventures.github.io/chatcairn/guides/search-old-claude-chats.html"
+  },
+  "image": "https://lgdventures.github.io/chatcairn/og.png",
+  "description": "Claude's built-in search only goes so far. Here's how to find any old Claude conversation fast — and search all your AI assistants in one place.",
+  "datePublished": "2026-10-18",
+  "inLanguage": "en",
+  "about": {
+   "@type": "SoftwareApplication",
+   "name": "ChatCairn",
+   "applicationCategory": "BrowserApplication",
+   "operatingSystem": "Chrome",
+   "url": "https://lgdventures.github.io/chatcairn/"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Does ChatCairn save chats automatically?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. You save (or export) explicitly. Be deliberate about what you keep."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What if I switch computers?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Use ChatCairn’s JSON backup and restore. Uninstalling the extension deletes local data — back up first."
+    }
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "LGD Ventures",
+    "item": "https://lgdventures.github.io/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "ChatCairn",
+    "item": "https://lgdventures.github.io/chatcairn/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Guides",
+    "item": "https://lgdventures.github.io/chatcairn/guides/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 4,
+    "name": "Search old AI chats",
+    "item": "https://lgdventures.github.io/chatcairn/guides/search-old-claude-chats.html"
+   }
+  ]
+ }
+]
+</script>
+<style>
+/* ChatCairn guides: article additions on top of the shared design system (tokens only). */
+.prose h3{margin:1.7em 0 0;font-size:17px;font-weight:650;letter-spacing:-.01em;line-height:1.4;color:var(--text)}
+.prose h3+p{margin-top:.5em}
+.prose code{font:500 .86em var(--mono);color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:1px 6px;overflow-wrap:anywhere}
+.prose pre{margin-top:1.1em;padding:16px 18px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;font:13.5px/1.65 var(--mono);color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
+.prose pre code{font:inherit;background:none;border:0;padding:0}
+.prose kbd{display:inline-block;font:600 .8em/1.5 var(--mono);color:var(--text);background:var(--surface);border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:6px;padding:0 7px}
+.tw{margin-top:1.1em;overflow-x:auto;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);background:linear-gradient(to right,var(--surface) 30%,transparent) left/40px 100% no-repeat local,linear-gradient(to left,var(--surface) 30%,transparent) right/40px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.14),transparent) left/12px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.14),transparent) right/12px 100% no-repeat scroll,var(--surface)}
+.prose table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.prose th,.prose td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+.prose thead th,.prose thead td{color:var(--text);font-weight:600;background:var(--surface-2)}
+.prose tbody tr:last-child>*{border-bottom:0}
+.prose tbody th{color:var(--text);font-weight:600;white-space:nowrap}
+.prose .src{font-size:14px;line-height:1.6;color:var(--muted)}
+.cta-card{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin-top:1.6em;padding:20px 22px;border-radius:16px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.cta-card b{display:block;color:var(--text);font-size:16.5px;font-weight:650;letter-spacing:-.01em}
+.cta-card>div{flex:1 1 300px}
+.cta-card span{display:block;color:var(--muted);font-size:14.5px;line-height:1.5}
+.prose .cta-card .btn{margin:0;width:auto;flex:none;color:#fff;text-decoration:none}
+.related{max-width:720px;margin-top:64px}
+.related.top{margin-top:0;max-width:none}
+.related h2{margin:10px 0 0;font-size:20px;font-weight:650;letter-spacing:-.02em;color:var(--text)}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.rel{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border-radius:14px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:border-color .15s,transform .2s var(--ease)}
+.rel:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--border-strong));transform:translateY(-2px)}
+.rel:active{transform:translateY(0)}
+.rel b{color:var(--text);font-weight:650;font-size:15.5px;line-height:1.35}
+.rel span{color:var(--muted);font-size:14px;line-height:1.5}
+.rel i{font-style:normal;margin-top:auto;padding-top:6px;color:var(--accent-ink);font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.rel i svg{width:14px;height:14px;transition:transform .2s var(--ease)}
+.rel:hover i svg{transform:translateX(3px)}
+@media (prefers-reduced-motion:reduce){.rel,.rel i svg{transition:none}.rel:hover{transform:none}}
+@media (max-width:480px){.brand .sub{display:none}.prose{font-size:16px}.cta-card .btn{width:100%!important;flex:1 1 100%!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/chatcairn/" aria-label="ChatCairn home"><img src="/chatcairn/logo.png" alt="" width="28" height="28">ChatCairn<span class="sub">by LGD Ventures</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/chatcairn/">ChatCairn</a>
+      <a href="/chatcairn/guides/">Guides</a>
+      <a href="/chatcairn/#pricing" class="hide-xs">Pricing</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">LGD Ventures</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/chatcairn/">ChatCairn</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/chatcairn/guides/">Guides</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <span aria-current="page">Search old AI chats</span></nav>
+      <h1>How to Search Old Claude Chats (and ChatGPT, Gemini, Grok)</h1>
+      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Last checked 2026-10-18 · Sources linked inline</span></p>
+    </div>
+  </section>
+  <section class="doc">
+    <div class="wrap">
+      <div class="prose">
+
+<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Quick answer:</strong> Use each assistant’s own search where it exists, rename and organize chats, or save chats you care about into <a href="https://lgdventures.github.io/chatcairn/?utm_source=guide-search&amp;utm_medium=guide&amp;utm_campaign=seo">ChatCairn</a> and full-text search ChatGPT, Claude, Gemini and Grok in one local library.</div></div>
+
+<p>Last checked 2026-10-18. Built-in ChatGPT and Claude features below cite official help pages. For Gemini and Grok, this guide sticks to documented data-export options plus ChatCairn’s verified local search of chats you save.</p>
+
+<h2>The problem</h2>
+<p>Useful answers live in four separate histories with vague titles. Searching one product never finds what you said in another.</p>
+
+<h2>Built-in search (what we verified)</h2>
+<h3>ChatGPT</h3>
+<p>Per <a href="https://help.openai.com/en/articles/10056348-finding-your-chats-projects-and-files-in-chatgpt">OpenAI Help: Finding your chats, projects, and files</a>: open <strong>Search</strong> in the sidebar (or <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>K</kbd> on web). Search matches words in titles or messages, including archived chats. Deleted chats are not searchable. Available to signed-in users on all ChatGPT plans (web, iOS, Android).</p>
+
+<h3>Claude</h3>
+<p>Per <a href="https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context">Claude Help: chat search and memory</a>: on <strong>paid</strong> plans (Pro, Max, Team, Enterprise), you can ask Claude to search past chats (e.g. “Find our conversation about …”). Scope: chats outside projects, or within one project when you search from that project. Incognito chats are excluded. Toggle off in Settings → Memory (“Search and reference chats”). Free-plan past-chat search via this tool is <strong>not</strong> described as available.</p>
+<p>For a full archive you control: <a href="https://support.claude.com/en/articles/9450526-export-your-claude-data">Export your Claude data</a> (Settings → Privacy → Export data on web/Desktop; email download link; link expires in 24 hours).</p>
+
+<h3>Gemini</h3>
+<p>Google documents downloading Gemini Apps data via <a href="https://support.google.com/gemini/answer/16920332?hl=en">Google Takeout / Gemini Apps data</a>, and exporting individual responses to Docs (<a href="https://support.google.com/gemini/answer/14184041?hl=en">Export responses from Gemini Apps</a>). To full-text search Gemini conversations alongside your other AI chats, save the ones you care about in ChatCairn and search that local library.</p>
+
+<h3>Grok</h3>
+<p>xAI describes accessing personal data through its account and privacy flows (see <a href="https://x.ai/legal/faq">x.ai Consumer FAQs</a> and <a href="https://x.ai/privacy-portal">Privacy Portal</a>). To full-text search Grok conversations next to ChatGPT, Claude and Gemini, save them in ChatCairn and search locally.</p>
+
+<h2>Tips without any extension</h2>
+<ul>
+<li>Rename chats with the topic you will search for later.</li>
+<li>Use Projects / folders where the product offers them.</li>
+<li>Star or pin important threads if available.</li>
+<li>Keep a short personal index note (date + topic + URL) for critical decisions.</li>
+</ul>
+
+<h2>One library for all four — ChatCairn</h2>
+<p>What ChatCairn 0.3.0 does:</p>
+<ul>
+<li>You choose which chats to save (not automatic).</li>
+<li>Full-text search across saved ChatGPT, Claude, Gemini and Grok chats (titles and every message).</li>
+<li>Opening a search hit highlights matches in the chat and lets you step next/previous.</li>
+<li>Click a note or task to jump to the exact message it came from; <strong>Open original</strong> takes you back to the chat on the AI site.</li>
+<li>Storage is local (IndexedDB / chrome.storage). Backup/restore via JSON if you switch computers.</li>
+</ul>
+<div class="cta-card"><div><b>Try ChatCairn — free for 50 chats</b><span>Save, search and export ChatGPT, Claude, Gemini and Grok chats. 100% local.</span></div><a class="btn btn-accent" href="https://lgdventures.github.io/chatcairn/?utm_source=guide-search&amp;utm_medium=guide&amp;utm_campaign=seo">See ChatCairn<svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+
+<h2>Keep results findable</h2>
+<p>Assign projects on notes/tasks, turn key answers into notes, and export Markdown backups periodically.</p>
+
+<h2>FAQ</h2>
+<h3>Does ChatCairn save chats automatically?</h3>
+<p>No. You save (or export) explicitly. Be deliberate about what you keep.</p>
+<h3>Can I search chats I saved months ago?</h3>
+<p>Yes, as long as they remain in your local library (or you restored a JSON backup).</p>
+<h3>What if I switch computers?</h3>
+<p>Use ChatCairn’s JSON backup and restore. Uninstalling the extension deletes local data — back up first.</p>
+
+<p class="src">Sources: OpenAI Help (chat search); Claude Help (chat search; data export); Google Gemini Help (Takeout; export to Docs); x.ai FAQ / Privacy Portal; ChatCairn 0.3.0, checked against the extension itself. Checked 2026-10-18.</p>
+
+      </div>
+      <aside class="related" aria-labelledby="rel-h"><span class="kicker">More guides</span><h2 id="rel-h">Keep your AI chats useful</h2><div class="rel-grid"><a class="rel" href="/chatcairn/guides/export-chatgpt-to-pdf.html"><b>How to Export a ChatGPT Chat to PDF (Free, 2026)</b><span>Print, the official data export, or a designed PDF with code and tables intact.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a><a class="rel" href="/chatcairn/guides/chatgpt-claude-to-obsidian.html"><b>ChatGPT &amp; Claude to Obsidian: Notes and Tasks in Minutes</b><span>Clean Markdown with front-matter, plus highlights as Obsidian Tasks with due dates.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a></div></aside>
+      <a class="back" href="/chatcairn/guides/"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg>All guides</a>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="/chatcairn/"><img src="/chatcairn/logo.png" alt="" width="22" height="22">ChatCairn</a>
+    <nav aria-label="Footer">
+      <a href="/">LGD Ventures</a>
+      <a href="/chatcairn/guides/">Guides</a>
+      <a href="/chatcairn/privacy.html">Privacy</a>
+      <a href="/chatcairn/terms.html">Terms</a>
+      <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
+    </nav>
+    <p class="legal">© 2026 LGD Ventures. ChatCairn is not affiliated with OpenAI, Anthropic, Google or xAI.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
