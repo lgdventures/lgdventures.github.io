@@ -56,6 +56,8 @@
 .faq a:hover,.inline-link:hover{text-decoration:underline;text-underline-offset:3px}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
 @media (max-width:480px){.brand .sub{display:none}}
+/* narrow screens: Pro (with the waitlist button) first, so a #pricing landing shows it without scrolling */
+@media (max-width:640px){.plans .plan.pro{order:-1}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
 </style>
 <script src="/chatcairn/config.js"></script>
@@ -142,7 +144,7 @@
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>All 4 platforms</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Up to 50 saved chats</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Up to 10 notes &amp; tasks</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Search, Markdown &amp; PDF export</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>JSON backup &amp; restore</span></li></ul>
           <div class="btns"><a class="btn btn-ghost" href="#" data-install aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span data-when="soon">Coming soon to Chrome</span><span data-when="live" hidden>Add to Chrome — free</span></a></div>
         </article>
-        <article class="card plan pro reveal">
+        <article class="card plan pro reveal" id="pro">
           <h3>Pro <span class="badge-pill">Everything, unlimited</span></h3>
           <p class="amount"><b data-price="monthly">$4.99</b><span>/ month</span><span style="white-space:nowrap">or <b data-price="lifetime" style="font-size:28px;vertical-align:-2px">$39</b> once</span></p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Unlimited saved chats</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Unlimited notes &amp; tasks</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Bulk ZIP export of your whole library</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Google Drive auto-backup <span class="badge-pill">Coming soon</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
@@ -151,7 +153,7 @@
             <a class="btn btn-ghost" href="#" data-buy="lifetime"><span>Get lifetime · <span data-price="lifetime">$39</span> once</span></a>
           </div>
           <div class="btns" data-waitlist>
-            <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=ChatCairn%20Pro%20waitlist&amp;body=Please%20let%20me%20know%20when%20ChatCairn%20Pro%20is%20available."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
+            <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=ChatCairn%20Pro%20waitlist%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20ChatCairn%20Pro%20is%20available." data-waitmail><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
             <p class="waitnote"><span data-when="soon">Pro launches in a few days, right after the Chrome Web Store release. One email when it's ready.</span><span data-when="live" hidden>Pro launches in a few days. Free works now.</span></p>
           </div>
         </article>
@@ -210,6 +212,25 @@
     document.querySelectorAll('[data-buyset]').forEach(function (e) { e.hidden = false; });
     document.querySelectorAll('[data-waitlist]').forEach(function (e) { e.hidden = true; });
   }
+  // Waitlist mailto: tag the subject with the visit's source (utm_source, sanitized), default "site". Counted in the brand inbox.
+  var src = 'site'; try { var u = new URLSearchParams(location.search).get('utm_source'); if (u && /^[a-z0-9][a-z0-9_.-]{0,39}$/i.test(u)) src = u.toLowerCase(); } catch (e) {}
+  document.querySelectorAll('[data-waitmail]').forEach(function (a) {
+    a.href = 'mailto:lgdventures.hq@gmail.com?subject=' + encodeURIComponent('ChatCairn Pro waitlist [' + src + ']') + '&body=' + encodeURIComponent('Please let me know when ChatCairn Pro is available.');
+  });
+  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the waitlist/buy button is visible without scrolling.
+  var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
+  function toPro() {
+    if (userMoved || location.hash !== '#pricing' || !narrow.matches) return;
+    var pro = document.getElementById('pro'), nav = document.querySelector('.nav'); if (!pro) return;
+    var y = 0, el = pro; while (el) { y += el.offsetTop; el = el.offsetParent; } // layout position (ignores the reveal transform)
+    window.scrollTo(0, Math.max(0, y - ((nav && nav.offsetHeight) || 64) - 12));
+  }
+  ['wheel', 'touchstart', 'keydown'].forEach(function (ev) { window.addEventListener(ev, function () { userMoved = true; }, { passive: true, once: true }); });
+  // the browser re-applies the fragment scroll while fonts/images settle, so re-anchor a few times until the user interacts
+  function settle() { [0, 120, 400, 900, 1600].forEach(function (ms) { setTimeout(toPro, ms); }); }
+  if (document.readyState === 'complete') settle(); else window.addEventListener('load', settle);
+  toPro();
+  window.addEventListener('hashchange', function () { userMoved = false; settle(); });
   if (C.STORE_URL) document.querySelectorAll('.waitnote [data-when]').forEach(function (s) { s.hidden = s.getAttribute('data-when') !== 'live'; });
   document.querySelectorAll('[data-install]').forEach(function (a) {
     if (C.STORE_URL) {
