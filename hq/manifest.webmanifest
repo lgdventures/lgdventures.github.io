@@ -1,0 +1,30 @@
+{
+  "name": "LGD HQ",
+  "short_name": "LGD HQ",
+  "description": "Panel interno de operaciones de LGD Ventures.",
+  "id": "/hq/",
+  "start_url": "/hq/",
+  "scope": "/hq/",
+  "display": "standalone",
+  "lang": "es-AR",
+  "background_color": "#07070c",
+  "theme_color": "#07070c",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
