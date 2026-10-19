@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MeetCrate — Sorry to see you go</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/meetcrate/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/meetcrate/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/meetcrate/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<style>
+.ux{max-width:640px;margin:0 auto;padding:56px 0 72px}
+.ux h1{font-size:clamp(28px,5vw,40px);letter-spacing:-.025em;line-height:1.1;margin:10px 0 12px}
+.ux .lead{color:var(--text-2);font-size:16.5px;margin:0 0 28px}
+.ux .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px}
+.ux .q{font-weight:650;font-size:15px;margin:0 0 12px}
+.rs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.rc{appearance:none;font:inherit;font-size:14px;font-weight:500;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border-strong);border-radius:999px;padding:8px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:background-color .15s,border-color .15s,color .15s,transform .15s var(--ease)}
+.rc:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--border-strong));color:var(--text)}
+.rc:active{transform:scale(.97)}
+.rc .ck{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-strong);display:inline-grid;place-items:center;flex:none;transition:all .15s}
+.rc .ck svg{width:10px;height:10px;opacity:0;color:#fff}
+.rc[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.rc[aria-pressed="true"] .ck{background:var(--accent);border-color:var(--accent)}.rc[aria-pressed="true"] .ck svg{opacity:1}
+.rc:focus-visible,.cm:focus-visible,.ux .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lb{display:flex;justify-content:space-between;align-items:baseline;font-weight:650;font-size:15px;margin:0 0 8px}.lb small{font-weight:500;color:var(--muted);font-size:12.5px}
+.cm{appearance:none;display:block;width:100%;box-sizing:border-box;min-height:110px;resize:vertical;font:inherit;font-size:15px;line-height:1.5;color:var(--text);background:var(--surface-2);border:1px solid var(--border-strong);border-radius:var(--radius-sm);padding:12px 14px;transition:border-color .15s,box-shadow .15s}
+.cm::placeholder{color:var(--muted)}.cm:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}
+.acts .note{color:var(--muted);font-size:13px;flex:1 1 220px}
+.err{display:none;margin:14px 0 0;padding:10px 12px;border-radius:10px;background:color-mix(in srgb,#dc2626 10%,transparent);color:color-mix(in srgb,#dc2626 80%,var(--text));font-size:14px}
+.err.on{display:block}
+.done{display:none;text-align:center;padding:36px 24px}
+.done .mk{width:56px;height:56px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}.done .mk svg{width:26px;height:26px}
+.done h2{margin:0 0 8px;font-size:24px;letter-spacing:-.02em}.done p{color:var(--text-2);margin:0 auto;max-width:440px}
+.done .alt{margin-top:16px;font-size:13.5px;color:var(--muted)}
+.ux.sent .panel{display:none}.ux.sent .done{display:block}
+.priv{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:520px){.ux{padding:36px 0 56px}.ux .panel{padding:18px;border-radius:var(--radius)}.acts .btn{width:100%}.rc{font-size:13.5px;padding:8px 12px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/meetcrate/" aria-label="MeetCrate home"><img src="/meetcrate/logo.png" alt="" width="28" height="28">MeetCrate<span class="sub">by LGD Ventures</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/meetcrate/">MeetCrate</a>
+      <a href="/meetcrate/#pricing" class="hide-xs">Pricing</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <section class="ux" id="ux" aria-live="polite">
+      <span class="kicker">MeetCrate was removed</span>
+      <h1>Sorry to see you go.</h1>
+      <p class="lead">Your exported files are untouched, and MeetCrate never had a copy of your meetings. If you have a minute, tell us what didn't work. It goes straight to the people who build it.</p>
+      <form class="panel" id="f" novalidate>
+        <p class="q" id="rq">Why did you uninstall? <span style="font-weight:500;color:var(--muted)">(pick any)</span></p>
+        <ul class="rs" role="group" aria-labelledby="rq" id="rs"></ul>
+        <label class="lb" for="c">Anything else? <small id="cc">Optional</small></label>
+        <textarea class="cm" id="c" maxlength="800" placeholder="What would have made you keep it?"></textarea>
+        <p class="err" id="err" role="alert">Pick at least one reason or write a line — or simply close this tab.</p>
+        <div class="acts">
+          <button class="btn btn-accent" type="submit" id="go">Send feedback<svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+          <span class="note">Opens your email app with your answer filled in. Nothing is sent until you press send there.</span>
+        </div>
+      </form>
+      <div class="panel done" id="done" tabindex="-1">
+        <div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg></div>
+        <h2>Thank you.</h2>
+        <p>Your email app should be open with the message ready. Every answer is read, and the common ones decide what we fix next.</p>
+        <p class="alt">No email app? Write to <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>. Changed your mind? <a href="/meetcrate/">MeetCrate</a> is one click away.</p>
+      </div>
+      <p class="priv">No tracking on this page. The only thing it knows is the MeetCrate version number. <a href="/meetcrate/privacy.html">Privacy</a></p>
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="/meetcrate/"><img src="/meetcrate/logo.png" alt="" width="22" height="22">MeetCrate</a>
+    <nav aria-label="Footer">
+      <a href="/">LGD Ventures</a>
+      <a href="/meetcrate/privacy.html">Privacy</a>
+      <a href="/meetcrate/terms.html">Terms</a>
+      <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
+    </nav>
+    <p class="legal">© 2026 LGD Ventures. MeetCrate is not affiliated with Read AI or tl;dv. Names are trademarks of their owners.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var TO = 'lgdventures.hq@gmail.com';
+  var R = ['Export didn\u2019t work or was incomplete', 'Sign-in with Read AI failed', 'Missing a format or field I need', 'I need another tool (tl;dv, Otter, Fireflies\u2026)', 'Free plan too limited', 'Pro costs too much', 'Privacy or permissions concern', 'Only needed it once', 'Something else'];
+  var CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5 6.5 11.5 12.5 4.5"/></svg>';
+  var v = (new URLSearchParams(location.search).get('v') || '').trim(); if (!/^\d{1,3}(\.\d{1,4}){0,3}$/.test(v)) v = '';
+  var rs = document.getElementById('rs'), c = document.getElementById('c'), err = document.getElementById('err'), cc = document.getElementById('cc');
+  R.forEach(function (r) {
+    var li = document.createElement('li'), b = document.createElement('button');
+    b.type = 'button'; b.className = 'rc'; b.setAttribute('aria-pressed', 'false'); b.innerHTML = '<span class="ck">' + CHECK + '</span>';
+    b.appendChild(document.createTextNode(r)); b.dataset.r = r;
+    b.addEventListener('click', function () { b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); err.classList.remove('on'); });
+    li.appendChild(b); rs.appendChild(li);
+  });
+  c.addEventListener('input', function () { err.classList.remove('on'); var n = c.value.length; cc.textContent = n ? n + ' / 800' : 'Optional'; });
+  function picked() { return Array.prototype.map.call(rs.querySelectorAll('[aria-pressed="true"]'), function (b) { return b.dataset.r; }); }
+  window.mcUninstallMail = function (reasons, comment, ver) { // exposed for QA
+    var body = 'Why I uninstalled MeetCrate:\r\n' + (reasons.length ? reasons.map(function (r) { return '- ' + r; }).join('\r\n') : '- (no reason picked)') +
+      '\r\n\r\nComment:\r\n' + (comment || '(none)') + '\r\n\r\nVersion: ' + (ver || 'unknown') + '\r\n';
+    return 'mailto:' + TO + '?subject=' + encodeURIComponent('MeetCrate uninstall feedback' + (ver ? ' (' + ver + ')' : '')) + '&body=' + encodeURIComponent(body);
+  };
+  document.getElementById('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var r = picked(), t = c.value.trim().slice(0, 800);
+    if (!r.length && !t) { err.classList.add('on'); var first = rs.querySelector('.rc'); if (first) first.focus(); return; }
+    var url = window.mcUninstallMail(r, t, v); window.__mcLastMail = url;
+    if (!window.__mcNoNav) location.href = url;
+    document.getElementById('ux').classList.add('sent'); document.getElementById('done').focus();
+  });
+})();
+</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

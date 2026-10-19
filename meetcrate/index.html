@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MeetCrate — Bulk export your Read AI transcripts</title>
+<meta name="description" content="Export all your Read AI meetings at once: transcripts, summaries and action items to Markdown, TXT, SRT or JSON in one ZIP. 100% local.">
+<link rel="canonical" href="https://lgdventures.github.io/meetcrate/">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LGD Ventures">
+<meta property="og:title" content="MeetCrate — Bulk export your Read AI transcripts">
+<meta property="og:description" content="Export all your Read AI meetings at once: transcripts, summaries and action items to Markdown, TXT, SRT or JSON in one ZIP. 100% local.">
+<meta property="og:url" content="https://lgdventures.github.io/meetcrate/">
+<meta property="og:image" content="https://lgdventures.github.io/meetcrate/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MeetCrate: every Read AI meeting, exported in one click">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MeetCrate — Bulk export your Read AI transcripts">
+<meta name="twitter:description" content="Export all your Read AI meetings at once: transcripts, summaries and action items to Markdown, TXT, SRT or JSON in one ZIP. 100% local.">
+<meta name="twitter:image" content="https://lgdventures.github.io/meetcrate/og.png">
+<link rel="icon" href="/meetcrate/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/meetcrate/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/meetcrate/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MeetCrate", "applicationCategory": "BrowserApplication", "applicationSubCategory": "Productivity", "operatingSystem": "Chrome, Microsoft Edge", "softwareVersion": "0.2.0", "url": "https://lgdventures.github.io/meetcrate/", "image": "https://lgdventures.github.io/meetcrate/og.png", "description": "Export all your Read AI meetings at once: transcripts, summaries and action items to Markdown, TXT, SRT or JSON in one ZIP. 100% local.", "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro (one-time)", "price": "29", "priceCurrency": "USD"}]}</script>
+<style>
+/* MeetCrate page additions on top of the shared design system (tokens only, no new colors). */
+[hidden]{display:none!important}
+.p-hero .eyebrow{margin-top:26px;max-width:100%}
+.eyebrow .tag,.badge-pill,.btn .soon{white-space:nowrap}
+.shot{margin:0}.shot img{width:100%;height:auto;display:block}
+.features .feature.big{grid-column:span 2}
+.feature .tag{display:inline-block;margin-left:8px;vertical-align:2px}
+.steps{grid-template-columns:repeat(3,1fr)}
+.steps .n{font:600 13px var(--mono);color:var(--accent-ink)}
+.plan{display:flex;flex-direction:column}
+.plan .amount{margin:14px 0 0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.plan .amount b{font-size:40px;letter-spacing:-.04em;font-weight:700;color:var(--text);line-height:1}
+.plan .amount span{color:var(--muted);font-size:15px}
+.plan ul{flex:1}
+.plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.plan .btns .btn{margin-top:0;width:100%}
+.waitnote{margin:2px 0 0;text-align:center;color:var(--muted);font-size:13.5px}
+.plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.faq .card{padding:26px}
+.faq h3{margin:0;font-size:16.5px;font-weight:650;letter-spacing:-.015em;color:var(--text)}
+.faq p{margin:8px 0 0;color:var(--text-2);font-size:15px}
+.faq a,.inline-link{color:var(--accent-ink);font-weight:600}
+.faq a:hover,.inline-link:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
+@media (max-width:480px){.brand .sub{display:none}}
+/* narrow screens: Pro (with the waitlist button) first, so a #pricing landing shows it without scrolling */
+@media (max-width:640px){.plans .plan.pro{order:-1}}
+@media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
+</style>
+<script src="/meetcrate/config.js"></script>
+<style>.plans{grid-template-columns:repeat(2,minmax(0,420px));justify-content:center}.tree{font:14px/1.9 var(--mono);color:var(--text-2)}.tree b{color:var(--accent-ink)}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/meetcrate/" aria-label="MeetCrate home"><img src="/meetcrate/logo.png" alt="" width="28" height="28">MeetCrate<span class="sub">by LGD Ventures</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#pricing" class="hide-xs">Pricing</a>
+      <a href="#faq" class="hide-sm">FAQ</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero p-hero">
+    <div class="wrap">
+      <img class="appicon" src="/meetcrate/logo.png" alt="" width="88" height="88">
+      <a class="eyebrow" href="#pricing"><span class="tag">Soon</span>Coming to Chrome and Edge<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+      <h1>Every Read AI meeting, exported in one click.</h1>
+      <p class="lede">MeetCrate uses Read AI’s official API to save all your transcripts, summaries and action items as Markdown, TXT, SRT or JSON, in one ZIP on your computer.</p>
+      <div class="actions">
+        <a class="btn btn-accent" href="#" data-install aria-disabled="true"><span data-when="soon">Coming soon to Chrome &amp; Edge</span><span data-when="live" hidden>Add to Chrome — free</span></a>
+        <a class="btn btn-ghost" href="#pricing">See pricing<svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>100% local</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Official Read AI sign-in, read-only</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>Free for your 10 latest meetings</li>
+      </ul>
+      <div class="showcase reveal">
+        <div class="window">
+          <div class="win-bar"><i></i><i></i><i></i><span class="url">MeetCrate · Read AI meetings</span></div>
+          <figure class="shot"><img src="/meetcrate/screenshot.png" alt="MeetCrate: a list of Read AI meetings, all selected, ready to export as Markdown and text" width="1160" height="634" loading="eager"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Features</span>
+        <h2>Your whole meeting archive, in files you own.</h2>
+        <p>Read AI downloads meetings one at a time. MeetCrate exports all of them at once, ready for Obsidian, Notion, Drive or a plain folder.</p>
+      </div>
+      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></div><h3>Everything in one ZIP</h3><p>One file per meeting with the summary, action items as a checklist, chapters, key questions, topics and the full transcript with speakers and timestamps. Plus an <code>index.csv</code> with one row per meeting.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><h3>Markdown, TXT, SRT &amp; JSON</h3><p>Markdown with YAML front matter for Obsidian and Notion, plain text, subtitles with speaker names, and the raw API JSON so nothing is lost.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Only new since last export</h3><p>Next time, export just the meetings you haven’t exported yet. Ideal for a weekly backup.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div><h3>Resumable, rate-limit friendly</h3><p>Close the tab or lose Wi-Fi and the export continues where it stopped. Meetings still processing are skipped and retried in one click.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Private by design</h3><p>You sign in on Read AI’s own page. Files go straight from Read AI to your computer: no MeetCrate account, no servers, no analytics.</p></article></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">How it works</span>
+        <h2>Three steps, about a minute.</h2>
+      </div>
+      <div class="principles steps reveal"><div class="principle"><span class="n">01</span><h3>Connect Read AI</h3><p>Sign in on Read AI’s page and allow read-only access to your meetings.</p></div><div class="principle"><span class="n">02</span><h3>Pick meetings and formats</h3><p>All of them, a date range, or only what’s new. Markdown, TXT, SRT and/or JSON.</p></div><div class="principle"><span class="n">03</span><h3>Download the ZIP</h3><p>Unzip into your notes app or keep it as a backup. Run it again any time.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing" style="padding-top:24px">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <span class="kicker">Pricing</span>
+        <h2>Try it free. Pay once for everything.</h2>
+        <p>No subscription. One payment unlocks your whole archive.</p>
+      </div>
+      <div class="plans">
+        <article class="card plan reveal">
+          <h3>Free</h3>
+          <p class="amount"><b>$0</b><span>forever</span></p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Your 10 most recent meetings, as often as you like</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>All formats: Markdown, TXT, SRT, JSON + index.csv</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Only new since last export</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Small “Made with MeetCrate” line in exported files</span></li></ul>
+          <div class="btns"><a class="btn btn-ghost" href="#" data-install aria-disabled="true"><span data-when="soon">Coming soon to Chrome &amp; Edge</span><span data-when="live" hidden>Add to Chrome — free</span></a></div>
+        </article>
+        <article class="card plan pro reveal" id="pro">
+          <h3>Pro <span class="badge-pill">Whole archive</span></h3>
+          <p class="amount"><b data-price="lifetime">$29</b><span>one-time</span></p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Every meeting, no limit</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Remove the MeetCrate line from exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Future sources included (tl;dv in progress)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
+          <div class="btns" data-buyset hidden>
+            <a class="btn btn-accent" href="#" data-buy="lifetime"><span>Get Pro · <span data-price="lifetime">$29</span> once</span></a>
+          </div>
+          <div class="btns" data-waitlist>
+            <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20Pro%20waitlist%20%5Bsite%5D" data-waitmail><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
+            <p class="waitnote">Launch price for the first buyers. One email when Pro opens.</p>
+          </div>
+        </article>
+      </div>
+      <p class="fineprint">Secure checkout by Lemon Squeezy (merchant of record). Prices in USD. 14-day refund on request. Your license key arrives by email.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
+      <div class="faq"><article class="card reveal"><h3>Which Read AI plans work?</h3><p>Any plan, including Free. MeetCrate uses Read AI’s official API, which is available on all Read AI plans, and only reads meetings your account can already see.</p></article><article class="card reveal"><h3>Does MeetCrate see my password or my meetings?</h3><p>No. You sign in on Read AI’s own page; MeetCrate gets a read-only token that stays in your browser. Meetings go straight from Read AI to your computer. See the <a href="/meetcrate/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>What’s inside each file?</h3><p>Title, date, duration, platform, participants, summary, action items, chapters, key questions, topics and the full transcript with speakers and timestamps (when Read AI has them).</p></article><article class="card reveal"><h3>Does it work with Obsidian and Notion?</h3><p>Yes. The Markdown files have YAML front matter and a checklist for action items. Drop the folder into an Obsidian vault, or use Notion’s Markdown import.</p></article><article class="card reveal"><h3>What about tl;dv, Otter or Fireflies?</h3><p>Read AI comes first. tl;dv is in progress; tell us which tool you need next at <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20next%20tool">lgdventures.hq@gmail.com</a>.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes, within 14 days of purchase. Reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:24px">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <span class="kicker">Contact</span>
+        <h2>Feedback or an export that went wrong?</h2>
+        <p>Tell us and we usually ship a fix within days.</p>
+        <div class="mail">
+          <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate">lgdventures.hq@gmail.com</a>
+          <button class="copy" type="button" data-copy="lgdventures.hq@gmail.com" aria-live="polite">
+            <svg class="cp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>
+            <svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg>
+            <span class="txt">Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="/meetcrate/"><img src="/meetcrate/logo.png" alt="" width="22" height="22">MeetCrate</a>
+    <nav aria-label="Footer">
+      <a href="/">LGD Ventures</a>
+            <a href="/meetcrate/privacy.html">Privacy</a>
+      <a href="/meetcrate/terms.html">Terms</a>
+      <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
+    </nav>
+    <p class="legal">© 2026 LGD Ventures. MeetCrate is not affiliated with Read AI or tl;dv. Names are trademarks of their owners.</p>
+  </div>
+</footer>
+<script>
+/* Links come only from /meetcrate/config.js. Empty = pre-launch state (waitlist / "coming soon"). */
+(function () {
+  var C = window.MEETCRATE || {};
+  document.querySelectorAll('[data-price]').forEach(function (s) { var p = C.PRICE_LIFETIME; if (p) s.textContent = p; });
+  if (C.CHECKOUT_LIFETIME) {
+    document.querySelectorAll('[data-buy]').forEach(function (a) { a.href = C.CHECKOUT_LIFETIME; a.rel = 'noopener'; });
+    document.querySelectorAll('[data-buyset]').forEach(function (e) { e.hidden = false; });
+    document.querySelectorAll('[data-waitlist]').forEach(function (e) { e.hidden = true; });
+  }
+  // Waitlist mailto: tag the subject with the visit's source (utm_source, sanitized), default "site". Counted in the brand inbox.
+  var src = 'site'; try { var u = new URLSearchParams(location.search).get('utm_source'); if (u && /^[a-z0-9][a-z0-9_.-]{0,39}$/i.test(u)) src = u.toLowerCase(); } catch (e) {}
+  document.querySelectorAll('[data-waitmail]').forEach(function (a) {
+    a.href = 'mailto:lgdventures.hq@gmail.com?subject=' + encodeURIComponent('MeetCrate Pro waitlist [' + src + ']') + '&body=' + encodeURIComponent('Please let me know when MeetCrate Pro is available.');
+  });
+  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the waitlist/buy button is visible without scrolling.
+  var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
+  function toPro() {
+    if (userMoved || location.hash !== '#pricing' || !narrow.matches) return;
+    var pro = document.getElementById('pro'), nav = document.querySelector('.nav'); if (!pro) return;
+    var y = 0, el = pro; while (el) { y += el.offsetTop; el = el.offsetParent; } // layout position (ignores the reveal transform)
+    window.scrollTo(0, Math.max(0, y - ((nav && nav.offsetHeight) || 64) - 12));
+  }
+  ['wheel', 'touchstart', 'keydown'].forEach(function (ev) { window.addEventListener(ev, function () { userMoved = true; }, { passive: true, once: true }); });
+  // the browser re-applies the fragment scroll while fonts/images settle, so re-anchor a few times until the user interacts
+  function settle() { [0, 120, 400, 900, 1600].forEach(function (ms) { setTimeout(toPro, ms); }); }
+  if (document.readyState === 'complete') settle(); else window.addEventListener('load', settle);
+  toPro();
+  window.addEventListener('hashchange', function () { userMoved = false; settle(); });
+  document.querySelectorAll('[data-install]').forEach(function (a) {
+    if (C.STORE_URL) {
+      a.href = C.STORE_URL; a.rel = 'noopener'; a.removeAttribute('aria-disabled');
+      a.querySelectorAll('[data-when]').forEach(function (s) { s.hidden = s.getAttribute('data-when') !== 'live'; });
+    } else a.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+})();
+</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
