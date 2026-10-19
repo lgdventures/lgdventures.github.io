@@ -33,6 +33,9 @@
 <link rel="stylesheet" href="assets/site.css">
 <script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"LGD Ventures","url":"https://lgdventures.github.io/","logo":"https://lgdventures.github.io/assets/icons/icon-512.png","email":"lgdventures.hq@gmail.com"}</script>
+<style>/* two products side by side, the lab card full width below (page-level, no change to /assets) */
+@media (min-width:961px){.products .product{grid-column:span 6}.products .lab{grid-column:span 12;min-height:0}}
+.product .logo.mc{box-shadow:0 10px 24px -10px rgba(16,150,138,.6),0 0 0 1px var(--border)}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -117,6 +120,21 @@
             <span class="muted">Free · Pro upgrade</span>
           </div>
         </article>
+        <article class="card product reveal">
+          <div class="top">
+            <img class="logo mc" src="meetcrate/logo.png" alt="" width="60" height="60">
+            <span class="status"><span class="dot"></span>Chrome &amp; Edge · coming soon</span>
+          </div>
+          <h3>MeetCrate<small>Chrome &amp; Edge extension</small></h3>
+          <p class="desc">Export every Read AI meeting at once: transcripts, summaries and action items as Markdown, TXT, SRT or JSON in one ZIP. Official Read AI sign-in, read-only, nothing leaves your computer.</p>
+          <ul class="chips" aria-label="Highlights">
+            <li>Read AI</li><li>Transcripts</li><li>Markdown &amp; SRT</li><li>Obsidian &amp; Notion</li><li>100% local</li>
+          </ul>
+          <div class="foot">
+            <a class="link-arrow stretched" href="meetcrate/">Learn more about MeetCrate<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <span class="muted">Free · Pro $29 once</span>
+          </div>
+        </article>
         <article class="card lab reveal">
           <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.6 1.6 0 0 0 5.9 21h12.2a1.6 1.6 0 0 0 1.4-2.5L14 9V3"/><path d="M7.5 15h9"/></svg></div>
           <h3>Next up, in the lab</h3>
@@ -170,11 +188,12 @@
     <nav aria-label="Footer">
       <a href="chatcairn/">ChatCairn</a>
       <a href="chatcairn/guides/">Guides</a>
+      <a href="meetcrate/">MeetCrate</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
       <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
     </nav>
-    <p class="legal">© 2026 LGD Ventures. Independent software studio. Not affiliated with OpenAI, Anthropic, Google or xAI.</p>
+    <p class="legal">© 2026 LGD Ventures. Independent software studio. Not affiliated with OpenAI, Anthropic, Google, xAI or Read AI.</p>
   </div>
 </footer>
 <script src="assets/site.js" defer></script>
