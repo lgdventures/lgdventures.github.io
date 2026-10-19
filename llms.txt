@@ -1,0 +1,25 @@
+# LGD Ventures
+
+> LGD Ventures is a small, independent software studio that builds private, single-purpose browser extensions for people who work online. Products keep user data on the user's device: no accounts and no analytics in the extensions.
+
+Contact: lgdventures.hq@gmail.com · Site: https://lgdventures.github.io/
+Facts below are as of Oct 2026.
+
+## Products
+
+- [ChatCairn](https://lgdventures.github.io/chatcairn/): a Chrome extension for people who use AI chatbots that saves ChatGPT, Claude, Gemini and Grok chats into one local, searchable library, exports them to Markdown or PDF, and turns highlights into notes and tasks. Free: up to 50 saved chats and 10 notes/tasks (exports carry a small "Made with ChatCairn" line). Pro (planned $4.99/month or $39 one-time) is on a waitlist and not purchasable yet. Chrome Web Store: https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc (update 0.3.1 in review).
+- [MeetCrate](https://lgdventures.github.io/meetcrate/): a Chrome and Edge extension for Read AI users that exports every meeting at once (transcripts, summaries and action items as Markdown, TXT, SRT or JSON in one ZIP) through Read AI's official sign-in, read-only. Free: the 10 most recent meetings. Pro: $29 one-time (waitlist). Not yet in a store.
+
+## Guides (ChatCairn)
+
+- [All guides](https://lgdventures.github.io/chatcairn/guides/)
+- [How to export a ChatGPT chat to PDF](https://lgdventures.github.io/chatcairn/guides/export-chatgpt-to-pdf.html)
+- [How to search old Claude chats (and ChatGPT, Gemini, Grok)](https://lgdventures.github.io/chatcairn/guides/search-old-claude-chats.html)
+- [ChatGPT and Claude to Obsidian: notes and tasks](https://lgdventures.github.io/chatcairn/guides/chatgpt-claude-to-obsidian.html)
+
+## Policies
+
+- [Privacy](https://lgdventures.github.io/privacy.html) · [Terms](https://lgdventures.github.io/terms.html)
+- [ChatCairn privacy](https://lgdventures.github.io/chatcairn/privacy.html) · [MeetCrate privacy](https://lgdventures.github.io/meetcrate/privacy.html)
+
+Not affiliated with OpenAI, Anthropic, Google, xAI, Microsoft or Read AI.

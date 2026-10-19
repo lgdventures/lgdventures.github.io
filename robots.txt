@@ -1,4 +1,15 @@
+# LGD Ventures. AI answer engines and search crawlers are welcome. /hq/ is private.
 User-agent: *
 Allow: /
 Disallow: /hq/
+
+User-agent: meta-webindexer
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+Allow: /
+Disallow: /hq/
+
 Sitemap: https://lgdventures.github.io/sitemap.xml
