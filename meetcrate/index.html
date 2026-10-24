@@ -28,7 +28,7 @@
 <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MeetCrate", "applicationCategory": "BrowserApplication", "applicationSubCategory": "Productivity", "operatingSystem": "Chrome, Microsoft Edge", "softwareVersion": "0.2.0", "url": "https://lgdventures.github.io/meetcrate/", "image": "https://lgdventures.github.io/meetcrate/og.png", "description": "Export all your Read AI meetings at once: transcripts, summaries and action items to Markdown, TXT, SRT or JSON in one ZIP. 100% local.", "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro (one-time)", "price": "29", "priceCurrency": "USD"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MeetCrate", "applicationCategory": "BrowserApplication", "applicationSubCategory": "Productivity", "operatingSystem": "Microsoft Edge (Chrome coming soon)", "softwareVersion": "0.2.2", "url": "https://lgdventures.github.io/meetcrate/", "image": "https://lgdventures.github.io/meetcrate/og.png", "downloadUrl": "https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj", "installUrl": "https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj", "description": "Export all your Read AI meetings at once: transcripts, summaries and action items to Markdown, TXT, SRT or JSON in one ZIP. 100% local. Free for your 10 most recent meetings. Pro ($29 one-time, as of Oct 2026) is on a waitlist.", "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}]}</script>
 <style>
 /* MeetCrate page additions on top of the shared design system (tokens only, no new colors). */
 [hidden]{display:none!important}
@@ -46,6 +46,7 @@
 .plan ul{flex:1}
 .plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .plan .btns .btn{margin-top:0;width:100%}
+.plan .planned{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
 .waitnote{margin:2px 0 0;text-align:center;color:var(--muted);font-size:13.5px}
 .plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -61,7 +62,7 @@
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
 </style>
 <script src="/meetcrate/config.js"></script>
-<style>.plans{grid-template-columns:repeat(2,minmax(0,420px));justify-content:center}.tree{font:14px/1.9 var(--mono);color:var(--text-2)}.tree b{color:var(--accent-ink)}</style>
+<style>.plans{grid-template-columns:repeat(2,minmax(0,420px));justify-content:center}.tree{font:14px/1.9 var(--mono);color:var(--text-2)}.tree b{color:var(--accent-ink)}.chrome-note{margin:14px 0 0;color:var(--muted);font-size:13.5px;text-align:center}.chrome-note a{color:var(--accent-ink);font-weight:600}.chrome-note a:hover{text-decoration:underline;text-underline-offset:3px}.plan .chrome-note{margin:2px 0 0}@media (max-width:640px){.plans{grid-template-columns:minmax(0,1fr)}}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -84,13 +85,14 @@
   <section class="hero p-hero">
     <div class="wrap">
       <img class="appicon" src="/meetcrate/logo.png" alt="" width="88" height="88">
-      <a class="eyebrow" href="#pricing"><span class="tag">Soon</span>Coming to Chrome and Edge<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+      <a class="eyebrow" href="https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj?utm_source=site&amp;utm_medium=meetcrate_eyebrow&amp;utm_campaign=edge_launch" rel="noopener"><span class="tag">Live</span>Version 0.2.2 now on Microsoft Edge<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
       <h1>Every Read AI meeting, exported in one click.</h1>
       <p class="lede">MeetCrate uses Read AI’s official API to save all your transcripts, summaries and action items as Markdown, TXT, SRT or JSON, in one ZIP on your computer.</p>
       <div class="actions">
-        <a class="btn btn-accent" href="#" data-install aria-disabled="true"><span data-when="soon">Coming soon to Chrome &amp; Edge</span><span data-when="live" hidden>Add to Chrome — free</span></a>
+        <a class="btn btn-accent" href="https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj?utm_source=site&amp;utm_medium=meetcrate_hero&amp;utm_campaign=edge_launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge — free</span></a>
         <a class="btn btn-ghost" href="#pricing">See pricing<svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
+      <p class="chrome-note">Chrome: coming soon. <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20for%20Chrome%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20MeetCrate%20is%20on%20the%20Chrome%20Web%20Store.">Get one email when it’s live</a></p>
       <ul class="trust">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>100% local</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Official Read AI sign-in, read-only</li>
@@ -109,7 +111,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="kicker">Features</span>
-        <h2>Your whole meeting archive, in files you own.</h2>
+        <h2>What is MeetCrate?</h2>
+        <p>MeetCrate is a browser extension for Read AI users (on Microsoft Edge now, Chrome coming soon) that exports every meeting at once (transcripts, summaries and action items as Markdown, TXT, SRT or JSON in one ZIP) through Read AI’s official, read-only sign-in. Files are created on your computer; nothing is sent to an LGD Ventures server.</p>
         <p>Read AI downloads meetings one at a time. MeetCrate exports all of them at once, ready for Obsidian, Notion, Drive or a plain folder.</p>
       </div>
       <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></div><h3>Everything in one ZIP</h3><p>One file per meeting with the summary, action items as a checklist, chapters, key questions, topics and the full transcript with speakers and timestamps. Plus an <code>index.csv</code> with one row per meeting.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><h3>Markdown, TXT, SRT &amp; JSON</h3><p>Markdown with YAML front matter for Obsidian and Notion, plain text, subtitles with speaker names, and the raw API JSON so nothing is lost.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Only new since last export</h3><p>Next time, export just the meetings you haven’t exported yet. Ideal for a weekly backup.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div><h3>Resumable, rate-limit friendly</h3><p>Close the tab or lose Wi-Fi and the export continues where it stopped. Meetings still processing are skipped and retried in one click.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Private by design</h3><p>You sign in on Read AI’s own page. Files go straight from Read AI to your computer: no MeetCrate account, no servers, no analytics.</p></article></div>
@@ -133,25 +136,26 @@
       <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
         <span class="kicker">Pricing</span>
         <h2>Try it free. Pay once for everything.</h2>
-        <p>No subscription. One payment unlocks your whole archive.</p>
+        <p>No subscription. One payment unlocks your whole archive. Prices as of Oct 2026.</p>
       </div>
       <div class="plans">
         <article class="card plan reveal">
           <h3>Free</h3>
           <p class="amount"><b>$0</b><span>forever</span></p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Your 10 most recent meetings, as often as you like</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>All formats: Markdown, TXT, SRT, JSON + index.csv</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Only new since last export</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Small “Made with MeetCrate” line in exported files</span></li></ul>
-          <div class="btns"><a class="btn btn-ghost" href="#" data-install aria-disabled="true"><span data-when="soon">Coming soon to Chrome &amp; Edge</span><span data-when="live" hidden>Add to Chrome — free</span></a></div>
+          <div class="btns"><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj?utm_source=site&amp;utm_medium=meetcrate_pricing&amp;utm_campaign=edge_launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge — free</span></a><p class="chrome-note">Chrome: coming soon. <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20for%20Chrome%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20MeetCrate%20is%20on%20the%20Chrome%20Web%20Store.">Get one email when it’s live</a></p></div>
         </article>
         <article class="card plan pro reveal" id="pro">
-          <h3>Pro <span class="badge-pill">Whole archive</span></h3>
+          <h3>Pro <span class="badge-pill">Coming soon</span></h3>
           <p class="amount"><b data-price="lifetime">$29</b><span>one-time</span></p>
+          <p class="planned">Price as of Oct 2026. Pro isn't purchasable yet: join the waitlist below.</p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Every meeting, no limit</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Remove the MeetCrate line from exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Future sources included (tl;dv in progress)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
           <div class="btns" data-buyset hidden>
             <a class="btn btn-accent" href="#" data-buy="lifetime"><span>Get Pro · <span data-price="lifetime">$29</span> once</span></a>
           </div>
           <div class="btns" data-waitlist>
             <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20Pro%20waitlist%20%5Bsite%5D" data-waitmail><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
-            <p class="waitnote">Launch price for the first buyers. One email when Pro opens.</p>
+            <p class="waitnote">Pro opens soon. Free works now. One email when it’s ready.</p>
           </div>
         </article>
       </div>
@@ -164,7 +168,7 @@
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
-      <div class="faq"><article class="card reveal"><h3>Which Read AI plans work?</h3><p>Any plan, including Free. MeetCrate uses Read AI’s official API, which is available on all Read AI plans, and only reads meetings your account can already see.</p></article><article class="card reveal"><h3>Does MeetCrate see my password or my meetings?</h3><p>No. You sign in on Read AI’s own page; MeetCrate gets a read-only token that stays in your browser. Meetings go straight from Read AI to your computer. See the <a href="/meetcrate/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>What’s inside each file?</h3><p>Title, date, duration, platform, participants, summary, action items, chapters, key questions, topics and the full transcript with speakers and timestamps (when Read AI has them).</p></article><article class="card reveal"><h3>Does it work with Obsidian and Notion?</h3><p>Yes. The Markdown files have YAML front matter and a checklist for action items. Drop the folder into an Obsidian vault, or use Notion’s Markdown import.</p></article><article class="card reveal"><h3>What about tl;dv, Otter or Fireflies?</h3><p>Read AI comes first. tl;dv is in progress; tell us which tool you need next at <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20next%20tool">lgdventures.hq@gmail.com</a>.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes, within 14 days of purchase. Reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
+      <div class="faq"><article class="card reveal"><h3>Which browsers does it work in?</h3><p>Microsoft Edge today (<a href="https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj?utm_source=site&amp;utm_medium=meetcrate_faq&amp;utm_campaign=edge_launch" rel="noopener">Edge Add-ons</a>, version 0.2.2). Chrome is coming soon: <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20for%20Chrome%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20MeetCrate%20is%20on%20the%20Chrome%20Web%20Store.">get one email when it’s live</a>.</p></article><article class="card reveal"><h3>Which Read AI plans work?</h3><p>Any plan, including Free. MeetCrate uses Read AI’s official API, which is available on all Read AI plans, and only reads meetings your account can already see.</p></article><article class="card reveal"><h3>Does MeetCrate see my password or my meetings?</h3><p>No. You sign in on Read AI’s own page; MeetCrate gets a read-only token that stays in your browser. Meetings go straight from Read AI to your computer. See the <a href="/meetcrate/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>What’s inside each file?</h3><p>Title, date, duration, platform, participants, summary, action items, chapters, key questions, topics and the full transcript with speakers and timestamps (when Read AI has them).</p></article><article class="card reveal"><h3>Does it work with Obsidian and Notion?</h3><p>Yes. The Markdown files have YAML front matter and a checklist for action items. Drop the folder into an Obsidian vault, or use Notion’s Markdown import.</p></article><article class="card reveal"><h3>What about tl;dv, Otter or Fireflies?</h3><p>Read AI comes first. tl;dv is in progress; tell us which tool you need next at <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20next%20tool">lgdventures.hq@gmail.com</a>.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes, within 14 days of purchase. Reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
     </div>
   </section>
 
@@ -191,7 +195,8 @@
     <a class="brand" href="/meetcrate/"><img src="/meetcrate/logo.png" alt="" width="22" height="22">MeetCrate</a>
     <nav aria-label="Footer">
       <a href="/">LGD Ventures</a>
-            <a href="/meetcrate/privacy.html">Privacy</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj?utm_source=site&amp;utm_medium=meetcrate_footer&amp;utm_campaign=edge_launch" rel="noopener">Edge Add-ons</a>
+      <a href="/meetcrate/privacy.html">Privacy</a>
       <a href="/meetcrate/terms.html">Terms</a>
       <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
     </nav>
@@ -199,7 +204,7 @@
   </div>
 </footer>
 <script>
-/* Links come only from /meetcrate/config.js. Empty = pre-launch state (waitlist / "coming soon"). */
+/* Checkout links come only from /meetcrate/config.js (empty = Pro waitlist). Store install links are static in the HTML (per-placement UTM). */
 (function () {
   var C = window.MEETCRATE || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = C.PRICE_LIFETIME; if (p) s.textContent = p; });
@@ -227,12 +232,6 @@
   if (document.readyState === 'complete') settle(); else window.addEventListener('load', settle);
   toPro();
   window.addEventListener('hashchange', function () { userMoved = false; settle(); });
-  document.querySelectorAll('[data-install]').forEach(function (a) {
-    if (C.STORE_URL) {
-      a.href = C.STORE_URL; a.rel = 'noopener'; a.removeAttribute('aria-disabled');
-      a.querySelectorAll('[data-when]').forEach(function (s) { s.hidden = s.getAttribute('data-when') !== 'live'; });
-    } else a.addEventListener('click', function (e) { e.preventDefault(); });
-  });
 })();
 </script>
 <script src="/assets/site.js" defer></script>
