@@ -28,7 +28,7 @@
 <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ChatCairn", "applicationCategory": "BrowserApplication", "applicationSubCategory": "Productivity", "operatingSystem": "Chrome", "browserRequirements": "Requires Google Chrome (desktop)", "softwareVersion": "0.3.0", "url": "https://lgdventures.github.io/chatcairn/", "image": "https://lgdventures.github.io/chatcairn/og.png", "description": "Save ChatGPT, Claude, Gemini and Grok chats to one searchable library, export to PDF or Markdown, and turn highlights into notes and tasks. 100% local.", "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro monthly", "price": "4.99", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "4.99", "priceCurrency": "USD", "billingDuration": "P1M", "unitCode": "MON"}}, {"@type": "Offer", "name": "Pro lifetime", "price": "39", "priceCurrency": "USD"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ChatCairn", "applicationCategory": "BrowserApplication", "applicationSubCategory": "Productivity", "operatingSystem": "Chrome, Microsoft Edge", "softwareVersion": "0.3.1", "url": "https://lgdventures.github.io/chatcairn/", "image": "https://lgdventures.github.io/chatcairn/og.png", "description": "Save ChatGPT, Claude, Gemini and Grok chats to one searchable library, export to PDF or Markdown, and turn highlights into notes and tasks. 100% local. Free up to 50 chats. Pro (planned $4.99/month or $39 one-time, as of Oct 2026) is on a waitlist.", "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Free plan: up to 50 saved chats and 10 notes and tasks."}], "installUrl": "https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc", "sameAs": ["https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc", "https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi"]}</script>
 <style>
 /* ChatCairn page additions on top of the shared design system (tokens only, no new colors). */
 [hidden]{display:none!important}
@@ -46,6 +46,7 @@
 .plan ul{flex:1}
 .plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .plan .btns .btn{margin-top:0;width:100%}
+.plan .planned{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
 .waitnote{margin:2px 0 0;text-align:center;color:var(--muted);font-size:13.5px}
 .plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -83,11 +84,12 @@
   <section class="hero p-hero">
     <div class="wrap">
       <img class="appicon" src="/chatcairn/logo.png" alt="" width="88" height="88">
-      <a class="eyebrow" href="#pricing"><span class="tag">Soon</span>Coming to the Chrome Web Store<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+      <a class="eyebrow" href="#features"><span class="tag">Live</span>Now on Chrome and Edge<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
       <h1>Your AI chats, saved and turned into action.</h1>
       <p class="lede">Save ChatGPT, Claude, Gemini and Grok conversations in one click, find any answer instantly, export to Markdown or PDF, and turn the best parts into notes and tasks.</p>
       <div class="actions">
-        <a class="btn btn-accent" href="#" data-install aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span data-when="soon">Coming soon to the Chrome Web Store</span><span data-when="live" hidden>Add to Chrome — free</span></a>
+        <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_hero&amp;utm_campaign=launch" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Add to Chrome — free</span></a>
+        <a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge&amp;utm_campaign=launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge</span></a>
         <a class="btn btn-ghost" href="#pricing">See pricing<svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
       <ul class="platforms" aria-label="Works with">
@@ -111,8 +113,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="kicker">Features</span>
-        <h2>Everything worth keeping, in one place.</h2>
-        <p>ChatCairn lives in your browser and works on the four AI assistants you already use.</p>
+        <h2>What is ChatCairn?</h2>
+        <p>ChatCairn is a browser extension for Chrome and Edge, for people who use ChatGPT, Claude, Gemini and Grok. It saves chats into one local, searchable library, exports them to Markdown or PDF, and turns highlights into notes and tasks. Your chats stay in your browser: no account and no ChatCairn server.</p>
       </div>
       <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Notes &amp; tasks from highlights <span class="badge-pill tag">New in 0.3</span></h3><p>Select any passage right in ChatGPT, Claude, Gemini or Grok and keep it as a note or a task with a project, due date and comment, without saving the whole conversation. It works in saved chats too. Filter by Overdue, Today or Upcoming, and jump back to the source in one click. Tasks export in Obsidian Tasks syntax.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg></div><h3>One-click save</h3><p>Save the open conversation from ChatGPT, Claude, Gemini or Grok: your prompts and the answers, with code, tables and headings intact.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Search everything</h3><p>Full-text search across every chat you saved, on every platform, plus a home view of what you saved lately.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><h3>Markdown, PDF &amp; ZIP</h3><p>Markdown with front-matter for Obsidian and Notion, clean paginated PDFs, or a ZIP of your whole library.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Private, with backups</h3><p>Everything stays in your browser: no account, no ChatCairn servers, no analytics. One-click backup and merge-restore keep it safe.</p></article></div>
     </div>
@@ -135,18 +137,19 @@
       <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
         <span class="kicker">Pricing</span>
         <h2>Generous free plan. Simple Pro.</h2>
-        <p>Start free. Upgrade when ChatCairn becomes part of your workflow.</p>
+        <p>Start free. Upgrade when ChatCairn becomes part of your workflow. Prices as of Oct 2026.</p>
       </div>
       <div class="plans">
         <article class="card plan reveal">
           <h3>Free</h3>
           <p class="amount"><b>$0</b><span>forever</span></p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>All 4 platforms</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Up to 50 saved chats</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Up to 10 notes &amp; tasks</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Search, Markdown &amp; PDF export (with a small “Made with ChatCairn” footer)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>JSON backup &amp; restore</span></li></ul>
-          <div class="btns"><a class="btn btn-ghost" href="#" data-install aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span data-when="soon">Coming soon to Chrome</span><span data-when="live" hidden>Add to Chrome — free</span></a></div>
+          <div class="btns"><a class="btn btn-accent" href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_pricing&amp;utm_campaign=launch" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Add to Chrome — free</span></a><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_pricing&amp;utm_campaign=launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge</span></a></div>
         </article>
         <article class="card plan pro reveal" id="pro">
-          <h3>Pro <span class="badge-pill">Everything, unlimited</span></h3>
+          <h3>Pro <span class="badge-pill">Waitlist</span></h3>
           <p class="amount"><b data-price="monthly">$4.99</b><span>/ month</span><span style="white-space:nowrap">or <b data-price="lifetime" style="font-size:28px;vertical-align:-2px">$39</b> once</span></p>
+          <p class="planned">Planned price as of Oct 2026. Pro isn't purchasable yet: join the waitlist below.</p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Unlimited saved chats</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Unlimited notes &amp; tasks</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Bulk ZIP export of your whole library</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Remove the ChatCairn footer from exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Google Drive auto-backup <span class="badge-pill">Coming soon</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
           <div class="btns" data-buyset hidden>
             <a class="btn btn-accent" href="#" data-buy="monthly"><span>Get Pro monthly · <span data-price="monthly">$4.99</span>/mo</span></a>
@@ -154,11 +157,11 @@
           </div>
           <div class="btns" data-waitlist>
             <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=ChatCairn%20Pro%20waitlist%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20ChatCairn%20Pro%20is%20available." data-waitmail><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
-            <p class="waitnote"><span data-when="soon">Pro launches in a few days, right after the Chrome Web Store release. One email when it's ready.</span><span data-when="live" hidden>Pro launches in a few days. Free works now.</span></p>
+            <p class="waitnote">Pro launches soon. Free works now. One email when it's ready.</p>
           </div>
         </article>
       </div>
-      <p class="fineprint">Secure checkout by Lemon Squeezy (merchant of record). Prices in USD. 14-day refund on request. Your license key arrives by email.</p>
+      <p class="fineprint">When Pro launches: secure checkout by Lemon Squeezy (merchant of record), prices in USD, 14-day refund on request, and your license key arrives by email.</p>
     </div>
   </section>
 
@@ -167,7 +170,7 @@
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
-      <div class="faq"><article class="card reveal"><h3>Where are my chats stored?</h3><p>Only in your browser (IndexedDB and Chrome storage). ChatCairn has no servers that receive your conversations. See the <a href="/chatcairn/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>How does ChatCairn read a conversation?</h3><p>When you click Save, it reads that one chat from the page. On ChatGPT and Claude it may ask the site itself for the same conversation using your existing login, read-only. Nothing is sent anywhere else.</p></article><article class="card reveal"><h3>Monthly or lifetime?</h3><p>Both unlock the same Pro features. Monthly is $4.99 and can be cancelled anytime; lifetime is a one-time $39. One key activates up to 3 browsers.</p></article><article class="card reveal"><h3>Where do I find my license key?</h3><p>In your Lemon Squeezy receipt email (subject “Your ChatCairn Pro … receipt”) and in My Orders at app.lemonsqueezy.com. Paste it in ChatCairn → Activate license.</p></article><article class="card reveal"><h3>What happens at the free limit?</h3><p>Everything you saved stays available to read, search and export. Upgrade to keep saving new chats and notes.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes, within 14 days of purchase. Just reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
+      <div class="faq"><article class="card reveal"><h3>Which browsers does it work in?</h3><p>Desktop Google Chrome (<a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_faq&amp;utm_campaign=launch" rel="noopener">Chrome Web Store</a>) and Microsoft Edge (<a href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_faq&amp;utm_campaign=launch" rel="noopener">Edge Add-ons</a>). Mobile browsers don't support extensions like this.</p></article><article class="card reveal"><h3>Where are my chats stored?</h3><p>Only in your browser (IndexedDB and extension storage). ChatCairn has no servers that receive your conversations. See the <a href="/chatcairn/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>How does ChatCairn read a conversation?</h3><p>When you click Save, it reads that one chat from the page. On ChatGPT and Claude it may ask the site itself for the same conversation using your existing login, read-only. Nothing is sent anywhere else.</p></article><article class="card reveal"><h3>Monthly or lifetime?</h3><p>Both will unlock the same Pro features. Planned pricing (as of Oct 2026): monthly $4.99, cancel anytime, or a one-time $39 for lifetime. One key activates up to 3 browsers. Pro is on a waitlist for now.</p></article><article class="card reveal"><h3>Where do I find my license key?</h3><p>Once Pro is on sale: in your Lemon Squeezy receipt email (subject “Your ChatCairn Pro … receipt”) and in My Orders at app.lemonsqueezy.com. Paste it in ChatCairn → Activate license.</p></article><article class="card reveal"><h3>What happens at the free limit?</h3><p>Everything you saved stays available to read, search and export. Upgrade to keep saving new chats and notes.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes, once Pro is on sale: within 14 days of purchase. Just reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
     </div>
   </section>
 
@@ -194,6 +197,8 @@
     <a class="brand" href="/chatcairn/"><img src="/chatcairn/logo.png" alt="" width="22" height="22">ChatCairn</a>
     <nav aria-label="Footer">
       <a href="/">LGD Ventures</a>
+      <a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_footer&amp;utm_campaign=launch" rel="noopener">Chrome Web Store</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_footer&amp;utm_campaign=launch" rel="noopener">Edge Add-ons</a>
       <a href="/chatcairn/guides/">Guides</a>
       <a href="/chatcairn/privacy.html">Privacy</a>
       <a href="/chatcairn/terms.html">Terms</a>
@@ -203,7 +208,7 @@
   </div>
 </footer>
 <script>
-/* Links come only from /chatcairn/config.js. Empty = pre-launch state (waitlist / "coming soon"). */
+/* Checkout links come only from /chatcairn/config.js (empty = Pro waitlist). Store install links are static in the HTML (per-placement UTM). */
 (function () {
   var C = window.CHATCAIRN || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = s.getAttribute('data-price') === 'lifetime' ? C.PRICE_LIFETIME : C.PRICE_MONTHLY; if (p) s.textContent = p; });
@@ -231,13 +236,6 @@
   if (document.readyState === 'complete') settle(); else window.addEventListener('load', settle);
   toPro();
   window.addEventListener('hashchange', function () { userMoved = false; settle(); });
-  if (C.STORE_URL) document.querySelectorAll('.waitnote [data-when]').forEach(function (s) { s.hidden = s.getAttribute('data-when') !== 'live'; });
-  document.querySelectorAll('[data-install]').forEach(function (a) {
-    if (C.STORE_URL) {
-      a.href = C.STORE_URL; a.rel = 'noopener'; a.removeAttribute('aria-disabled');
-      a.querySelectorAll('[data-when]').forEach(function (s) { s.hidden = s.getAttribute('data-when') !== 'live'; });
-    } else a.addEventListener('click', function (e) { e.preventDefault(); });
-  });
 })();
 </script>
 <script src="/assets/site.js" defer></script>
