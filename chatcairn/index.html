@@ -57,6 +57,12 @@
 .faq a:hover,.inline-link:hover{text-decoration:underline;text-underline-offset:3px}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
 @media (max-width:480px){.brand .sub{display:none}}
+.ft-bottom{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap;margin-top:6px}
+.ft-bottom .legal{width:auto;margin:0;flex:1 1 320px}
+.ft-badge{display:inline-flex;flex:none;border-radius:10px;opacity:.88;transition:opacity .15s,transform .15s}
+.ft-badge:hover{opacity:1;transform:translateY(-1px)}
+.ft-badge:focus-visible{outline:2px solid var(--accent);outline-offset:4px;opacity:1}
+.ft-badge img{display:block;width:160px;height:auto}
 /* narrow screens: Pro (with the waitlist button) first, so a #pricing landing shows it without scrolling */
 @media (max-width:640px){.plans .plan.pro{order:-1}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
@@ -204,7 +210,10 @@
       <a href="/chatcairn/terms.html">Terms</a>
       <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
     </nav>
-    <p class="legal">© 2026 LGD Ventures. ChatCairn is not affiliated with OpenAI, Anthropic, Google or xAI.</p>
+    <div class="ft-bottom">
+      <p class="legal">© 2026 LGD Ventures. ChatCairn is not affiliated with OpenAI, Anthropic, Google or xAI.</p>
+      <a class="ft-badge" href="https://semilaunch.com" target="_blank" rel="noopener"><img src="/chatcairn/assets/semilaunch-badge.png" alt="Featured on SemiLaunch" width="220" height="80" loading="lazy" decoding="async"></a>
+    </div>
   </div>
 </footer>
 <script>
