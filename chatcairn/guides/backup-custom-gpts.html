@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How to Export Your Custom GPTs and Gems to Files You Own (2026) · ChatCairn</title>
+<meta name="description" content="Turn each Custom GPT or Gemini Gem into files you keep: instructions, starters, actions and knowledge as Markdown, SKILL.md and a Claude Project. As of Oct 2026.">
+<link rel="canonical" href="https://lgdventures.github.io/chatcairn/guides/backup-custom-gpts.html">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<meta property="og:site_name" content="LGD Ventures">
+<meta property="og:title" content="How to Export Your Custom GPTs and Gems to Files You Own (2026)">
+<meta property="og:description" content="Turn each Custom GPT or Gemini Gem into files you keep: instructions, starters, actions and knowledge as Markdown, SKILL.md and a Claude Project. As of Oct 2026.">
+<meta property="og:url" content="https://lgdventures.github.io/chatcairn/guides/backup-custom-gpts.html">
+<meta property="og:image" content="https://lgdventures.github.io/chatcairn/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChatCairn — your AI conversations, saved and searchable">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Export Your Custom GPTs and Gems to Files You Own (2026)">
+<meta name="twitter:description" content="Turn each Custom GPT or Gemini Gem into files you keep: instructions, starters, actions and knowledge as Markdown, SKILL.md and a Claude Project. As of Oct 2026.">
+<meta name="twitter:image" content="https://lgdventures.github.io/chatcairn/og.png">
+<link rel="icon" href="/chatcairn/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/chatcairn/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/chatcairn/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Export Your Custom GPTs and Gems to Files You Own (2026)",
+  "dateModified": "2026-10-25",
+  "author": {
+   "@type": "Organization",
+   "name": "LGD Ventures",
+   "url": "https://lgdventures.github.io/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lgdventures.github.io/chatcairn/logo.png"
+   }
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "LGD Ventures",
+   "url": "https://lgdventures.github.io/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lgdventures.github.io/chatcairn/logo.png"
+   }
+  },
+  "mainEntityOfPage": {
+   "@type": "WebPage",
+   "@id": "https://lgdventures.github.io/chatcairn/guides/backup-custom-gpts.html"
+  },
+  "image": "https://lgdventures.github.io/chatcairn/og.png",
+  "description": "Turn each Custom GPT or Gemini Gem into files you keep: instructions, starters, actions and knowledge as Markdown, SKILL.md and a Claude Project. As of Oct 2026.",
+  "datePublished": "2026-10-25",
+  "inLanguage": "en",
+  "about": {
+   "@type": "SoftwareApplication",
+   "name": "ChatCairn",
+   "applicationCategory": "BrowserApplication",
+   "operatingSystem": "Chrome, Microsoft Edge",
+   "url": "https://lgdventures.github.io/chatcairn/",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Export a Custom GPT to portable files you own",
+  "step": [
+   {
+    "@type": "HowToStep",
+    "name": "Open the GPT's editor",
+    "text": "In ChatGPT open My GPTs, choose Edit on the GPT and open the Configure tab."
+   },
+   {
+    "@type": "HowToStep",
+    "name": "Copy the text fields",
+    "text": "Copy the name, description, instructions and conversation starters into a Markdown file, one folder per GPT."
+   },
+   {
+    "@type": "HowToStep",
+    "name": "Keep the knowledge files",
+    "text": "Put a copy of every file listed under Knowledge in a knowledge folder next to it."
+   },
+   {
+    "@type": "HowToStep",
+    "name": "Save actions without secrets",
+    "text": "For each custom action, save the OpenAPI schema as a .yaml or .json file and note the auth type. Leave out API keys."
+   },
+   {
+    "@type": "HowToStep",
+    "name": "Write down what won't move",
+    "text": "Note the model, capabilities, sharing setting and whether the version is a draft."
+   },
+   {
+    "@type": "HowToStep",
+    "name": "Make a portable version",
+    "text": "Add a SKILL.md and a Claude Project version of the instructions so you can load the same assistant in Gemini or Claude."
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Do I still need a copy if I use Migrate to plugin?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Only if you want something the plugin doesn't keep. Migrate to plugin keeps your GPT working inside ChatGPT, using its latest published version. It doesn't carry over custom actions, the selected model, sharing settings, drafts or unpublished edits, and it doesn't give you anything you can open in Claude or Gemini. A copy in your own files covers those cases (as of Oct 2026)."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will my old conversations with a Custom GPT disappear on Dec 11, 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. OpenAI's FAQ says existing conversations stay accessible after retirement; the GPT itself and its page become inaccessible (as of Oct 2026)."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I use my Custom GPT in Claude or Gemini?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Not directly, but its instructions and files move well. Paste the instructions into a Claude Project and upload the knowledge files, or turn them into a SKILL.md file, which Gemini can import as a skill. Custom actions won't run in a Claude Project; rebuild them as a connector or MCP server."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do Gemini Gems migrate automatically?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, partly. For personal Google accounts, Google turns Gems into skills and makes them read-only on Nov 17, 2026, then removes them on Dec 17, 2026. Google says some files won't carry over (audio, video, GitHub, legacy Office and archive files, and anything past 100 MB), and tools like Canvas and Deep Research don't work in skills yet (as of Oct 2026)."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I export a GPT someone else made?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. OpenAI only lets the creator (or a workspace admin) migrate a GPT, and ChatCairn GPT Rescue only reads GPTs and Gems you created."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is ChatCairn GPT Rescue free?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. GPT Rescue is free on every ChatCairn plan, no Pro needed, and the backup is built on your computer; nothing is uploaded."
+    }
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "LGD Ventures",
+    "item": "https://lgdventures.github.io/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "ChatCairn",
+    "item": "https://lgdventures.github.io/chatcairn/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Guides",
+    "item": "https://lgdventures.github.io/chatcairn/guides/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 4,
+    "name": "Export Custom GPTs and Gems",
+    "item": "https://lgdventures.github.io/chatcairn/guides/backup-custom-gpts.html"
+   }
+  ]
+ }
+]
+</script>
+<style>
+/* ChatCairn guides: article additions on top of the shared design system (tokens only). */
+.prose h3{margin:1.7em 0 0;font-size:17px;font-weight:650;letter-spacing:-.01em;line-height:1.4;color:var(--text)}
+.prose h3+p{margin-top:.5em}
+.prose code{font:500 .86em var(--mono);color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:1px 6px;overflow-wrap:anywhere}
+.prose pre{margin-top:1.1em;padding:16px 18px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;font:13.5px/1.65 var(--mono);color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
+.prose pre code{font:inherit;background:none;border:0;padding:0}
+.prose kbd{display:inline-block;font:600 .8em/1.5 var(--mono);color:var(--text);background:var(--surface);border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:6px;padding:0 7px}
+.tw{margin-top:1.1em;overflow-x:auto;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);background:linear-gradient(to right,var(--surface) 30%,transparent) left/40px 100% no-repeat local,linear-gradient(to left,var(--surface) 30%,transparent) right/40px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.14),transparent) left/12px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.14),transparent) right/12px 100% no-repeat scroll,var(--surface)}
+.prose table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.prose th,.prose td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+.prose thead th,.prose thead td{color:var(--text);font-weight:600;background:var(--surface-2)}
+.prose tbody tr:last-child>*{border-bottom:0}
+.prose tbody th{color:var(--text);font-weight:600;white-space:nowrap}
+.prose .src{font-size:14px;line-height:1.6;color:var(--muted)}
+.cta-card{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin-top:1.6em;padding:20px 22px;border-radius:16px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.cta-card b{display:block;color:var(--text);font-size:16.5px;font-weight:650;letter-spacing:-.01em}
+.cta-card>div{flex:1 1 300px}
+.cta-card span{display:block;color:var(--muted);font-size:14.5px;line-height:1.5}
+.prose .cta-card .btn{margin:0;width:auto;flex:none;color:#fff;text-decoration:none}
+.prose .cta-card .btn-ghost{color:var(--text)}
+.cta-card .cta-btns{display:flex;flex-wrap:wrap;gap:10px;flex:none}
+.cta-card .cta-btns .btn span{display:inline;color:inherit;font-size:inherit}
+.related{max-width:720px;margin-top:64px}
+.related.top{margin-top:0;max-width:none}
+.related h2{margin:10px 0 0;font-size:20px;font-weight:650;letter-spacing:-.02em;color:var(--text)}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.rel{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border-radius:14px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:border-color .15s,transform .2s var(--ease)}
+.rel:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--border-strong));transform:translateY(-2px)}
+.rel:active{transform:translateY(0)}
+.rel b{color:var(--text);font-weight:650;font-size:15.5px;line-height:1.35}
+.rel span{color:var(--muted);font-size:14px;line-height:1.5}
+.rel i{font-style:normal;margin-top:auto;padding-top:6px;color:var(--accent-ink);font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.rel i svg{width:14px;height:14px;transition:transform .2s var(--ease)}
+.rel:hover i svg{transform:translateX(3px)}
+@media (prefers-reduced-motion:reduce){.rel,.rel i svg{transition:none}.rel:hover{transform:none}}
+@media (max-width:480px){.brand .sub{display:none}.prose{font-size:16px}.cta-card .btn{width:100%!important;flex:1 1 100%!important}.cta-card .cta-btns{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/chatcairn/" aria-label="ChatCairn home"><img src="/chatcairn/logo.png" alt="" width="28" height="28">ChatCairn<span class="sub">by LGD Ventures</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/chatcairn/">ChatCairn</a>
+      <a href="/chatcairn/guides/">Guides</a>
+      <a href="/chatcairn/#pricing" class="hide-xs">Pricing</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">LGD Ventures</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/chatcairn/">ChatCairn</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/chatcairn/guides/">Guides</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <span aria-current="page">Export Custom GPTs and Gems</span></nav>
+      <h1>How to Export Your Custom GPTs and Gems to Files You Own (2026)</h1>
+      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-10-25">Oct 25, 2026</time> · Updated <time datetime="2026-10-25">Oct 25, 2026</time> · Sources linked inline</span></p>
+    </div>
+  </section>
+  <section class="doc">
+    <div class="wrap">
+      <div class="prose">
+
+<h2>How do I export my Custom GPTs and Gemini Gems to files I own?</h2>
+<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Quick answer:</strong> Open each GPT’s editor and copy its name, description, instructions and conversation starters into a Markdown file, keep its knowledge files next to it, and save any custom action as an OpenAPI file (without secrets). Add a <code>SKILL.md</code> and a Claude Project version and the same assistant loads in Gemini or Claude. Do the same for each Gem before Nov 17, 2026. To do all your GPTs at once, the free <strong>GPT Rescue</strong> tab in ChatCairn builds those folders into one ZIP on your computer.</div></div>
+
+<p>Last checked 2026-10-25 against OpenAI Help, ChatGPT Learn and Google’s Gemini Help. Dates are as of Oct 2026 and may move; check the linked pages before you rely on them.</p>
+
+<h2>Why keep a portable copy at all?</h2>
+<p>A Custom GPT or a Gem only exists inside one company’s app. Both are being replaced: OpenAI retires Custom GPTs on <strong>Dec 11, 2026</strong> in favor of plugins, and Google turns Gems into skills for personal accounts from <strong>Nov 17, 2026</strong>. Each company offers its own path forward, but that path keeps your assistant inside the same app, and some parts don’t make the trip. A folder of plain files is yours whatever either company does next, works in any AI app that takes instructions and files, and lets you compare the new version with the original.</p>
+
+<h2>Key dates (as of Oct 2026)</h2>
+<div class="tw" role="region" aria-label="Retirement dates" tabindex="0"><table>
+<thead><tr><th scope="col">Date</th><th scope="col">What happens</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><th scope="row">Already in effect</th><td>Personal ChatGPT accounts (Free, Go, Plus, Pro) can’t create or publish new GPTs; existing ones can still be used, and edited on a plan that allows editing</td><td><a href="https://help.openai.com/en/articles/8554407-gpts-in-chatgpt">OpenAI Help</a></td></tr>
+<tr><th scope="row">Nov 17, 2026</th><td>Gemini Gems (personal accounts) become skills; the Gems turn read-only: you can see them but not use or edit them</td><td><a href="https://support.google.com/gemini/answer/18560919">Gemini Help</a></td></tr>
+<tr><th scope="row">Dec 11, 2026</th><td>Custom GPTs retire on all plans; GPTs and their pages become inaccessible. Your existing conversations with them stay accessible</td><td><a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq">OpenAI FAQ</a></td></tr>
+<tr><th scope="row">Dec 17, 2026</th><td>Gems (personal accounts) and their files are removed from Gemini</td><td><a href="https://support.google.com/gemini/answer/18560919">Gemini Help</a></td></tr>
+<tr><th scope="row">Feb 11, 2027</th><td>Retirement for Enterprise workspaces with an approved deferral</td><td><a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq">OpenAI FAQ</a></td></tr>
+<tr><th scope="row">From Mar 2027</th><td>Gems for Workspace business, enterprise and nonprofit accounts (Education from Jun 2027)</td><td><a href="https://support.google.com/gemini/answer/18560919">Gemini Help</a></td></tr>
+</tbody>
+</table></div>
+
+<h2>ChatGPT’s own “Migrate to plugin”, and when you’d still want a copy</h2>
+<p>ChatGPT has a built-in migration: in <strong>My GPTs</strong>, the creator can choose <strong>Migrate to plugin</strong>. The GPT’s instructions become a skill, knowledge files become reference files, and connected apps carry over (<a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq">OpenAI FAQ</a>, as of Oct 2026). If all you want is to keep using the GPT inside ChatGPT, that’s the place to start, and it’s free.</p>
+<p>A copy in your own files is still worth having when:</p>
+<ul>
+<li><strong>You want it outside ChatGPT.</strong> A plugin runs in ChatGPT. Instructions and files in a folder can go into a Claude Project or a Gemini skill.</li>
+<li><strong>It’s a draft or has unpublished edits.</strong> Migration uses the latest <em>published</em> version, and personal accounts can no longer publish, so drafts can only be kept by copying them out (<a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">ChatGPT Learn</a>).</li>
+<li><strong>It has custom actions.</strong> Actions don’t migrate; they have to be rebuilt as an app or custom MCP server. Keeping the OpenAPI schema makes that a lot easier.</li>
+<li><strong>You want a record of what doesn’t move.</strong> The selected model and sharing settings don’t carry over, and conversation starters don’t map one-to-one (<a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">ChatGPT Learn</a>).</li>
+<li><strong>You want to compare.</strong> After migrating, the original GPT is read-only, and the plugin may not behave the same way. The original instructions next to a few test questions let you check and fix it.</li>
+</ul>
+
+<h2>Gemini Gems: Google converts them, but not everything comes along</h2>
+<p>For personal Google accounts (18+), Google will recreate your Gems as skills automatically. On <strong>Nov 17, 2026</strong> the Gems become read-only, and on <strong>Dec 17, 2026</strong> they’re removed along with their files (<a href="https://support.google.com/gemini/answer/18560919">Gemini Help</a>, as of Oct 2026). What doesn’t make it:</p>
+<ul>
+<li><strong>Some knowledge files.</strong> Audio, video, GitHub files, legacy Office (.doc, .xls, .ppt) and archives (.zip, .tar, .7z, .rar, .gz, .tgz) aren’t supported in skills, and skills have a 100 MB limit (Google drops the largest files first). Google says to download files one by one before Dec 17.</li>
+<li><strong>Some tools.</strong> Canvas, Deep Research, Guided learning and video and music creation don’t work with skills yet.</li>
+</ul>
+<p>Copy each Gem’s name, description and instructions, note its default tool, and download its files. Because a skill is a <code>SKILL.md</code> file, the same copy can also be imported into Gemini later or used elsewhere.</p>
+
+<h2>Method 1 — Export a GPT by hand (free)</h2>
+<p>This works wherever you can open the GPT’s editor. Do it for every GPT you built, starting with the ones other people use.</p>
+<ol>
+<li><strong>Copy the text.</strong> In ChatGPT open <strong>My GPTs</strong>, choose <strong>Edit</strong> on the GPT and open the <strong>Configure</strong> tab. Copy the name, description, instructions and every conversation starter into a <code>README.md</code> in a folder named after the GPT.</li>
+<li><strong>Keep the knowledge files.</strong> Put a copy of each file listed under <strong>Knowledge</strong> in a <code>knowledge/</code> folder. If you no longer have an original, write its name down so you know what to replace.</li>
+<li><strong>Save custom actions.</strong> For each action, save the OpenAPI schema as <code>actions/openapi-1.yaml</code> (or <code>.json</code>) and note the authentication type. Leave out API keys and secrets; you’ll re-enter them wherever you rebuild it.</li>
+<li><strong>Write down what won’t move.</strong> Note the model, which capabilities were on, who it’s shared with, and whether this version is a draft.</li>
+<li><strong>Make a portable version.</strong> Copy the instructions into a <code>SKILL.md</code> with a short <code>name</code> and <code>description</code> header, and into a <code>claude-project.md</code> you can paste into a Claude Project.</li>
+<li><strong>Save a few test questions.</strong> Three to five real questions and answers let you check the copy, or the plugin, behaves the same way.</li>
+</ol>
+<pre><code>my-gpts/
+  course-tutor/
+    README.md           # name, description, instructions, starters, settings
+    SKILL.md            # same instructions as an Agent Skill
+    claude-project.md   # paste into a Claude Project
+    actions/openapi-1.yaml   # no secrets
+    knowledge/          # original files
+    test-questions.md</code></pre>
+
+<h2>Method 2 — Export all your GPTs at once with ChatCairn GPT Rescue (free)</h2>
+<p>ChatCairn 0.4.0 adds a <strong>GPT Rescue</strong> tab that builds the folders above for every Custom GPT and Gem <strong>you created</strong>, in one ZIP on your computer. It reads your GPTs through your signed-in chatgpt.com tab, only when you click; nothing is changed or sent anywhere. Free, no Pro plan needed.</p>
+<ol>
+<li>Install or update <a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=guide_gpt_backup&amp;utm_campaign=gpt_rescue" rel="noopener">ChatCairn</a> and keep a chatgpt.com tab open and signed in.</li>
+<li>Click the ChatCairn icon in your toolbar and choose <strong>Open library</strong> (or the GPT Rescue card), go to the <strong>GPT Rescue</strong> tab and click <strong>Find my GPTs</strong>. It lists only GPTs you own, drafts included, all pre-selected.</li>
+<li>For each Gem, open its edit page in Gemini and click <strong>Save this Gem</strong>. It appears under <strong>Your saved Gems</strong>, ready for the ZIP.</li>
+<li>Click <strong>Download backup (ZIP)</strong>.</li>
+</ol>
+<p><strong>What each folder holds:</strong> <code>README.md</code> (instructions, starters, capabilities, the model or “ChatGPT default” when none is set, voice and memory settings, sharing and draft status, and a warning section for anything that couldn’t be read), <code>SKILL.md</code>, <code>claude-project.md</code>, <code>actions/</code> with each action’s OpenAPI file (secrets removed), <code>knowledge/</code> with the files ChatGPT lets it download (up to 20 MB each and 60 MB per GPT) plus <code>FILES.md</code> listing all of them, the GPT’s avatar, and the raw <code>gpt.json</code> (secrets removed). An <code>INDEX.md</code> lists every folder. Files that are too big or that ChatGPT won’t hand over are listed with download links (they expire after a while), so you can download them yourself.</p>
+<p><strong>Gems are lighter:</strong> GPT Rescue saves a Gem’s name, description, instructions, default tool and the <em>names</em> of its knowledge files, and flags the file types Google says won’t carry over (audio, video, legacy Office, archives and GitHub files). It can’t copy Gem files, so download those from the Gem. One Gem at a time, before Nov 17.</p>
+<pre><code>chatcairn-gpt-rescue-2026-10-25.zip   # named with the day you download it
+  INDEX.md
+  course-tutor/
+    README.md  SKILL.md  claude-project.md  gpt.json  avatar.png
+    actions/openapi-1.json
+    knowledge/FILES.md
+  writing-coach/
+    README.md  SKILL.md  claude-project.md  gem.json
+    knowledge/FILES.md</code></pre>
+
+<h2>Using your copy in Claude or Gemini</h2>
+<ul>
+<li><strong>Claude:</strong> create a Project, paste <code>claude-project.md</code> into the project instructions and upload the files from <code>knowledge/</code>. Claude Projects don’t run GPT Actions; the OpenAPI files are there so you can rebuild them as a connector.</li>
+<li><strong>Gemini:</strong> import <code>SKILL.md</code> as a skill (Gemini can import a skill by uploading its <code>SKILL.md</code>), and add the knowledge files to it.</li>
+<li><strong>ChatGPT:</strong> if you also migrated to a plugin, rerun your test questions on it and use the original instructions to fix any differences.</li>
+</ul>
+
+<div class="cta-card"><div><b>Export your GPTs and Gems with ChatCairn — free</b><span>GPT Rescue is free, no Pro needed. ChatCairn also saves, searches and exports ChatGPT, Claude, Gemini and Grok chats: free for up to 50 saved chats; Pro is on a waitlist (planned $4.99/month or $39 lifetime, as of Oct 2026). 100% local.</span></div><div class="cta-btns"><a class="btn btn-accent" href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=guide_gpt_backup&amp;utm_campaign=gpt_rescue" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Add to Chrome — free</span></a><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=guide_edge_gpt_backup&amp;utm_campaign=gpt_rescue" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge</span></a></div></div>
+<p class="src">ChatCairn isn’t affiliated with OpenAI or Google. Only GPTs and Gems you created are read.</p>
+
+<h2>FAQ</h2>
+<h3>Do I still need a copy if I use Migrate to plugin?</h3>
+<p>Only if you want something the plugin doesn't keep. Migrate to plugin keeps your GPT working inside ChatGPT, using its latest published version. It doesn't carry over custom actions, the selected model, sharing settings, drafts or unpublished edits, and it doesn't give you anything you can open in Claude or Gemini. A copy in your own files covers those cases (as of Oct 2026).</p>
+<h3>Will my old conversations with a Custom GPT disappear on Dec 11, 2026?</h3>
+<p>No. OpenAI's FAQ says existing conversations stay accessible after retirement; the GPT itself and its page become inaccessible (as of Oct 2026).</p>
+<h3>Can I use my Custom GPT in Claude or Gemini?</h3>
+<p>Not directly, but its instructions and files move well. Paste the instructions into a Claude Project and upload the knowledge files, or turn them into a SKILL.md file, which Gemini can import as a skill. Custom actions won't run in a Claude Project; rebuild them as a connector or MCP server.</p>
+<h3>Do Gemini Gems migrate automatically?</h3>
+<p>Yes, partly. For personal Google accounts, Google turns Gems into skills and makes them read-only on Nov 17, 2026, then removes them on Dec 17, 2026. Google says some files won't carry over (audio, video, GitHub, legacy Office and archive files, and anything past 100 MB), and tools like Canvas and Deep Research don't work in skills yet (as of Oct 2026).</p>
+<h3>Can I export a GPT someone else made?</h3>
+<p>No. OpenAI only lets the creator (or a workspace admin) migrate a GPT, and ChatCairn GPT Rescue only reads GPTs and Gems you created.</p>
+<h3>Is ChatCairn GPT Rescue free?</h3>
+<p>Yes. GPT Rescue is free on every ChatCairn plan, no Pro needed, and the backup is built on your computer; nothing is uploaded.</p>
+
+<p class="src">Sources: <a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq">OpenAI Help — Custom GPT retirement and migration FAQ</a>; <a href="https://learn.chatgpt.com/docs/migrate-custom-gpts">ChatGPT Learn — Migrate custom GPTs</a>; <a href="https://help.openai.com/en/articles/8554407-gpts-in-chatgpt">OpenAI Help — GPTs in ChatGPT</a>; <a href="https://support.google.com/gemini/answer/18560919">Gemini Help — About the transition from Gems to skills</a>; <a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/about-the-transition-to-skills">Google Workspace Admin Help — transition to skills</a>. All checked 2026-10-25.</p>
+
+      </div>
+      <aside class="related" aria-labelledby="rel-h"><span class="kicker">More guides</span><h2 id="rel-h">Keep your AI chats useful</h2><div class="rel-grid"><a class="rel" href="/chatcairn/guides/search-old-claude-chats.html"><b>How to Search Old Claude Chats (and ChatGPT, Gemini, Grok)</b><span>Built-in search, tips without an extension, and one local library for all four.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a><a class="rel" href="/chatcairn/guides/export-chatgpt-to-pdf.html"><b>How to Export a ChatGPT Chat to PDF (Free, 2026)</b><span>Print, the official data export, or a designed PDF with code blocks and tables intact.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a><a class="rel" href="/chatcairn/guides/chatgpt-claude-to-obsidian.html"><b>ChatGPT &amp; Claude to Obsidian: Notes and Tasks in Minutes</b><span>Clean Markdown with front-matter, plus highlights as Obsidian Tasks with due dates.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a></div></aside>
+      <a class="back" href="/chatcairn/guides/"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg>All guides</a>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="/chatcairn/"><img src="/chatcairn/logo.png" alt="" width="22" height="22">ChatCairn</a>
+    <nav aria-label="Footer">
+      <a href="/">LGD Ventures</a>
+      <a href="/chatcairn/guides/">Guides</a>
+      <a href="/chatcairn/privacy.html">Privacy</a>
+      <a href="/chatcairn/terms.html">Terms</a>
+      <a href="mailto:lgdventures.hq@gmail.com">Contact</a>
+    </nav>
+    <p class="legal">© 2026 LGD Ventures. ChatCairn is not affiliated with OpenAI, Anthropic, Google or xAI.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
