@@ -7,7 +7,7 @@
    Never put Lemon Squeezy TEST-mode checkout links here: this file is deployed.
    (Test-mode links live only in the extension's src/config.js for local testing.) */
 window.CHATCAIRN = {
-  PRO_LIVE: false,  // GO-LIVE SWITCH: set true on Lemon Squeezy approval day (the only change needed)
+  PRO_LIVE: true,  // GO-LIVE SWITCH: set true on Lemon Squeezy approval day (the only change needed)
   // Live mode, product 1475011 "ChatCairn Pro" (created 2026-10-26). Monthly = variant 2299598, lifetime = variant 2299599.
   CHECKOUT_MONTHLY: 'https://lgdventures.lemonsqueezy.com/checkout/buy/1b97fab7-f3a6-48fd-b31c-47c10ef59b83',
   CHECKOUT_LIFETIME: 'https://lgdventures.lemonsqueezy.com/checkout/buy/ebfcf527-1c24-4d00-8c5e-31269fe0a6c1?enabled=2299599',
