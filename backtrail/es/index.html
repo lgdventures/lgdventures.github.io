@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BackTrail — Todo el historial de Atrás de cada pestaña, incluso tras reiniciar</title>
-<meta name="description" content="Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Nada sale de tu navegador.">
+<meta name="description" content="Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Tu historial nunca sale de tu navegador.">
 <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="BackTrail — Todo el historial de Atrás de cada pestaña, incluso tras reiniciar">
-<meta property="og:description" content="Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Nada sale de tu navegador.">
+<meta property="og:description" content="Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Tu historial nunca sale de tu navegador.">
 <meta property="og:url" content="https://lgdventures.github.io/backtrail/es/">
 <meta property="og:image" content="https://lgdventures.github.io/backtrail/og.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 <meta property="og:image:alt" content="BackTrail: todo el historial de Atrás de cada pestaña, incluso tras reiniciar">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BackTrail — Todo el historial de Atrás de cada pestaña, incluso tras reiniciar">
-<meta name="twitter:description" content="Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Nada sale de tu navegador.">
+<meta name="twitter:description" content="Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Tu historial nunca sale de tu navegador.">
 <meta name="twitter:image" content="https://lgdventures.github.io/backtrail/og.png">
 <meta name="twitter:image:alt" content="BackTrail: todo el historial de Atrás de cada pestaña, incluso tras reiniciar">
 <link rel="icon" href="/backtrail/favicon-32.png" type="image/png" sizes="32x32">
@@ -34,7 +34,7 @@
 <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BackTrail", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome, Microsoft Edge", "description": "Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Nada sale de tu navegador.", "url": "https://lgdventures.github.io/backtrail/es/", "image": "https://lgdventures.github.io/backtrail/logo.png", "inLanguage": "es", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BackTrail", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome, Microsoft Edge", "description": "Extensión gratis para Chrome y Edge: cada pestaña guarda todo su historial de Atrás en el panel lateral, lo recupera al reiniciar el navegador y rescata lo que ya se había perdido. Tu historial nunca sale de tu navegador.", "url": "https://lgdventures.github.io/backtrail/es/", "image": "https://lgdventures.github.io/backtrail/logo.png", "inLanguage": "es", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}}</script>
 <style>
 /* BackTrail page additions on top of the shared design system (tokens only, no new colors). */
 [hidden]{display:none!important}
@@ -56,6 +56,16 @@
 .lang a[aria-current="page"]{color:var(--accent-ink);font-weight:650}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
 @media (max-width:480px){.brand .sub{display:none}}
+.pro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.pro-grid .card{padding:28px}
+.pro-grid h3{margin:0 0 10px;font-size:18px;font-weight:650;letter-spacing:-.015em;color:var(--text)}
+.pro-grid ul{margin:0;padding-left:18px;color:var(--text-2);font-size:15px;line-height:1.7}
+.pro-price{margin:16px 0 0;font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.pro-price small{display:block;font-size:13.5px;font-weight:500;color:var(--muted);letter-spacing:0}
+.pro-cta{margin-top:18px}
+.pro-cta p{margin:10px 0 0;color:var(--text-2);font-size:14px}
+.pro-note{margin:18px 0 0;color:var(--muted);font-size:13.5px;text-align:center}
+@media (max-width:640px){.pro-grid{grid-template-columns:1fr}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}}
 </style>
 <script src="/backtrail/config.js"></script>
@@ -103,10 +113,10 @@
       <div class="section-head reveal">
         <span class="kicker">Funciones</span>
         <h2>¿Qué es BackTrail?</h2>
-        <p>BackTrail es una extensión gratis para Google Chrome y Microsoft Edge que recuerda todo el historial de Atrás de cada pestaña, lo muestra en el panel lateral y lo conserva aunque reinicies el navegador. Guarda solo direcciones, títulos y horas de las páginas, en tu navegador; no envía nada a ningún lado.</p>
+        <p>BackTrail es una extensión gratis para Google Chrome y Microsoft Edge que recuerda todo el historial de Atrás de cada pestaña, lo muestra en el panel lateral y lo conserva aunque reinicies el navegador. Guarda solo direcciones, títulos y horas de las páginas, en tu navegador; tu historial nunca se envía a ningún lado.</p>
         <p>Las horas de lectura detrás de una pestaña ya no desaparecen al reiniciar el navegador.</p>
       </div>
-      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 8 12l7 7"/><circle cx="19" cy="12" r="1.2"/></svg></div><h3>Esta pestaña</h3><p>Por dónde pasaste en la pestaña actual, lo más reciente arriba, con horas. Haz clic en una página para volver; Ctrl/Cmd+clic la abre en otra pestaña.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>A prueba de reinicios</h3><p>Cierras, actualizas o se cuelga: cada pestaña conserva todo su recorrido, unido a la pestaña que vuelve.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Recuperar historial anterior</h3><p>Justo al instalar, las pestañas que ya tenías abiertas recuperan su pasado desde los archivos de historial de tu navegador, leídos en tu computadora.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Revisar</h3><p>Las pestañas con más historial del que guarda el navegador (+N), para terminar lo pendiente antes de cerrar.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Duplicadas</h3><p>Pestañas abiertas en la misma dirección. Deja la de más historial y cierra el resto.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Sitios</h3><p>Las pestañas que usaste desde que abriste el navegador, para un repaso antes de cerrar, o todas tus pestañas por sitio para liberar memoria.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Cerradas</h3><p>Las pestañas que cerraste en los últimos 7 días, con su historial. “Reabrir” la trae de vuelta con su recorrido.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Privado de verdad</h3><p>Sin cuenta, sin servidores, sin analíticas, sin conexiones de red. Lee direcciones y títulos, nunca el contenido de las páginas.</p></article></div>
+      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 8 12l7 7"/><circle cx="19" cy="12" r="1.2"/></svg></div><h3>Esta pestaña</h3><p>Por dónde pasaste en la pestaña actual, lo más reciente arriba, con horas. Haz clic en una página para volver; Ctrl/Cmd+clic la abre en otra pestaña.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>A prueba de reinicios</h3><p>Cierras, actualizas o se cuelga: cada pestaña conserva todo su recorrido, unido a la pestaña que vuelve.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Recuperar historial anterior</h3><p>Justo al instalar, las pestañas que ya tenías abiertas recuperan su pasado desde los archivos de historial de tu navegador, leídos en tu computadora.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Revisar</h3><p>Las pestañas con más historial del que guarda el navegador (+N), para terminar lo pendiente antes de cerrar.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Duplicadas</h3><p>Pestañas abiertas en la misma dirección. Deja la de más historial y cierra el resto.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Sitios</h3><p>Las pestañas que usaste desde que abriste el navegador, para un repaso antes de cerrar, o todas tus pestañas por sitio para liberar memoria.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Cerradas</h3><p>Las pestañas que cerraste en los últimos 7 días (90 con Pro), con su historial. “Reabrir” la trae de vuelta con su recorrido.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Privado de verdad</h3><p>Sin cuenta, sin analíticas, y tu historial nunca sale de tu navegador. Lee direcciones y títulos, nunca el contenido de las páginas.</p></article></div>
     </div>
   </section>
 
@@ -121,10 +131,26 @@
 
   <hr class="divider">
 
+  <section class="section" id="pro">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="kicker">Pro</span><h2>BackTrail Pro</h2><p>BackTrail sigue siendo gratis. Pro es una mejora opcional de pago único para cuando quieres recuperar todo, siempre.</p></div>
+      <div class="pro-grid">
+        <article class="card reveal"><h3>Gratis</h3><ul><li>Historial Atrás en vivo de cada pestaña, sin límite</li><li>Revisar, Duplicadas y Sitios</li><li>El escaneo completo de “Recuperar historial anterior” y la recuperación de 3 pestañas</li><li>3 cierres masivos por día</li><li>Pestañas cerradas guardadas 7 días</li></ul><p class="pro-price">USD 0</p></article>
+        <article class="card reveal"><h3>BackTrail Pro</h3><ul><li>Recupera el historial anterior de todas tus pestañas</li><li>Y de nuevo tras cada reinicio o cuelgue</li><li>Cierres masivos en Sitios y Duplicadas sin límite diario</li><li>Pestañas cerradas guardadas 90 días, con su historial</li><li>Una clave de licencia, hasta 3 navegadores</li></ul><p class="pro-price">USD 15<small>pago único · sin suscripción · hasta 3 navegadores</small></p>
+          <div class="pro-cta">
+            <p data-pro="soon"><strong>BackTrail Pro: muy pronto.</strong> Instala ya la versión gratis; Pro se activa en la misma extensión con una clave de licencia.</p>
+            <div data-pro="buy" hidden><a class="btn btn-accent" href="#pro" rel="noopener" data-pro-checkout>Comprar BackTrail Pro — USD 15</a><p>Pago seguro con Lemon Squeezy, nuestro vendedor oficial (merchant of record). La clave de licencia llega por email: abre BackTrail, haz clic en “Pro” abajo y pégala. Reembolso a pedido durante 14 días.</p></div>
+          </div>
+        </article>
+      </div>
+      <p class="pro-note reveal">Solo la clave de licencia sale a la red (a Lemon Squeezy, para activarla y una vez por semana para verificarla). Tu historial nunca sale de tu navegador.</p>
+    </div>
+  </section>
+
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head reveal"><span class="kicker">Preguntas</span><h2>Preguntas frecuentes.</h2></div>
-      <div class="faq"><article class="card reveal"><h3>¿En qué navegadores funciona?</h3><p>Google Chrome y Microsoft Edge en escritorio. BackTrail llega pronto a Chrome Web Store y Edge Add-ons: <a href="mailto:lgdventures.hq@gmail.com?subject=BackTrail%20lanzamiento%20%5Bsitio-es%5D&amp;body=Av%C3%ADsenme%20cuando%20BackTrail%20est%C3%A9%20en%20Chrome%20Web%20Store%20o%20Edge%20Add-ons.">recibe un email cuando esté disponible</a>.</p></article><article class="card reveal"><h3>¿BackTrail ve lo que leo?</h3><p>No. Guarda la dirección, el título y la hora de las páginas que abres en cada pestaña, solo en tu navegador, y nunca lee el contenido de las páginas. No hace conexiones de red. Mira la <a href="/backtrail/es/privacy.html">política de privacidad</a>.</p></article><article class="card reveal"><h3>¿Por qué mi navegador olvida el historial de Atrás?</h3><p>Cuando Chrome restaura las pestañas tras un reinicio, guarda solo las últimas 6 páginas de Atrás de cada una. BackTrail las guarda todas y las muestra en el panel lateral.</p></article><article class="card reveal"><h3>¿Qué hace “Recuperar historial anterior”?</h3><p>Justo al instalar, reconstruye el pasado de las pestañas que ya estaban abiertas desde el historial de tu navegador y, si los eliges, sus archivos History y de sesión. Se leen dentro de la extensión, en tu computadora, y nunca salen de ella.</p></article><article class="card reveal"><h3>¿Cuánto tiempo se guardan las pestañas cerradas?</h3><p>7 días; después se borran solas. Puedes borrar cualquiera antes desde el panel.</p></article><article class="card reveal"><h3>¿Es gratis?</h3><p>Sí. Sin cuenta y sin anuncios. Al desinstalarla se borra todo lo que guardó.</p></article></div>
+      <div class="faq"><article class="card reveal"><h3>¿En qué navegadores funciona?</h3><p>Google Chrome y Microsoft Edge en escritorio. BackTrail llega pronto a Chrome Web Store y Edge Add-ons: <a href="mailto:lgdventures.hq@gmail.com?subject=BackTrail%20lanzamiento%20%5Bsitio-es%5D&amp;body=Av%C3%ADsenme%20cuando%20BackTrail%20est%C3%A9%20en%20Chrome%20Web%20Store%20o%20Edge%20Add-ons.">recibe un email cuando esté disponible</a>.</p></article><article class="card reveal"><h3>¿BackTrail ve lo que leo?</h3><p>No. Guarda la dirección, el título y la hora de las páginas que abres en cada pestaña, solo en tu navegador, y nunca lee el contenido de las páginas. Tu historial nunca se envía a ningún lado. Mira la <a href="/backtrail/es/privacy.html">política de privacidad</a>.</p></article><article class="card reveal"><h3>¿Por qué mi navegador olvida el historial de Atrás?</h3><p>Cuando Chrome restaura las pestañas tras un reinicio, guarda solo las últimas 6 páginas de Atrás de cada una. BackTrail las guarda todas y las muestra en el panel lateral.</p></article><article class="card reveal"><h3>¿Qué hace “Recuperar historial anterior”?</h3><p>Justo al instalar, reconstruye el pasado de las pestañas que ya estaban abiertas desde el historial de tu navegador y, si los eliges, sus archivos History y de sesión. Se leen dentro de la extensión, en tu computadora, y nunca salen de ella.</p></article><article class="card reveal"><h3>¿Cuánto tiempo se guardan las pestañas cerradas?</h3><p>7 días (90 con BackTrail Pro); después se borran solas. Puedes borrar cualquiera antes desde el panel.</p></article><article class="card reveal"><h3>¿Es gratis?</h3><p>Sí, y sigue siéndolo: historial de Atrás en vivo de cada pestaña, Revisar, Duplicadas, Sitios, Cerradas, el escaneo completo de recuperación y la recuperación de 3 pestañas. Sin cuenta y sin anuncios. <strong>BackTrail Pro</strong> (USD 15, pago único, hasta 3 navegadores) recupera todas las pestañas, también tras cada reinicio o cierre inesperado, cierra pestañas en bloque sin límite diario y guarda Cerradas 90 días.</p></article></div>
     </div>
   </section>
 
@@ -167,6 +193,16 @@
     if (u) { a.href = u; a.hidden = false; any = true; }
   });
   if (any) document.querySelectorAll('[data-waitlist]').forEach(function (x) { x.hidden = true; });
+})();
+</script>
+<script>
+/* BackTrail Pro (#pro) comes only from /backtrail/config.js: PRO_AVAILABLE false = "coming very soon", no buy button. */
+(function () {
+  var C = window.BACKTRAIL || {};
+  var on = C.PRO_AVAILABLE === true && /^https:\/\/lgdventures\.lemonsqueezy\.com\/checkout\/buy\//.test(C.PRO_CHECKOUT_URL || '');
+  document.querySelectorAll('[data-pro="buy"]').forEach(function (x) { x.hidden = !on; });
+  document.querySelectorAll('[data-pro="soon"]').forEach(function (x) { x.hidden = on; });
+  if (on) document.querySelectorAll('[data-pro-checkout]').forEach(function (a) { a.href = C.PRO_CHECKOUT_URL; });
 })();
 </script>
 <script src="/assets/site.js" defer></script>

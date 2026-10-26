@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BackTrail — Todo o histórico de Voltar de cada aba, mesmo depois de reiniciar</title>
-<meta name="description" content="Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Nada sai do seu navegador.">
+<meta name="description" content="Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Seu histórico nunca sai do navegador.">
 <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="BackTrail — Todo o histórico de Voltar de cada aba, mesmo depois de reiniciar">
-<meta property="og:description" content="Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Nada sai do seu navegador.">
+<meta property="og:description" content="Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Seu histórico nunca sai do navegador.">
 <meta property="og:url" content="https://lgdventures.github.io/backtrail/pt/">
 <meta property="og:image" content="https://lgdventures.github.io/backtrail/og.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 <meta property="og:image:alt" content="BackTrail: todo o histórico de Voltar de cada aba, mesmo depois de reiniciar">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BackTrail — Todo o histórico de Voltar de cada aba, mesmo depois de reiniciar">
-<meta name="twitter:description" content="Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Nada sai do seu navegador.">
+<meta name="twitter:description" content="Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Seu histórico nunca sai do navegador.">
 <meta name="twitter:image" content="https://lgdventures.github.io/backtrail/og.png">
 <meta name="twitter:image:alt" content="BackTrail: todo o histórico de Voltar de cada aba, mesmo depois de reiniciar">
 <link rel="icon" href="/backtrail/favicon-32.png" type="image/png" sizes="32x32">
@@ -34,7 +34,7 @@
 <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BackTrail", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome, Microsoft Edge", "description": "Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Nada sai do seu navegador.", "url": "https://lgdventures.github.io/backtrail/pt/", "image": "https://lgdventures.github.io/backtrail/logo.png", "inLanguage": "pt-BR", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BackTrail", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome, Microsoft Edge", "description": "Extensão grátis para Chrome e Edge: cada aba guarda todo o histórico de Voltar no painel lateral, recupera esse histórico quando o navegador reinicia e resgata o que já tinha sido perdido. Seu histórico nunca sai do navegador.", "url": "https://lgdventures.github.io/backtrail/pt/", "image": "https://lgdventures.github.io/backtrail/logo.png", "inLanguage": "pt-BR", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}}</script>
 <style>
 /* BackTrail page additions on top of the shared design system (tokens only, no new colors). */
 [hidden]{display:none!important}
@@ -56,6 +56,16 @@
 .lang a[aria-current="page"]{color:var(--accent-ink);font-weight:650}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
 @media (max-width:480px){.brand .sub{display:none}}
+.pro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.pro-grid .card{padding:28px}
+.pro-grid h3{margin:0 0 10px;font-size:18px;font-weight:650;letter-spacing:-.015em;color:var(--text)}
+.pro-grid ul{margin:0;padding-left:18px;color:var(--text-2);font-size:15px;line-height:1.7}
+.pro-price{margin:16px 0 0;font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.pro-price small{display:block;font-size:13.5px;font-weight:500;color:var(--muted);letter-spacing:0}
+.pro-cta{margin-top:18px}
+.pro-cta p{margin:10px 0 0;color:var(--text-2);font-size:14px}
+.pro-note{margin:18px 0 0;color:var(--muted);font-size:13.5px;text-align:center}
+@media (max-width:640px){.pro-grid{grid-template-columns:1fr}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}}
 </style>
 <script src="/backtrail/config.js"></script>
@@ -103,10 +113,10 @@
       <div class="section-head reveal">
         <span class="kicker">Recursos</span>
         <h2>O que é o BackTrail?</h2>
-        <p>O BackTrail é uma extensão grátis para Google Chrome e Microsoft Edge que lembra todo o histórico de Voltar de cada aba, mostra no painel lateral e mantém mesmo quando você reinicia o navegador. Guarda só endereços, títulos e horários das páginas, no seu navegador; nada é enviado a lugar nenhum.</p>
+        <p>O BackTrail é uma extensão grátis para Google Chrome e Microsoft Edge que lembra todo o histórico de Voltar de cada aba, mostra no painel lateral e mantém mesmo quando você reinicia o navegador. Guarda só endereços, títulos e horários das páginas, no seu navegador; seu histórico nunca é enviado a lugar nenhum.</p>
         <p>Horas de leitura atrás de uma aba não somem mais quando o navegador reinicia.</p>
       </div>
-      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 8 12l7 7"/><circle cx="19" cy="12" r="1.2"/></svg></div><h3>Esta aba</h3><p>Por onde você passou na aba atual, mais recente no topo, com horários. Clique numa página para voltar; Ctrl/Cmd+clique abre em outra aba.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Resiste a reinícios</h3><p>Fechou, atualizou ou travou: cada aba mantém todo o caminho, ligado à aba que volta.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Recuperar histórico anterior</h3><p>Logo ao instalar, as abas que você já tinha abertas recuperam o passado a partir dos arquivos de histórico do navegador, lidos no seu computador.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Revisar</h3><p>As abas com mais histórico do que o navegador guarda (+N), para terminar o que está pendente antes de fechar.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Duplicadas</h3><p>Abas abertas no mesmo endereço. Fique com a de mais histórico e feche as outras.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Sites</h3><p>As abas que você usou desde que abriu o navegador, para uma revisão antes de fechar, ou todas as abas por site para liberar memória.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Fechadas</h3><p>As abas que você fechou nos últimos 7 dias, com o histórico. “Reabrir” traz a aba de volta com o caminho.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Privado de verdade</h3><p>Sem conta, sem servidores, sem análises, sem conexões de rede. Lê endereços e títulos, nunca o conteúdo das páginas.</p></article></div>
+      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 8 12l7 7"/><circle cx="19" cy="12" r="1.2"/></svg></div><h3>Esta aba</h3><p>Por onde você passou na aba atual, mais recente no topo, com horários. Clique numa página para voltar; Ctrl/Cmd+clique abre em outra aba.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Resiste a reinícios</h3><p>Fechou, atualizou ou travou: cada aba mantém todo o caminho, ligado à aba que volta.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Recuperar histórico anterior</h3><p>Logo ao instalar, as abas que você já tinha abertas recuperam o passado a partir dos arquivos de histórico do navegador, lidos no seu computador.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Revisar</h3><p>As abas com mais histórico do que o navegador guarda (+N), para terminar o que está pendente antes de fechar.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Duplicadas</h3><p>Abas abertas no mesmo endereço. Fique com a de mais histórico e feche as outras.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Sites</h3><p>As abas que você usou desde que abriu o navegador, para uma revisão antes de fechar, ou todas as abas por site para liberar memória.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Fechadas</h3><p>As abas que você fechou nos últimos 7 dias (90 com Pro), com o histórico. “Reabrir” traz a aba de volta com o caminho.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Privado de verdade</h3><p>Sem conta, sem análises, e seu histórico nunca sai do navegador. Lê endereços e títulos, nunca o conteúdo das páginas.</p></article></div>
     </div>
   </section>
 
@@ -121,10 +131,26 @@
 
   <hr class="divider">
 
+  <section class="section" id="pro">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="kicker">Pro</span><h2>BackTrail Pro</h2><p>O BackTrail continua grátis. O Pro é um upgrade opcional de pagamento único para quando você quer tudo de volta, sempre.</p></div>
+      <div class="pro-grid">
+        <article class="card reveal"><h3>Grátis</h3><ul><li>Histórico Voltar ao vivo de cada aba, sem limite</li><li>Revisar, Duplicadas e Sites</li><li>A verificação completa de “Recuperar histórico anterior” e a recuperação de 3 abas</li><li>3 fechamentos em massa por dia</li><li>Abas fechadas guardadas por 7 dias</li></ul><p class="pro-price">USD 0</p></article>
+        <article class="card reveal"><h3>BackTrail Pro</h3><ul><li>Recupere o histórico anterior de todas as suas abas</li><li>De novo após qualquer reinício ou travamento</li><li>Fechamento em massa em Sites e Duplicadas sem limite diário</li><li>Abas fechadas guardadas por 90 dias, com o histórico</li><li>Uma chave de licença, até 3 navegadores</li></ul><p class="pro-price">USD 15<small>pagamento único · sem assinatura · até 3 navegadores</small></p>
+          <div class="pro-cta">
+            <p data-pro="soon"><strong>BackTrail Pro: em breve.</strong> Instale já a versão grátis; o Pro é ativado na mesma extensão com uma chave de licença.</p>
+            <div data-pro="buy" hidden><a class="btn btn-accent" href="#pro" rel="noopener" data-pro-checkout>Comprar o BackTrail Pro — USD 15</a><p>Pagamento seguro pela Lemon Squeezy, nossa revendedora oficial (merchant of record). A chave de licença chega por e-mail: abra o BackTrail, clique em “Pro” embaixo e cole a chave. Reembolso a pedido em até 14 dias.</p></div>
+          </div>
+        </article>
+      </div>
+      <p class="pro-note reveal">Só a chave de licença vai pela rede (para a Lemon Squeezy, para ativá-la e cerca de uma vez por semana para verificá-la). Seu histórico nunca sai do seu navegador.</p>
+    </div>
+  </section>
+
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head reveal"><span class="kicker">Perguntas</span><h2>Perguntas frequentes.</h2></div>
-      <div class="faq"><article class="card reveal"><h3>Em quais navegadores funciona?</h3><p>Google Chrome e Microsoft Edge no desktop. O BackTrail chega em breve à Chrome Web Store e ao Edge Add-ons: <a href="mailto:lgdventures.hq@gmail.com?subject=BackTrail%20lan%C3%A7amento%20%5Bsite-pt%5D&amp;body=Me%20avisem%20quando%20o%20BackTrail%20estiver%20na%20Chrome%20Web%20Store%20ou%20no%20Edge%20Add-ons.">receba um email quando sair</a>.</p></article><article class="card reveal"><h3>O BackTrail vê o que eu leio?</h3><p>Não. Ele guarda o endereço, o título e o horário das páginas que você abre em cada aba, só no seu navegador, e nunca lê o conteúdo das páginas. Não faz conexões de rede. Veja a <a href="/backtrail/pt/privacy.html">política de privacidade</a>.</p></article><article class="card reveal"><h3>Por que o navegador esquece o histórico de Voltar?</h3><p>Quando o Chrome restaura as abas depois de reiniciar, guarda só as últimas 6 páginas de Voltar de cada uma. O BackTrail guarda todas e mostra no painel lateral.</p></article><article class="card reveal"><h3>O que faz “Recuperar histórico anterior”?</h3><p>Logo ao instalar, reconstrói o passado das abas que já estavam abertas a partir do histórico do navegador e, se você escolher, dos arquivos History e de sessão. Eles são lidos dentro da extensão, no seu computador, e nunca saem dele.</p></article><article class="card reveal"><h3>Por quanto tempo as abas fechadas ficam guardadas?</h3><p>7 dias; depois são apagadas automaticamente. Você pode apagar qualquer uma antes pelo painel.</p></article><article class="card reveal"><h3>É grátis?</h3><p>Sim. Sem conta e sem anúncios. Desinstalar apaga tudo o que ele guardou.</p></article></div>
+      <div class="faq"><article class="card reveal"><h3>Em quais navegadores funciona?</h3><p>Google Chrome e Microsoft Edge no desktop. O BackTrail chega em breve à Chrome Web Store e ao Edge Add-ons: <a href="mailto:lgdventures.hq@gmail.com?subject=BackTrail%20lan%C3%A7amento%20%5Bsite-pt%5D&amp;body=Me%20avisem%20quando%20o%20BackTrail%20estiver%20na%20Chrome%20Web%20Store%20ou%20no%20Edge%20Add-ons.">receba um email quando sair</a>.</p></article><article class="card reveal"><h3>O BackTrail vê o que eu leio?</h3><p>Não. Ele guarda o endereço, o título e o horário das páginas que você abre em cada aba, só no seu navegador, e nunca lê o conteúdo das páginas. Seu histórico nunca é enviado a lugar nenhum. Veja a <a href="/backtrail/pt/privacy.html">política de privacidade</a>.</p></article><article class="card reveal"><h3>Por que o navegador esquece o histórico de Voltar?</h3><p>Quando o Chrome restaura as abas depois de reiniciar, guarda só as últimas 6 páginas de Voltar de cada uma. O BackTrail guarda todas e mostra no painel lateral.</p></article><article class="card reveal"><h3>O que faz “Recuperar histórico anterior”?</h3><p>Logo ao instalar, reconstrói o passado das abas que já estavam abertas a partir do histórico do navegador e, se você escolher, dos arquivos History e de sessão. Eles são lidos dentro da extensão, no seu computador, e nunca saem dele.</p></article><article class="card reveal"><h3>Por quanto tempo as abas fechadas ficam guardadas?</h3><p>7 dias (90 com o BackTrail Pro); depois são apagadas automaticamente. Você pode apagar qualquer uma antes pelo painel.</p></article><article class="card reveal"><h3>É grátis?</h3><p>Sim, e continua grátis: histórico de Voltar ao vivo de cada aba, Revisar, Duplicadas, Sites, Fechadas, a verificação completa de recuperação e a recuperação de 3 abas. Sem conta e sem anúncios. O <strong>BackTrail Pro</strong> (USD 15, pagamento único, até 3 navegadores) recupera todas as abas, também depois de cada reinício ou travamento, fecha abas em massa sem limite diário e guarda as Fechadas por 90 dias.</p></article></div>
     </div>
   </section>
 
@@ -167,6 +193,16 @@
     if (u) { a.href = u; a.hidden = false; any = true; }
   });
   if (any) document.querySelectorAll('[data-waitlist]').forEach(function (x) { x.hidden = true; });
+})();
+</script>
+<script>
+/* BackTrail Pro (#pro) comes only from /backtrail/config.js: PRO_AVAILABLE false = "coming very soon", no buy button. */
+(function () {
+  var C = window.BACKTRAIL || {};
+  var on = C.PRO_AVAILABLE === true && /^https:\/\/lgdventures\.lemonsqueezy\.com\/checkout\/buy\//.test(C.PRO_CHECKOUT_URL || '');
+  document.querySelectorAll('[data-pro="buy"]').forEach(function (x) { x.hidden = !on; });
+  document.querySelectorAll('[data-pro="soon"]').forEach(function (x) { x.hidden = on; });
+  if (on) document.querySelectorAll('[data-pro-checkout]').forEach(function (a) { a.href = C.PRO_CHECKOUT_URL; });
 })();
 </script>
 <script src="/assets/site.js" defer></script>

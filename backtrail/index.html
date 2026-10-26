@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BackTrail — Every tab’s full Back history, even after a restart</title>
-<meta name="description" content="Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Nothing leaves your browser.">
+<meta name="description" content="Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Your history never leaves your browser.">
 <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="BackTrail — Every tab’s full Back history, even after a restart">
-<meta property="og:description" content="Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Nothing leaves your browser.">
+<meta property="og:description" content="Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Your history never leaves your browser.">
 <meta property="og:url" content="https://lgdventures.github.io/backtrail/">
 <meta property="og:image" content="https://lgdventures.github.io/backtrail/og.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 <meta property="og:image:alt" content="BackTrail: every tab’s full Back history, even after a restart">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BackTrail — Every tab’s full Back history, even after a restart">
-<meta name="twitter:description" content="Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Nothing leaves your browser.">
+<meta name="twitter:description" content="Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Your history never leaves your browser.">
 <meta name="twitter:image" content="https://lgdventures.github.io/backtrail/og.png">
 <meta name="twitter:image:alt" content="BackTrail: every tab’s full Back history, even after a restart">
 <link rel="icon" href="/backtrail/favicon-32.png" type="image/png" sizes="32x32">
@@ -34,7 +34,7 @@
 <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BackTrail", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome, Microsoft Edge", "description": "Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Nothing leaves your browser.", "url": "https://lgdventures.github.io/backtrail/", "image": "https://lgdventures.github.io/backtrail/logo.png", "inLanguage": "en", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BackTrail", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome, Microsoft Edge", "description": "Free Chrome and Edge extension: every tab keeps its full Back history in the side panel, gets it back after the browser restarts, and recovers what was already lost. Your history never leaves your browser.", "url": "https://lgdventures.github.io/backtrail/", "image": "https://lgdventures.github.io/backtrail/logo.png", "inLanguage": "en", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LGD Ventures", "url": "https://lgdventures.github.io/", "email": "lgdventures.hq@gmail.com"}}</script>
 <style>
 /* BackTrail page additions on top of the shared design system (tokens only, no new colors). */
 [hidden]{display:none!important}
@@ -56,6 +56,16 @@
 .lang a[aria-current="page"]{color:var(--accent-ink);font-weight:650}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
 @media (max-width:480px){.brand .sub{display:none}}
+.pro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.pro-grid .card{padding:28px}
+.pro-grid h3{margin:0 0 10px;font-size:18px;font-weight:650;letter-spacing:-.015em;color:var(--text)}
+.pro-grid ul{margin:0;padding-left:18px;color:var(--text-2);font-size:15px;line-height:1.7}
+.pro-price{margin:16px 0 0;font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.pro-price small{display:block;font-size:13.5px;font-weight:500;color:var(--muted);letter-spacing:0}
+.pro-cta{margin-top:18px}
+.pro-cta p{margin:10px 0 0;color:var(--text-2);font-size:14px}
+.pro-note{margin:18px 0 0;color:var(--muted);font-size:13.5px;text-align:center}
+@media (max-width:640px){.pro-grid{grid-template-columns:1fr}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}}
 </style>
 <script src="/backtrail/config.js"></script>
@@ -103,10 +113,10 @@
       <div class="section-head reveal">
         <span class="kicker">Features</span>
         <h2>What is BackTrail?</h2>
-        <p>BackTrail is a free browser extension for Google Chrome and Microsoft Edge that remembers the full Back history of every tab, shows it in the side panel and keeps it across browser restarts. It stores only page addresses, titles and times, in your browser; nothing is sent anywhere.</p>
+        <p>BackTrail is a free browser extension for Google Chrome and Microsoft Edge that remembers the full Back history of every tab, shows it in the side panel and keeps it across browser restarts. It stores only page addresses, titles and times, in your browser; your history is never sent anywhere.</p>
         <p>Hours of reading behind a tab no longer disappear when the browser restarts.</p>
       </div>
-      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 8 12l7 7"/><circle cx="19" cy="12" r="1.2"/></svg></div><h3>This tab</h3><p>Where you’ve been in the current tab, newest first, with times. Click any page to go back to it; Ctrl/Cmd-click opens it in a new tab.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Survives restarts</h3><p>Quit, update or crash: each tab keeps its whole trail, matched to the tab that comes back.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Recover earlier history</h3><p>Right after install, tabs you already had open get their past back from your browser’s own history files, read on your computer.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Review</h3><p>Tabs with more Back history than the browser keeps (shown as +N), so you can finish what’s pending before you quit.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Duplicates</h3><p>Tabs open on the same address. Keep the one with the most history and close the rest.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Sites</h3><p>The tabs you used since you opened the browser, for a quick pass before quitting, or every open tab by site to free memory.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Closed</h3><p>Tabs you closed in the last 7 days, with their history. Reopen brings the tab back with its trail.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Private by design</h3><p>No account, no servers, no analytics, no network requests. Reads addresses and titles, never page content.</p></article></div>
+      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 8 12l7 7"/><circle cx="19" cy="12" r="1.2"/></svg></div><h3>This tab</h3><p>Where you’ve been in the current tab, newest first, with times. Click any page to go back to it; Ctrl/Cmd-click opens it in a new tab.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Survives restarts</h3><p>Quit, update or crash: each tab keeps its whole trail, matched to the tab that comes back.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Recover earlier history</h3><p>Right after install, tabs you already had open get their past back from your browser’s own history files, read on your computer.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Review</h3><p>Tabs with more Back history than the browser keeps (shown as +N), so you can finish what’s pending before you quit.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Duplicates</h3><p>Tabs open on the same address. Keep the one with the most history and close the rest.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Sites</h3><p>The tabs you used since you opened the browser, for a quick pass before quitting, or every open tab by site to free memory.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Closed</h3><p>Tabs you closed in the last 7 days (90 with Pro), with their history. Reopen brings the tab back with its trail.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Private by design</h3><p>No account, no analytics, and your history never leaves your browser. Reads addresses and titles, never page content.</p></article></div>
     </div>
   </section>
 
@@ -121,10 +131,26 @@
 
   <hr class="divider">
 
+  <section class="section" id="pro">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="kicker">Pro</span><h2>BackTrail Pro</h2><p>BackTrail stays free. Pro is an optional one-time upgrade for when you want everything back, every time.</p></div>
+      <div class="pro-grid">
+        <article class="card reveal"><h3>Free</h3><ul><li>Live Back history for every tab, no limit</li><li>Review, Duplicates and Sites</li><li>Full “Recover earlier history” scan, and recovery of 3 tabs</li><li>3 bulk closes a day</li><li>Closed tabs kept 7 days</li></ul><p class="pro-price">USD 0</p></article>
+        <article class="card reveal"><h3>BackTrail Pro</h3><ul><li>Recover the earlier history of all your tabs</li><li>Again after any restart or crash</li><li>Bulk close in Sites and Duplicates without a daily limit</li><li>Closed tabs kept 90 days, with their history</li><li>One license key, up to 3 browsers</li></ul><p class="pro-price">USD 15<small>one-time payment · no subscription · up to 3 browsers</small></p>
+          <div class="pro-cta">
+            <p data-pro="soon"><strong>BackTrail Pro: coming very soon.</strong> Install the free version now; Pro unlocks in the same extension with a license key.</p>
+            <div data-pro="buy" hidden><a class="btn btn-accent" href="#pro" rel="noopener" data-pro-checkout>Buy BackTrail Pro — USD 15</a><p>Secure checkout by Lemon Squeezy, our merchant of record. Your license key arrives by email: open BackTrail, click “Pro” at the bottom and paste it. 14-day refund on request.</p></div>
+          </div>
+        </article>
+      </div>
+      <p class="pro-note reveal">Only the license key goes over the network (to Lemon Squeezy, to activate it and about once a week to check it). Your history never leaves your browser.</p>
+    </div>
+  </section>
+
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
-      <div class="faq"><article class="card reveal"><h3>Which browsers does it work in?</h3><p>Google Chrome and Microsoft Edge on desktop. BackTrail is coming soon to the Chrome Web Store and Edge Add-ons: <a href="mailto:lgdventures.hq@gmail.com?subject=BackTrail%20launch%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20BackTrail%20is%20on%20the%20Chrome%20Web%20Store%20or%20Edge%20Add-ons.">get one email when it’s live</a>.</p></article><article class="card reveal"><h3>Does BackTrail see what I read?</h3><p>No. It stores the address, title and time of the pages you open in each tab, only in your browser, and never reads page content. It makes no network requests. See the <a href="/backtrail/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>Why does my browser forget my Back history?</h3><p>When Chrome restores tabs after a restart, it keeps only the last 6 Back pages of each tab. BackTrail keeps all of them and shows them in the side panel.</p></article><article class="card reveal"><h3>What does “Recover earlier history” do?</h3><p>Right after install, it rebuilds the past of tabs that were already open from your browser’s own history, and, if you choose them, its History and session files. They are read inside the extension, on your computer, and never leave it.</p></article><article class="card reveal"><h3>How long are closed tabs kept?</h3><p>7 days, then they are deleted automatically. You can delete any of them earlier from the panel.</p></article><article class="card reveal"><h3>Is it free?</h3><p>Yes. No account and no ads. Uninstalling it deletes everything it stored.</p></article></div>
+      <div class="faq"><article class="card reveal"><h3>Which browsers does it work in?</h3><p>Google Chrome and Microsoft Edge on desktop. BackTrail is coming soon to the Chrome Web Store and Edge Add-ons: <a href="mailto:lgdventures.hq@gmail.com?subject=BackTrail%20launch%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20BackTrail%20is%20on%20the%20Chrome%20Web%20Store%20or%20Edge%20Add-ons.">get one email when it’s live</a>.</p></article><article class="card reveal"><h3>Does BackTrail see what I read?</h3><p>No. It stores the address, title and time of the pages you open in each tab, only in your browser, and never reads page content. Your history is never sent anywhere. See the <a href="/backtrail/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>Why does my browser forget my Back history?</h3><p>When Chrome restores tabs after a restart, it keeps only the last 6 Back pages of each tab. BackTrail keeps all of them and shows them in the side panel.</p></article><article class="card reveal"><h3>What does “Recover earlier history” do?</h3><p>Right after install, it rebuilds the past of tabs that were already open from your browser’s own history, and, if you choose them, its History and session files. They are read inside the extension, on your computer, and never leave it.</p></article><article class="card reveal"><h3>How long are closed tabs kept?</h3><p>7 days (90 with BackTrail Pro), then they are deleted automatically. You can delete any of them earlier from the panel.</p></article><article class="card reveal"><h3>Is it free?</h3><p>Yes, and it stays free: live Back history for every tab, Review, Duplicates, Sites, Closed, the full recovery scan and recovery of 3 tabs. No account and no ads. <strong>BackTrail Pro</strong> (USD 15, one-time payment, up to 3 browsers) recovers all tabs, again after any restart or crash, closes tabs in bulk without a daily limit and keeps Closed 90 days.</p></article></div>
     </div>
   </section>
 
@@ -167,6 +193,16 @@
     if (u) { a.href = u; a.hidden = false; any = true; }
   });
   if (any) document.querySelectorAll('[data-waitlist]').forEach(function (x) { x.hidden = true; });
+})();
+</script>
+<script>
+/* BackTrail Pro (#pro) comes only from /backtrail/config.js: PRO_AVAILABLE false = "coming very soon", no buy button. */
+(function () {
+  var C = window.BACKTRAIL || {};
+  var on = C.PRO_AVAILABLE === true && /^https:\/\/lgdventures\.lemonsqueezy\.com\/checkout\/buy\//.test(C.PRO_CHECKOUT_URL || '');
+  document.querySelectorAll('[data-pro="buy"]').forEach(function (x) { x.hidden = !on; });
+  document.querySelectorAll('[data-pro="soon"]').forEach(function (x) { x.hidden = on; });
+  if (on) document.querySelectorAll('[data-pro-checkout]').forEach(function (a) { a.href = C.PRO_CHECKOUT_URL; });
 })();
 </script>
 <script src="/assets/site.js" defer></script>
