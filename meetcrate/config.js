@@ -4,6 +4,6 @@
 window.MEETCRATE = {
   CHECKOUT_LIFETIME: 'https://lgdventures.lemonsqueezy.com/checkout/buy/ab15c028-0777-4bc6-b28c-db1e52b117d4',  // live-mode Lemon Squeezy checkout URL, MeetCrate Pro ($29 one-time)
   PRICE_LIFETIME: '$29',
-  STORE_URL: '',          // Chrome Web Store listing URL once published (T-072); Chrome is "coming soon" until then
+  STORE_URL: 'https://chromewebstore.google.com/detail/adpkgbamjibcfecamldpopjpgbhgjchh',  // Chrome Web Store listing, live since 2026-10-27
   STORE_URL_EDGE: 'https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj'  // live since 2026-10-19
 };
