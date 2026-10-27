@@ -1,5 +1,5 @@
 /* MeetCrate page: the ONLY place the site reads store/checkout links from.
-   Empty CHECKOUT_LIFETIME = "Join the Pro waitlist". Store install links are static in index.html (per-placement UTM, rendered by scripts/site_gen.py).
+   The Pro buy link is also rendered as a static href in index.html (scripts/site_gen.py). Store install links are static in index.html (per-placement UTM, rendered by scripts/site_gen.py).
    Never put Lemon Squeezy TEST-mode checkout links here: this file is deployed. */
 window.MEETCRATE = {
   CHECKOUT_LIFETIME: 'https://lgdventures.lemonsqueezy.com/checkout/buy/ab15c028-0777-4bc6-b28c-db1e52b117d4',  // live-mode Lemon Squeezy checkout URL, MeetCrate Pro ($29 one-time)

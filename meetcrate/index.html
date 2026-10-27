@@ -70,7 +70,7 @@
 .installnote a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .plan .installnote{margin:2px 0 0;text-align:center}
 #safe-browsing{scroll-margin-top:96px}
-/* narrow screens: Pro (with the waitlist button) first, so a #pricing landing shows it without scrolling */
+/* narrow screens: Pro (with the buy button) first, so a #pricing landing shows it without scrolling */
 @media (max-width:640px){.plans .plan.pro{order:-1}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
 </style>
@@ -160,16 +160,12 @@
           <div class="btns"><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/cloojflpimbjgnfhohjmiblmgkmfggcj?utm_source=site&amp;utm_medium=meetcrate_pricing&amp;utm_campaign=edge_launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge — free</span></a><p class="chrome-note">Chrome: coming soon. <a href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20for%20Chrome%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20MeetCrate%20is%20on%20the%20Chrome%20Web%20Store.">Get one email when it’s live</a></p></div>
         </article>
         <article class="card plan pro reveal" id="pro">
-          <h3>Pro <span class="badge-pill" data-waitlist>Coming soon</span></h3>
+          <h3>Pro</h3>
           <p class="amount"><b data-price="lifetime">$29</b><span>one-time</span></p>
-          <p class="planned" data-waitlist>Price as of Oct 2026. Pro isn't purchasable yet: join the waitlist below.</p><p class="planned" data-buyset hidden>Price as of Oct 2026. Pay once, no subscription.</p>
+          <p class="planned">Price as of Oct 2026. Pay once, no subscription.</p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Export all your meetings, not just the last 10</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Remove the MeetCrate line from exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Future sources included free</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
-          <div class="btns" data-buyset hidden>
-            <a class="btn btn-accent" href="#" data-buy="lifetime"><span>Get Pro · <span data-price="lifetime">$29</span> once</span></a>
-          </div>
-          <div class="btns" data-waitlist>
-            <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=MeetCrate%20Pro%20waitlist%20%5Bsite%5D" data-waitmail><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
-            <p class="waitnote">Pro opens soon. Free works now. One email when it’s ready.</p>
+          <div class="btns">
+            <a class="btn btn-accent" href="https://lgdventures.lemonsqueezy.com/checkout/buy/ab15c028-0777-4bc6-b28c-db1e52b117d4" rel="noopener" data-buy="lifetime"><span>Get Pro · <span data-price="lifetime">$29</span> once</span></a>
           </div>
         </article>
       </div>
@@ -231,21 +227,14 @@
   </div>
 </footer>
 <script>
-/* Checkout links come only from /meetcrate/config.js (empty = Pro waitlist). Store install links are static in the HTML (per-placement UTM). */
+/* Checkout links come only from /meetcrate/config.js (the Pro buy link is also static in the HTML, so it works without JS). Store install links are static in the HTML (per-placement UTM). */
 (function () {
   var C = window.MEETCRATE || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = C.PRICE_LIFETIME; if (p) s.textContent = p; });
   if (C.CHECKOUT_LIFETIME) {
     document.querySelectorAll('[data-buy]').forEach(function (a) { a.href = C.CHECKOUT_LIFETIME; a.rel = 'noopener'; });
-    document.querySelectorAll('[data-buyset]').forEach(function (e) { e.hidden = false; });
-    document.querySelectorAll('[data-waitlist]').forEach(function (e) { e.hidden = true; });
   }
-  // Waitlist mailto: tag the subject with the visit's source (utm_source, sanitized), default "site". Counted in the brand inbox.
-  var src = 'site'; try { var u = new URLSearchParams(location.search).get('utm_source'); if (u && /^[a-z0-9][a-z0-9_.-]{0,39}$/i.test(u)) src = u.toLowerCase(); } catch (e) {}
-  document.querySelectorAll('[data-waitmail]').forEach(function (a) {
-    a.href = 'mailto:lgdventures.hq@gmail.com?subject=' + encodeURIComponent('MeetCrate Pro waitlist [' + src + ']') + '&body=' + encodeURIComponent('Please let me know when MeetCrate Pro is available.');
-  });
-  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the waitlist/buy button is visible without scrolling.
+  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy button is visible without scrolling.
   var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
   function toPro() {
     if (userMoved || location.hash !== '#pricing' || !narrow.matches) return;
