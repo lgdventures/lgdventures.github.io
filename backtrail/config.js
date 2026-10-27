@@ -1,4 +1,4 @@
-/* BackTrail public links. Empty store URL = not live yet (the pages show the one-email waitlist). */
+/* BackTrail public links. Empty store URL = that store's button stays hidden on the pages. */
 window.BACKTRAIL = {
   STORE_URL_CHROME: "",
   STORE_URL_EDGE: "https://microsoftedge.microsoft.com/addons/detail/pefddbpjdboihonoknjogogmckhpogpf", /* live 2026-10-26 15:00 ART (0.5.8) */
