@@ -48,6 +48,7 @@
 .plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .plan .btns .btn{margin-top:0;width:100%}
 .plan .planned{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
+.waitnote{margin:2px 0 0;text-align:center;color:var(--muted);font-size:13.5px}
 .plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .faq .card{padding:26px}
@@ -76,8 +77,6 @@
 <script src="/meetcrate/config.js"></script>
 <style>.plans{grid-template-columns:repeat(2,minmax(0,420px));justify-content:center}.tree{font:14px/1.9 var(--mono);color:var(--text-2)}.tree b{color:var(--accent-ink)}.chrome-note{margin:14px 0 0;color:var(--muted);font-size:13.5px;text-align:center}.chrome-note a{color:var(--accent-ink);font-weight:600}.chrome-note a:hover{text-decoration:underline;text-underline-offset:3px}.plan .chrome-note{margin:2px 0 0}@media (max-width:640px){.plans{grid-template-columns:minmax(0,1fr)}}</style>
 <style>.qa-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:10px}.qa{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);transition:border-color .16s var(--ease),box-shadow .16s var(--ease)}.qa:hover{border-color:var(--border-strong)}.qa:has(.qa-q[aria-expanded="true"]){box-shadow:var(--shadow)}.qa h3{margin:0;font-size:16.5px;font-weight:650;letter-spacing:-.015em;line-height:1.4}.qa-q{appearance:none;-webkit-appearance:none;background:none;border:0;margin:0;box-sizing:border-box;display:flex;width:100%;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;cursor:pointer;color:var(--text);font:inherit;text-align:left;border-radius:var(--radius);-webkit-tap-highlight-color:transparent}.qa-q:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.qa-ico{flex:none;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);transition:transform .16s var(--ease),background .16s var(--ease)}.qa-ico svg{transition:transform .18s var(--ease)}.qa-q:hover .qa-ico{background:var(--border-strong)}.qa-q:active .qa-ico{transform:scale(.9)}.qa-q[aria-expanded="true"] .qa-ico svg{transform:rotate(180deg)}.qa-a{padding:0 24px 22px}.qa-a:not([hidden]){animation:qa-in .18s var(--ease)}.qa-a p{margin:0;color:var(--text-2);font-size:15px;line-height:1.65;max-width:68ch}.qa-a a{color:var(--accent-ink);font-weight:600;border-radius:4px}.qa-a a:hover{text-decoration:underline;text-underline-offset:3px}.qa-a a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}@keyframes qa-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){.qa-a:not([hidden]){animation:none}.qa,.qa-ico,.qa-ico svg{transition:none}}@media (max-width:640px){.qa-q{padding:18px}.qa-a{padding:0 18px 18px}.qa h3{font-size:16px}}</style>
-<script>window.lemonSqueezyAffiliateConfig = { store: "lgdventures" };</script>
-<script src="https://lmsqueezy.com/affiliate.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -228,11 +227,13 @@
   </div>
 </footer>
 <script>
-/* Buy buttons carry the live checkout links statically (works without JS); /meetcrate/config.js can override them and the prices. Store install links are static in the HTML (per-placement UTM). */
+/* Checkout links come only from /meetcrate/config.js (the Pro buy link is also static in the HTML, so it works without JS). Store install links are static in the HTML (per-placement UTM). */
 (function () {
   var C = window.MEETCRATE || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = C.PRICE_LIFETIME; if (p) s.textContent = p; });
-  document.querySelectorAll('[data-buy]').forEach(function (a) { var u = C.CHECKOUT_LIFETIME; if (u) a.href = u; });
+  if (C.CHECKOUT_LIFETIME) {
+    document.querySelectorAll('[data-buy]').forEach(function (a) { a.href = C.CHECKOUT_LIFETIME; a.rel = 'noopener'; });
+  }
   // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy button is visible without scrolling.
   var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
   function toPro() {
