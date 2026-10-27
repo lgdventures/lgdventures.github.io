@@ -48,7 +48,6 @@
 .plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .plan .btns .btn{margin-top:0;width:100%}
 .plan .planned{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
-.waitnote{margin:2px 0 0;text-align:center;color:var(--muted);font-size:13.5px}
 .plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .faq .card{padding:26px}
@@ -234,6 +233,18 @@
   if (C.CHECKOUT_LIFETIME) {
     document.querySelectorAll('[data-buy]').forEach(function (a) { a.href = C.CHECKOUT_LIFETIME; a.rel = 'noopener'; });
   }
+  // Affiliate referrals (first-party): ?aff=<code> on this page is passed on to the Lemon Squeezy checkout links. No cookie, no storage.
+  function withAff(href, aff) {
+    try {
+      var u = new URL(href, location.href);
+      if (u.hostname !== 'lgdventures.lemonsqueezy.com') return href;
+      var q = u.search.replace(/^\?/, '').split('&').filter(function (p) { return p && p.split('=')[0] !== 'aff'; });
+      q.push('aff=' + aff); u.search = '?' + q.join('&');
+      return u.toString();
+    } catch (e) { return href; }
+  }
+  var aff = null; try { aff = new URLSearchParams(location.search).get('aff'); } catch (e) {}
+  if (aff && /^[A-Za-z0-9_-]{1,64}$/.test(aff)) document.querySelectorAll('a[href]').forEach(function (a) { var h = withAff(a.href, aff); if (h !== a.href) a.href = h; });
   // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy button is visible without scrolling.
   var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
   function toPro() {
