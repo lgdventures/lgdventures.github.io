@@ -1,13 +1,9 @@
-/* ChatCairn page: the ONLY place the site reads store/checkout links from.
-   PRO_LIVE is the single go-live switch. false = Pro waitlist ("Join the Pro waitlist", no buy buttons; the checkout
-   URLs below are never written into the page). true = buy buttons open the live checkout links and the waitlist copy
-   is swapped for on-sale copy. Flip it only after Lemon Squeezy activates store 499728 (until then the links 404).
-   STORE_URL / EDGE_URL are the live listings (reference; the page HTML carries static links with per-placement UTM tags).
-   Buy buttons appear only when PRO_LIVE is true AND both CHECKOUT_* are set (live mode).
-   Never put Lemon Squeezy TEST-mode checkout links here: this file is deployed.
+/* ChatCairn page: store/checkout links and prices. The page HTML already carries the live checkout links
+   statically (buy state is the default, also without JS); index.html overrides them from here when set.
+   Live mode, Lemon Squeezy store 499728. Never put TEST-mode checkout links here: this file is deployed.
    (Test-mode links live only in the extension's src/config.js for local testing.) */
 window.CHATCAIRN = {
-  PRO_LIVE: true,  // GO-LIVE SWITCH: set true on Lemon Squeezy approval day (the only change needed)
+  PRO_LIVE: true,  // Pro is on sale (since 2026-10-26)
   // Live mode, product 1475011 "ChatCairn Pro" (created 2026-10-26). Monthly = variant 2299598, lifetime = variant 2299599.
   CHECKOUT_MONTHLY: 'https://lgdventures.lemonsqueezy.com/checkout/buy/1b97fab7-f3a6-48fd-b31c-47c10ef59b83',
   CHECKOUT_LIFETIME: 'https://lgdventures.lemonsqueezy.com/checkout/buy/ebfcf527-1c24-4d00-8c5e-31269fe0a6c1?enabled=2299599',

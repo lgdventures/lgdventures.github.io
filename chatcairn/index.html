@@ -47,7 +47,6 @@
 .plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .plan .btns .btn{margin-top:0;width:100%}
 .plan .planned{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
-.waitnote{margin:2px 0 0;text-align:center;color:var(--muted);font-size:13.5px}
 .plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .faq .card{padding:26px}
@@ -69,7 +68,7 @@
 .installnote a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .plan .installnote{margin:2px 0 0;text-align:center}
 #safe-browsing{scroll-margin-top:96px}
-/* narrow screens: Pro (with the waitlist button) first, so a #pricing landing shows it without scrolling */
+/* narrow screens: Pro (with the buy buttons) first, so a #pricing landing shows it without scrolling */
 @media (max-width:640px){.plans .plan.pro{order:-1}}
 @media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
 </style>
@@ -160,22 +159,17 @@
           <div class="btns"><a class="btn btn-accent" href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_pricing&amp;utm_campaign=launch" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Add to Chrome — free</span></a><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_pricing&amp;utm_campaign=launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge</span></a></div><p class="installnote">New-developer warning in Chrome? Continue to install is safe. <a href="#safe-browsing">Why?</a></p>
         </article>
         <article class="card plan pro reveal" id="pro">
-          <h3>Pro <span class="badge-pill" data-waitlist>Waitlist</span></h3>
+          <h3>Pro</h3>
           <p class="amount"><b data-price="monthly">$4.99</b><span>/ month</span><span style="white-space:nowrap">or <b data-price="lifetime" style="font-size:28px;vertical-align:-2px">$39</b> once</span></p>
-          <p class="planned" data-waitlist>Planned price as of Oct 2026. Pro isn't purchasable yet: join the waitlist below.</p>
-          <p class="planned" data-buyset hidden>Prices in USD as of Oct 2026. Cancel monthly anytime; lifetime is a one-time payment.</p>
+          <p class="planned">Prices in USD as of Oct 2026. Cancel monthly anytime; lifetime is a one-time payment.</p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Save past 50 chats</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>More than 10 notes &amp; tasks</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Bulk ZIP export of your whole library</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Remove the ChatCairn footer from exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Google Drive auto-backup <span class="badge-pill">Coming soon</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
-          <div class="btns" data-buyset hidden>
-            <a class="btn btn-accent" href="#" data-buy="monthly"><span>Get Pro monthly · <span data-price="monthly">$4.99</span>/mo</span></a>
-            <a class="btn btn-ghost" href="#" data-buy="lifetime"><span>Get lifetime · <span data-price="lifetime">$39</span> once</span></a>
-          </div>
-          <div class="btns" data-waitlist>
-            <a class="btn btn-accent" href="mailto:lgdventures.hq@gmail.com?subject=ChatCairn%20Pro%20waitlist%20%5Bsite%5D&amp;body=Please%20let%20me%20know%20when%20ChatCairn%20Pro%20is%20available." data-waitmail><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Join the Pro waitlist</a>
-            <p class="waitnote">Pro launches soon. Free works now. One email when it's ready.</p>
+          <div class="btns">
+            <a class="btn btn-accent" href="https://lgdventures.lemonsqueezy.com/checkout/buy/1b97fab7-f3a6-48fd-b31c-47c10ef59b83" rel="noopener" data-buy="monthly"><span>Get Pro monthly · <span data-price="monthly">$4.99</span>/mo</span></a>
+            <a class="btn btn-ghost" href="https://lgdventures.lemonsqueezy.com/checkout/buy/ebfcf527-1c24-4d00-8c5e-31269fe0a6c1?enabled=2299599" rel="noopener" data-buy="lifetime"><span>Get lifetime · <span data-price="lifetime">$39</span> once</span></a>
           </div>
         </article>
       </div>
-      <p class="fineprint"><span data-waitlist>When Pro launches: s</span><span data-buyset hidden>S</span>ecure checkout by Lemon Squeezy (merchant of record), prices in USD, 14-day refund on request, and your license key arrives by email.</p>
+      <p class="fineprint">Secure checkout by Lemon Squeezy (merchant of record), prices in USD, 14-day refund on request, and your license key arrives by email.</p>
     </div>
   </section>
 
@@ -184,7 +178,7 @@
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
-      <div class="faq"><article class="card reveal"><h3>Which browsers does it work in?</h3><p>Desktop Google Chrome (<a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_faq&amp;utm_campaign=launch" rel="noopener">Chrome Web Store</a>) and Microsoft Edge (<a href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_faq&amp;utm_campaign=launch" rel="noopener">Edge Add-ons</a>). Mobile browsers don't support extensions like this.</p></article><article class="card reveal" id="safe-browsing"><h3>Why does Chrome say “not trusted by Enhanced Safe Browsing”?</h3><p>With Enhanced protection on, Chrome shows “Proceed with caution” for extensions from developers it doesn’t know yet. Google says new developers <a href="https://support.google.com/chrome_webstore/answer/2664769" target="_blank" rel="noopener">generally take a few months</a> to become trusted. ChatCairn is reviewed and published on the Chrome Web Store and Edge Add-ons, and your chats stay on your device, so it’s safe to choose Continue to install.</p></article><article class="card reveal"><h3>Where are my chats stored?</h3><p>Only in your browser (IndexedDB and extension storage). ChatCairn has no servers that receive your conversations. See the <a href="/chatcairn/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>How does ChatCairn read a conversation?</h3><p>When you click Save, it reads that one chat from the page. On ChatGPT and Claude it may ask the site itself for the same conversation using your existing login, read-only. Nothing is sent anywhere else.</p></article><article class="card reveal"><h3>Monthly or lifetime?</h3><p><span data-waitlist>Both will unlock the same Pro features. Planned pricing (as of Oct 2026): monthly $4.99, cancel anytime, or a one-time $39 for lifetime. One key activates up to 3 browsers. Pro is on a waitlist for now.</span><span data-buyset hidden>Both unlock the same Pro features. Monthly is $4.99, cancel anytime, or pay $39 once for lifetime (prices as of Oct 2026). One key activates up to 3 browsers.</span></p></article><article class="card reveal"><h3>Where do I find my license key?</h3><p><span data-waitlist>Once Pro is on sale: i</span><span data-buyset hidden>I</span>n your Lemon Squeezy receipt email (subject “Your ChatCairn Pro … receipt”) and in My Orders at app.lemonsqueezy.com. Paste it in ChatCairn → Activate license.</p></article><article class="card reveal"><h3>What happens at the free limit?</h3><p>Everything you saved stays available to read, search and export. Upgrade to keep saving new chats and notes.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes<span data-waitlist>, once Pro is on sale:</span><span data-buyset hidden>,</span> within 14 days of purchase. Just reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
+      <div class="faq"><article class="card reveal"><h3>Which browsers does it work in?</h3><p>Desktop Google Chrome (<a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_faq&amp;utm_campaign=launch" rel="noopener">Chrome Web Store</a>) and Microsoft Edge (<a href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_faq&amp;utm_campaign=launch" rel="noopener">Edge Add-ons</a>). Mobile browsers don't support extensions like this.</p></article><article class="card reveal" id="safe-browsing"><h3>Why does Chrome say “not trusted by Enhanced Safe Browsing”?</h3><p>With Enhanced protection on, Chrome shows “Proceed with caution” for extensions from developers it doesn’t know yet. Google says new developers <a href="https://support.google.com/chrome_webstore/answer/2664769" target="_blank" rel="noopener">generally take a few months</a> to become trusted. ChatCairn is reviewed and published on the Chrome Web Store and Edge Add-ons, and your chats stay on your device, so it’s safe to choose Continue to install.</p></article><article class="card reveal"><h3>Where are my chats stored?</h3><p>Only in your browser (IndexedDB and extension storage). ChatCairn has no servers that receive your conversations. See the <a href="/chatcairn/privacy.html">privacy policy</a>.</p></article><article class="card reveal"><h3>How does ChatCairn read a conversation?</h3><p>When you click Save, it reads that one chat from the page. On ChatGPT and Claude it may ask the site itself for the same conversation using your existing login, read-only. Nothing is sent anywhere else.</p></article><article class="card reveal"><h3>Monthly or lifetime?</h3><p>Both unlock the same Pro features. Monthly is $4.99, cancel anytime, or pay $39 once for lifetime (prices as of Oct 2026). One key activates up to 3 browsers.</p></article><article class="card reveal"><h3>Where do I find my license key?</h3><p>In your Lemon Squeezy receipt email (subject “Your ChatCairn Pro … receipt”) and in My Orders at app.lemonsqueezy.com. Paste it in ChatCairn → Activate license.</p></article><article class="card reveal"><h3>What happens at the free limit?</h3><p>Everything you saved stays available to read, search and export. Upgrade to keep saving new chats and notes.</p></article><article class="card reveal"><h3>Can I get a refund?</h3><p>Yes, within 14 days of purchase. Just reply to your receipt or email <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
     </div>
   </section>
 
@@ -227,21 +221,12 @@
   </div>
 </footer>
 <script>
-/* Checkout links come only from /chatcairn/config.js and are used only when PRO_LIVE is true (false = Pro waitlist). Store install links are static in the HTML (per-placement UTM). */
+/* Buy buttons carry the live checkout links statically (works without JS); /chatcairn/config.js can override them and the prices. Store install links are static in the HTML (per-placement UTM). */
 (function () {
   var C = window.CHATCAIRN || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = s.getAttribute('data-price') === 'lifetime' ? C.PRICE_LIFETIME : C.PRICE_MONTHLY; if (p) s.textContent = p; });
-  if (C.PRO_LIVE === true && C.CHECKOUT_MONTHLY && C.CHECKOUT_LIFETIME) {
-    document.querySelectorAll('[data-buy]').forEach(function (a) { a.href = a.getAttribute('data-buy') === 'lifetime' ? C.CHECKOUT_LIFETIME : C.CHECKOUT_MONTHLY; a.rel = 'noopener'; });
-    document.querySelectorAll('[data-buyset]').forEach(function (e) { e.hidden = false; });
-    document.querySelectorAll('[data-waitlist]').forEach(function (e) { e.hidden = true; });
-  }
-  // Waitlist mailto: tag the subject with the visit's source (utm_source, sanitized), default "site". Counted in the brand inbox.
-  var src = 'site'; try { var u = new URLSearchParams(location.search).get('utm_source'); if (u && /^[a-z0-9][a-z0-9_.-]{0,39}$/i.test(u)) src = u.toLowerCase(); } catch (e) {}
-  document.querySelectorAll('[data-waitmail]').forEach(function (a) {
-    a.href = 'mailto:lgdventures.hq@gmail.com?subject=' + encodeURIComponent('ChatCairn Pro waitlist [' + src + ']') + '&body=' + encodeURIComponent('Please let me know when ChatCairn Pro is available.');
-  });
-  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the waitlist/buy button is visible without scrolling.
+  document.querySelectorAll('[data-buy]').forEach(function (a) { var u = a.getAttribute('data-buy') === 'lifetime' ? C.CHECKOUT_LIFETIME : C.CHECKOUT_MONTHLY; if (u) a.href = u; });
+  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy buttons are visible without scrolling.
   var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
   function toPro() {
     if (userMoved || location.hash !== '#pricing' || !narrow.matches) return;
