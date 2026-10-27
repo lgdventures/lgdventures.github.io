@@ -1,6 +1,6 @@
 /* BackTrail public links. Empty store URL = that store's button stays hidden on the pages. */
 window.BACKTRAIL = {
-  STORE_URL_CHROME: "",
+  STORE_URL_CHROME: "https://chromewebstore.google.com/detail/cmjfkhlioojeinhmjgfepoggnmoancnp", /* live 0.5.7, seen 2026-10-27 12:05 ART */
   STORE_URL_EDGE: "https://microsoftedge.microsoft.com/addons/detail/pefddbpjdboihonoknjogogmckhpogpf", /* live 2026-10-26 15:00 ART (0.5.8) */
   /* BackTrail Pro (#pro section). false = "coming very soon", no buy button.
      Set to true when Lemon Squeezy approves store 499728: that alone shows the price and the Buy button. */
