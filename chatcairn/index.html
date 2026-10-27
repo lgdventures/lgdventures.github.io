@@ -226,6 +226,15 @@
   var C = window.CHATCAIRN || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = s.getAttribute('data-price') === 'lifetime' ? C.PRICE_LIFETIME : C.PRICE_MONTHLY; if (p) s.textContent = p; });
   document.querySelectorAll('[data-buy]').forEach(function (a) { var u = a.getAttribute('data-buy') === 'lifetime' ? C.CHECKOUT_LIFETIME : C.CHECKOUT_MONTHLY; if (u) a.href = u; });
+  // Affiliate passthrough (first-party, no storage): a valid ?aff= on this page is copied onto every Lemon Squeezy checkout link. Runs after the config.js rewrite above.
+  try {
+    var aff = new URLSearchParams(location.search).get('aff');
+    if (aff && /^[A-Za-z0-9_-]{1,64}$/.test(aff)) {
+      document.querySelectorAll('a[href]').forEach(function (a) {
+        try { var x = new URL(a.href); if (x.hostname === 'lgdventures.lemonsqueezy.com' && x.pathname.indexOf('/checkout/buy/') === 0) { x.searchParams.set('aff', aff); a.href = x.toString(); } } catch (e) {}
+      });
+    }
+  } catch (e) {}
   // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy buttons are visible without scrolling.
   var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
   function toPro() {
