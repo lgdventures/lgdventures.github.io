@@ -8,7 +8,7 @@ window.CHATCAIRN = {
   CHECKOUT_MONTHLY: 'https://lgdventures.lemonsqueezy.com/checkout/buy/1b97fab7-f3a6-48fd-b31c-47c10ef59b83',
   CHECKOUT_LIFETIME: 'https://lgdventures.lemonsqueezy.com/checkout/buy/ebfcf527-1c24-4d00-8c5e-31269fe0a6c1?enabled=2299599',
   PRICE_MONTHLY: '$4.99',
-  PRICE_LIFETIME: '$39',
+  PRICE_LIFETIME: '$69',
   STORE_URL: 'https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc',  // Chrome Web Store (0.3.1 live 2026-10-20)
   EDGE_URL: 'https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi'  // Edge Add-ons (0.3.2 live 2026-10-19)
 };
