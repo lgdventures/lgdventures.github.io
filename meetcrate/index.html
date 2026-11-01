@@ -234,18 +234,50 @@
   if (C.CHECKOUT_LIFETIME) {
     document.querySelectorAll('[data-buy]').forEach(function (a) { a.href = C.CHECKOUT_LIFETIME; a.rel = 'noopener'; });
   }
-  // Affiliate referrals (first-party): ?aff=<code> on this page is passed on to the Lemon Squeezy checkout links. No cookie, no storage.
-  function withAff(href, aff) {
+  // Affiliate + UTM → Lemon Squeezy (first-party): ?aff= and utm_* on this page are passed to checkout links. No cookie, no storage.
+  function withCheckoutExtras(href, aff, utms) {
     try {
       var u = new URL(href, location.href);
       if (u.hostname !== 'lgdventures.lemonsqueezy.com') return href;
-      var q = u.search.replace(/^\?/, '').split('&').filter(function (p) { return p && p.split('=')[0] !== 'aff'; });
-      q.push('aff=' + aff); u.search = '?' + q.join('&');
+      var drop = { aff: !!aff };
+      if (utms) {
+        if (utms.source) drop['checkout[custom][utm_source]'] = true;
+        if (utms.medium) drop['checkout[custom][utm_medium]'] = true;
+        if (utms.campaign) drop['checkout[custom][utm_campaign]'] = true;
+      }
+      var q = u.search.replace(/^\?/, '').split('&').filter(function (p) {
+        if (!p) return false;
+        var k = p.split('=')[0];
+        try { k = decodeURIComponent(k); } catch (e) {}
+        return !drop[k];
+      });
+      if (aff) q.push('aff=' + encodeURIComponent(aff));
+      if (utms && utms.source) q.push('checkout[custom][utm_source]=' + encodeURIComponent(utms.source));
+      if (utms && utms.medium) q.push('checkout[custom][utm_medium]=' + encodeURIComponent(utms.medium));
+      if (utms && utms.campaign) q.push('checkout[custom][utm_campaign]=' + encodeURIComponent(utms.campaign));
+      u.search = q.length ? ('?' + q.join('&')) : '';
       return u.toString();
     } catch (e) { return href; }
   }
-  var aff = null; try { aff = new URLSearchParams(location.search).get('aff'); } catch (e) {}
-  if (aff && /^[A-Za-z0-9_-]{1,64}$/.test(aff)) document.querySelectorAll('a[href]').forEach(function (a) { var h = withAff(a.href, aff); if (h !== a.href) a.href = h; });
+  function safeUtm(v) {
+    if (!v) return null;
+    v = String(v).slice(0, 100);
+    return /^[A-Za-z0-9._~-]+$/.test(v) ? v : null;
+  }
+  var aff = null, utms = { source: null, medium: null, campaign: null };
+  try {
+    var sp = new URLSearchParams(location.search);
+    aff = sp.get('aff');
+    utms.source = safeUtm(sp.get('utm_source'));
+    utms.medium = safeUtm(sp.get('utm_medium'));
+    utms.campaign = safeUtm(sp.get('utm_campaign'));
+  } catch (e) {}
+  if (aff && !/^[A-Za-z0-9_-]{1,64}$/.test(aff)) aff = null;
+  var need = !!(aff || utms.source || utms.medium || utms.campaign);
+  if (need) document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = withCheckoutExtras(a.href, aff, utms);
+    if (h !== a.href) a.href = h;
+  });
   // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy button is visible without scrolling.
   var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
   function toPro() {
