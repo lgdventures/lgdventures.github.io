@@ -227,12 +227,26 @@
   var C = window.CHATCAIRN || {};
   document.querySelectorAll('[data-price]').forEach(function (s) { var p = s.getAttribute('data-price') === 'lifetime' ? C.PRICE_LIFETIME : C.PRICE_MONTHLY; if (p) s.textContent = p; });
   document.querySelectorAll('[data-buy]').forEach(function (a) { var u = a.getAttribute('data-buy') === 'lifetime' ? C.CHECKOUT_LIFETIME : C.CHECKOUT_MONTHLY; if (u) a.href = u; });
-  // Affiliate passthrough (first-party, no storage): a valid ?aff= on this page is copied onto every Lemon Squeezy checkout link. Runs after the config.js rewrite above.
+  // First-party checkout passthrough (no cookies/storage/3rd-party): valid ?aff= and ?utm_* from this page URL are copied onto every Lemon Squeezy checkout link. Runs after the config.js rewrite above. UTMs become checkout[custom][utm_*] (brackets URL-encoded OK); only present+valid values are added; enabled= and other existing params are kept.
   try {
-    var aff = new URLSearchParams(location.search).get('aff');
-    if (aff && /^[A-Za-z0-9_-]{1,64}$/.test(aff)) {
+    var q = new URLSearchParams(location.search);
+    var aff = q.get('aff');
+    var okAff = aff && /^[A-Za-z0-9_-]{1,64}$/.test(aff);
+    var okUtm = /^[A-Za-z0-9._~ -]{1,64}$/;
+    var utms = {};
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+      var v = q.get(k);
+      if (v && okUtm.test(v)) utms[k] = v;
+    });
+    if (okAff || Object.keys(utms).length) {
       document.querySelectorAll('a[href]').forEach(function (a) {
-        try { var x = new URL(a.href); if (x.hostname === 'lgdventures.lemonsqueezy.com' && x.pathname.indexOf('/checkout/buy/') === 0) { x.searchParams.set('aff', aff); a.href = x.toString(); } } catch (e) {}
+        try {
+          var x = new URL(a.href);
+          if (x.hostname !== 'lgdventures.lemonsqueezy.com' || x.pathname.indexOf('/checkout/buy/') !== 0) return;
+          if (okAff) x.searchParams.set('aff', aff);
+          Object.keys(utms).forEach(function (k) { x.searchParams.set('checkout[custom][' + k + ']', utms[k]); });
+          a.href = x.toString();
+        } catch (e) {}
       });
     }
   } catch (e) {}
