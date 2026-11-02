@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ChatCairn — Guardá, buscá y convertí chats de IA en notas y tareas</title>
+<meta name="description" content="Guardá chats de ChatGPT, Claude, Gemini y Grok, buscá en todos, exportá a Markdown o PDF y convertí resaltados en notas y tareas. 100% local.">
+<link rel="canonical" href="https://lgdventures.github.io/chatcairn/es/">
+<link rel="alternate" hreflang="en" href="https://lgdventures.github.io/chatcairn/">
+<link rel="alternate" hreflang="es" href="https://lgdventures.github.io/chatcairn/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://lgdventures.github.io/chatcairn/pt/">
+<link rel="alternate" hreflang="x-default" href="https://lgdventures.github.io/chatcairn/">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="LGD Ventures">
+<meta property="og:title" content="ChatCairn — Guardá, buscá y convertí chats de IA en notas y tareas">
+<meta property="og:description" content="Guardá chats de ChatGPT, Claude, Gemini y Grok, buscá en todos, exportá a Markdown o PDF y convertí resaltados en notas y tareas. 100% local.">
+<meta property="og:url" content="https://lgdventures.github.io/chatcairn/es/">
+<meta property="og:image" content="https://lgdventures.github.io/chatcairn/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChatCairn — tus conversaciones de IA, guardadas y buscables">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChatCairn — Guardá, buscá y convertí chats de IA en notas y tareas">
+<meta name="twitter:description" content="Guardá chats de ChatGPT, Claude, Gemini y Grok, buscá en todos, exportá a Markdown o PDF y convertí resaltados en notas y tareas. 100% local.">
+<meta name="twitter:image" content="https://lgdventures.github.io/chatcairn/og.png">
+<link rel="icon" href="/chatcairn/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/chatcairn/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/chatcairn/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(d){d.className+=' js';try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ChatCairn","applicationCategory":"BrowserApplication","applicationSubCategory":"Productivity","operatingSystem":"Chrome, Microsoft Edge","softwareVersion":"0.4.0","url":"https://lgdventures.github.io/chatcairn/es/","image":"https://lgdventures.github.io/chatcairn/og.png","description":"Guardá chats de ChatGPT, Claude, Gemini y Grok en una biblioteca local, exportá a PDF o Markdown y convertí resaltados en notas y tareas. 100% local. Gratis hasta 30 chats y 10 notas/tareas. Pro es $4.99/mes o $69 de por vida (oct 2026).","publisher":{"@type":"Organization","name":"LGD Ventures","url":"https://lgdventures.github.io/","email":"lgdventures.hq@gmail.com"},"offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD","description":"Free plan: up to 30 saved chats and 10 notes and tasks."},{"@type":"Offer","name":"Pro monthly","price":"4.99","priceCurrency":"USD","url":"https://lgdventures.github.io/chatcairn/#pricing","description":"Pro, billed monthly: save past 30 chats and more than 10 notes and tasks, bulk ZIP export, footer-free exports. Cancel anytime."},{"@type":"Offer","name":"Pro lifetime","price":"69","priceCurrency":"USD","url":"https://lgdventures.github.io/chatcairn/#pricing","description":"Pro, one-time payment: save past 30 chats and more than 10 notes and tasks, bulk ZIP export, footer-free exports."}],"installUrl":"https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc","sameAs":["https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc","https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi"],"inLanguage":"es"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"es","url":"https://lgdventures.github.io/chatcairn/es/","mainEntity":[{"@type":"Question","name":"¿Cómo exporto chats de ChatGPT a Markdown?","acceptedAnswer":{"@type":"Answer","text":"Instalá ChatCairn en Chrome o Edge, abrí un chat de ChatGPT y tocá Guardar. En la biblioteca de ChatCairn lo exportás a Markdown con front-matter YAML para Obsidian o Notion; los datos quedan en tu dispositivo."}},{"@type":"Question","name":"¿Cómo hago backup de chats de ChatGPT, Claude y Gemini?","acceptedAnswer":{"@type":"Answer","text":"ChatCairn guarda los chats que elijas de ChatGPT, Claude, Gemini y Grok en una biblioteca privada en tu navegador. Exportá Markdown, PDF o un backup JSON cuando quieras; nada se envía a servidores de ChatCairn."}},{"@type":"Question","name":"¿Cómo guardo en local los chats que elijo?","acceptedAnswer":{"@type":"Answer","text":"Con ChatCairn guardás con un clic chats de ChatGPT, Claude, Gemini o Grok; quedan en tu navegador, en tu dispositivo. El plan gratis cubre 30 chats; Pro te deja seguir guardando los chats que elijas ($4.99/mes o $69 de por vida)."}},{"@type":"Question","name":"¿En qué navegadores funciona?","acceptedAnswer":{"@type":"Answer","text":"En Google Chrome de escritorio (Chrome Web Store) y Microsoft Edge (Edge Add-ons). Los navegadores móviles no admiten este tipo de extensiones."}},{"@type":"Question","name":"¿Por qué Chrome dice “not trusted by Enhanced Safe Browsing”?","acceptedAnswer":{"@type":"Answer","text":"Con la protección mejorada activada, Chrome muestra “Proceed with caution” para extensiones de desarrolladores que todavía no conoce. Google dice que a los desarrolladores nuevos suele llevarles unos meses volverse de confianza. ChatCairn está revisado y publicado en Chrome Web Store y Edge Add-ons, y tus chats quedan en tu dispositivo, así que es seguro elegir Continue para instalar."}},{"@type":"Question","name":"¿Dónde se guardan mis chats?","acceptedAnswer":{"@type":"Answer","text":"Solo en tu navegador (IndexedDB y almacenamiento de la extensión). ChatCairn no tiene servidores que reciban tus conversaciones. Ver la política de privacidad."}},{"@type":"Question","name":"¿Cómo lee ChatCairn una conversación?","acceptedAnswer":{"@type":"Answer","text":"Cuando tocás Guardar, lee ese chat de la página. En ChatGPT y Claude puede pedirle al sitio la misma conversación con tu sesión, solo lectura. No se envía a ningún otro lado."}},{"@type":"Question","name":"¿Mensual o de por vida?","acceptedAnswer":{"@type":"Answer","text":"Ambos desbloquean las mismas funciones Pro. Mensual es $4.99, cancelás cuando quieras, o pagás $69 una vez de por vida (precios a oct 2026). Una clave activa hasta 3 navegadores."}},{"@type":"Question","name":"¿Dónde encuentro mi clave de licencia?","acceptedAnswer":{"@type":"Answer","text":"En el email de recibo de Lemon Squeezy (asunto “Your ChatCairn Pro … receipt”) y en My Orders en app.lemonsqueezy.com. Pegala en ChatCairn → Activate license."}},{"@type":"Question","name":"¿Qué pasa al llegar al límite gratis?","acceptedAnswer":{"@type":"Answer","text":"Todo lo que guardaste sigue disponible para leer, buscar y exportar. Pasate a Pro para seguir guardando los chats que elijas."}},{"@type":"Question","name":"¿Puedo hacer backup de mis Custom GPTs y Gems?","acceptedAnswer":{"@type":"Answer","text":"Sí. GPT Rescue (gratis en todos los planes) exporta los Custom GPTs y Gems que creaste a archivos tuyos. Cómo exportar tus Custom GPTs y Gems."}},{"@type":"Question","name":"¿Puedo pedir un reembolso?","acceptedAnswer":{"@type":"Answer","text":"Sí, dentro de los 14 días de la compra. Respondé al recibo o escribinos a lgdventures.hq@gmail.com."}}]}</script>
+<style>
+/* ChatCairn page additions on top of the shared design system (tokens only, no new colors). */
+.lang{display:inline-flex;gap:2px;font-size:13px}
+.lang a{padding:6px 7px!important}
+.lang a[aria-current="page"]{color:var(--accent-ink);font-weight:650}
+[hidden]{display:none!important}
+.p-hero .eyebrow{margin-top:26px;max-width:100%}
+.eyebrow .tag,.badge-pill,.btn .soon{white-space:nowrap}
+.shot{margin:0}.shot img{width:100%;height:auto;display:block}
+.features .feature.big{grid-column:span 2}
+.feature .tag{display:inline-block;margin-left:8px;vertical-align:2px}
+.steps{grid-template-columns:repeat(4,1fr)}
+.steps .n{font:600 13px var(--mono);color:var(--accent-ink)}
+.plan{display:flex;flex-direction:column}
+.plan .amount{margin:14px 0 0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.plan .amount b{font-size:40px;letter-spacing:-.04em;font-weight:700;color:var(--text);line-height:1}
+.plan .amount span{color:var(--muted);font-size:15px}
+.plan ul{flex:1}
+.plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.plan .btns .btn{margin-top:0;width:100%}
+.plan .planned{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
+.plan .btn .soon{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.faq .card{padding:26px}
+.faq h3{margin:0;font-size:16.5px;font-weight:650;letter-spacing:-.015em;color:var(--text)}
+.faq p{margin:8px 0 0;color:var(--text-2);font-size:15px}
+.faq a,.inline-link{color:var(--accent-ink);font-weight:600}
+.faq a:hover,.inline-link:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr}.features .feature.big{grid-column:span 2}}
+@media (max-width:480px){.brand .sub{display:none}}
+.ft-bottom{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap;margin-top:6px}
+.ft-bottom .legal{width:auto;margin:0;flex:1 1 320px}
+.ft-badge{display:inline-flex;flex:none;border-radius:10px;opacity:.88;transition:opacity .15s,transform .15s}
+.ft-badge:hover{opacity:1;transform:translateY(-1px)}
+.ft-badge:focus-visible{outline:2px solid var(--accent);outline-offset:4px;opacity:1}
+.ft-badge img{display:block;width:160px;height:auto}
+.installnote{margin:14px auto 0;max-width:560px;color:var(--muted);font-size:13px;line-height:1.55;text-wrap:pretty}
+.installnote a{color:var(--accent-ink);font-weight:600;border-radius:4px;white-space:nowrap}
+.installnote a:hover{text-decoration:underline;text-underline-offset:3px}
+.installnote a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.plan .installnote{margin:2px 0 0;text-align:center}
+#safe-browsing{scroll-margin-top:96px}
+/* narrow screens: Pro (with the buy buttons) first, so a #pricing landing shows it without scrolling */
+@media (max-width:640px){.plans .plan.pro{order:-1}}
+@media (max-width:640px){.faq,.steps{grid-template-columns:1fr}.features .feature.big{grid-column:auto}.plan{padding:24px}}
+.ft-more{width:100%;padding:18px 0 4px;border-top:1px solid var(--border)}
+.ft-more h2{margin:0 0 10px;font-size:12.5px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ft-more ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ft-more li{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;font-size:14px;line-height:1.5;color:var(--text-2)}
+.ft-more a{color:var(--text);border-radius:6px;transition:color .15s}
+.ft-more a:hover{color:var(--accent,var(--text));text-decoration:underline;text-underline-offset:3px}
+.ft-more a b{font-weight:650}
+.ft-more span{flex:1 1 320px;min-width:0}
+</style>
+<script src="/chatcairn/config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/chatcairn/es/" aria-label="ChatCairn"><img src="/chatcairn/logo.png" alt="" width="28" height="28">ChatCairn<span class="sub">by LGD Ventures</span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#features">Funciones</a>
+      <a href="#pricing" class="hide-xs">Precios</a>
+      <a href="#faq" class="hide-sm">FAQ</a>
+      <span class="lang" role="group" aria-label="Language"><a href="/chatcairn/" hreflang="en" lang="en" title="English" >EN</a><a href="/chatcairn/es/" hreflang="es" lang="es" title="Español" aria-current="page">ES</a><a href="/chatcairn/pt/" hreflang="pt-BR" lang="pt-BR" title="Português">PT</a></span>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero p-hero">
+    <div class="wrap">
+      <img class="appicon" src="/chatcairn/logo.png" alt="" width="88" height="88">
+      <a class="eyebrow" href="#features"><span class="tag">Live</span>Ya en Chrome y Edge<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+      <h1>Tus chats de IA, guardados y listos para actuar.</h1>
+      <p class="lede">Guardá conversaciones de ChatGPT, Claude, Gemini y Grok con un clic, encontrá cualquier respuesta al instante, exportá a Markdown o PDF y convertí lo mejor en notas y tareas.</p>
+      <div class="actions">
+        <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_hero&amp;utm_campaign=launch" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Agregar a Chrome — gratis</span></a>
+        <a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge&amp;utm_campaign=launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Conseguilo para Edge</span></a>
+        <a class="btn btn-ghost" href="#pricing">Ver precios<svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+      <p class="installnote">Con la protección mejorada, Chrome puede decir “not trusted by Enhanced Safe Browsing”. Es normal en desarrolladores nuevos; es seguro elegir Continue para instalar. <a href="#safe-browsing">¿Por qué?</a></p>
+      <ul class="platforms" aria-label="Funciona con">
+        <li><span class="pf gpt" aria-hidden="true">G</span>ChatGPT</li><li><span class="pf cl" aria-hidden="true">C</span>Claude</li><li><span class="pf gm" aria-hidden="true">G</span>Gemini</li><li><span class="pf gk" aria-hidden="true">X</span>Grok</li>
+      </ul>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>100% local</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/></svg>Sin cuenta; la extensión no rastrea</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><circle cx="17" cy="14" r="1.5"/></svg>Gratis hasta 30 chats</li>
+      </ul>
+      <div class="showcase reveal">
+        <div class="window">
+          <div class="win-bar"><i></i><i></i><i></i><span class="url">ChatCairn · Library</span></div>
+          <figure class="shot"><img src="/chatcairn/screenshot.png" alt="Biblioteca de ChatCairn: chats guardados de ChatGPT, Claude, Gemini y Grok con una conversación renderizada" width="1280" height="800" loading="eager"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Funciones</span>
+        <h2>¿Qué es ChatCairn?</h2>
+        <p>ChatCairn es una extensión para Chrome y Edge, para quienes usan ChatGPT, Claude, Gemini y Grok. Guarda chats en una biblioteca local y buscable, los exporta a Markdown o PDF y convierte resaltados en notas y tareas. Tus chats quedan en tu navegador: sin cuenta y sin servidor de ChatCairn.</p>
+      </div>
+      <div class="features"><article class="card feature big reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Notas y tareas desde resaltados <span class="badge-pill tag">Nuevo en 0.3</span></h3><p>Seleccioná cualquier pasaje en ChatGPT, Claude, Gemini o Grok y guardalo como nota o tarea con proyecto, fecha y comentario, sin guardar toda la conversación. También funciona en chats ya guardados. Filtrá por Vencidas, Hoy o Próximas y volvé a la fuente con un clic. Las tareas se exportan en sintaxis de Obsidian Tasks.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg></div><h3>Guardar con un clic</h3><p>Guardá la conversación abierta de ChatGPT, Claude, Gemini o Grok: tus prompts y las respuestas, con código, tablas y títulos intactos.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Buscá en todo</h3><p>Búsqueda de texto completo en cada chat que guardaste, en cada plataforma, más una vista de lo que guardaste últimamente.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><h3>Markdown, PDF y ZIP</h3><p>Markdown con front-matter para Obsidian y Notion, PDFs limpios con paginación, o un ZIP de toda tu biblioteca.</p></article><article class="card feature reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Privado, con backups</h3><p>Todo queda en tu navegador: sin cuenta, sin servidores de ChatCairn; la extensión no tiene analítica. Un backup y restauración con un clic lo mantienen a salvo. GPT Rescue también guarda los Custom GPTs y Gems que creaste, gratis. <a class="inline-link" href="/chatcairn/guides/backup-custom-gpts.html">Cómo exportar Custom GPTs y Gems con GPT Rescue</a>.</p></article></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Cómo funciona</span>
+        <h2>Tres clics, sin configuración.</h2>
+      </div>
+      <div class="principles steps reveal"><div class="principle"><span class="n">01</span><h3>Abrí un chat</h3><p>En chatgpt.com, claude.ai, gemini.google.com o grok.com.</p></div><div class="principle"><span class="n">02</span><h3>Tocá Guardar</h3><p>Desde el botón de ChatCairn en la barra. Si guardás de nuevo, se actualiza en el mismo lugar.</p></div><div class="principle"><span class="n">03</span><h3>Resaltá en el chat</h3><p>Convertí cualquier pasaje en nota o tarea, con proyecto y fecha, sin guardar toda la conversación.</p></div><div class="principle"><span class="n">04</span><h3>Buscá, exportá, actuá</h3><p>Buscá en la biblioteca, exportá Markdown o PDF y marcá tareas como hechas.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing" style="padding-top:24px">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <span class="kicker">Precios</span>
+        <h2>Plan gratis generoso. Pro simple.</h2>
+        <p>Empezá gratis. Pasate a Pro cuando ChatCairn sea parte de tu flujo. Precios a oct 2026.</p>
+      </div>
+      <div class="plans">
+        <article class="card plan reveal">
+          <h3>Gratis</h3>
+          <p class="amount"><b>$0</b><span>para siempre</span></p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Las 4 plataformas</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Hasta 30 chats guardados</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Hasta 10 notas y tareas</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Búsqueda y export Markdown y PDF (con un pie chico “Made with ChatCairn”)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Backup y restauración JSON</span></li></ul>
+          <div class="btns"><a class="btn btn-accent" href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_pricing&amp;utm_campaign=launch" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Agregar a Chrome — gratis</span></a><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_pricing&amp;utm_campaign=launch" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Conseguilo para Edge</span></a></div><p class="installnote">¿Aviso de desarrollador nuevo en Chrome? Continue to install es seguro. <a href="#safe-browsing">¿Por qué?</a></p>
+        </article>
+        <article class="card plan pro reveal" id="pro">
+          <h3>Pro</h3>
+          <p class="amount"><b data-price="monthly">$4.99</b><span>/ month</span><span style="white-space:nowrap">or <b data-price="lifetime" style="font-size:28px;vertical-align:-2px">$69</b> once</span></p>
+          <p class="planned">Precios en USD a oct 2026. Cancelá el mensual cuando quieras; de por vida es un pago único.</p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Guardá más de 30 chats</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Más de 10 notas y tareas</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Export ZIP masivo de toda tu biblioteca</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Sacá el pie de ChatCairn de los exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Backup automático a Google Drive <span class="badge-pill">Pronto</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Una clave, hasta 3 navegadores</span></li></ul>
+          <div class="btns">
+            <a class="btn btn-accent" href="https://lgdventures.lemonsqueezy.com/checkout/buy/1b97fab7-f3a6-48fd-b31c-47c10ef59b83" rel="noopener" data-buy="monthly"><span>Pro mensual · <span data-price="monthly">$4.99</span>/mes</span></a>
+            <a class="btn btn-ghost" href="https://lgdventures.lemonsqueezy.com/checkout/buy/ebfcf527-1c24-4d00-8c5e-31269fe0a6c1?enabled=2299599" rel="noopener" data-buy="lifetime"><span>De por vida · <span data-price="lifetime">$69</span> una vez</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="fineprint">Checkout seguro con Lemon Squeezy (merchant of record), precios en USD, reembolso en 14 días a pedido, y tu clave llega por email.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Preguntas, respondidas.</h2></div>
+      <div class="faq"><article class="card reveal" id="export-markdown"><h3>¿Cómo exporto chats de ChatGPT a Markdown?</h3><p>Instalá ChatCairn en Chrome o Edge, abrí un chat de ChatGPT y tocá Guardar. En la biblioteca de ChatCairn lo exportás a Markdown con front-matter YAML para Obsidian o Notion; los datos quedan en tu dispositivo.</p></article><article class="card reveal" id="backup-chats"><h3>¿Cómo hago backup de chats de ChatGPT, Claude y Gemini?</h3><p>ChatCairn guarda los chats que elijas de ChatGPT, Claude, Gemini y Grok en una biblioteca privada en tu navegador. Exportá Markdown, PDF o un backup JSON cuando quieras; nada se envía a servidores de ChatCairn.</p></article><article class="card reveal" id="save-locally"><h3>¿Cómo guardo en local los chats que elijo?</h3><p>Con ChatCairn guardás con un clic chats de ChatGPT, Claude, Gemini o Grok; quedan en tu navegador, en tu dispositivo. El plan gratis cubre 30 chats; Pro te deja seguir guardando los chats que elijas ($4.99/mes o $69 de por vida).</p></article><article class="card reveal"><h3>¿En qué navegadores funciona?</h3><p>En Google Chrome de escritorio (<a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_faq_es&amp;utm_campaign=launch" rel="noopener">Chrome Web Store</a>) y Microsoft Edge (<a href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_faq_es&amp;utm_campaign=launch" rel="noopener">Edge Add-ons</a>). Los navegadores móviles no admiten este tipo de extensiones.</p></article><article class="card reveal" id="safe-browsing"><h3>¿Por qué Chrome dice “not trusted by Enhanced Safe Browsing”?</h3><p>Con la protección mejorada activada, Chrome muestra “Proceed with caution” para extensiones de desarrolladores que todavía no conoce. Google dice que a los desarrolladores nuevos <a href="https://support.google.com/chrome_webstore/answer/2664769" target="_blank" rel="noopener">suele llevarles unos meses</a> volverse de confianza. ChatCairn está revisado y publicado en Chrome Web Store y Edge Add-ons, y tus chats quedan en tu dispositivo, así que es seguro elegir Continue para instalar.</p></article><article class="card reveal"><h3>¿Dónde se guardan mis chats?</h3><p>Solo en tu navegador (IndexedDB y almacenamiento de la extensión). ChatCairn no tiene servidores que reciban tus conversaciones. Ver la <a href="/chatcairn/privacy.html">política de privacidad</a>.</p></article><article class="card reveal"><h3>¿Cómo lee ChatCairn una conversación?</h3><p>Cuando tocás Guardar, lee ese chat de la página. En ChatGPT y Claude puede pedirle al sitio la misma conversación con tu sesión, solo lectura. No se envía a ningún otro lado.</p></article><article class="card reveal"><h3>¿Mensual o de por vida?</h3><p>Ambos desbloquean las mismas funciones Pro. Mensual es $4.99, cancelás cuando quieras, o pagás $69 una vez de por vida (precios a oct 2026). Una clave activa hasta 3 navegadores.</p></article><article class="card reveal"><h3>¿Dónde encuentro mi clave de licencia?</h3><p>En el email de recibo de Lemon Squeezy (asunto “Your ChatCairn Pro … receipt”) y en My Orders en app.lemonsqueezy.com. Pegala en ChatCairn → Activate license.</p></article><article class="card reveal"><h3>¿Qué pasa al llegar al límite gratis?</h3><p>Todo lo que guardaste sigue disponible para leer, buscar y exportar. Pasate a Pro para seguir guardando los chats que elijas.</p></article><article class="card reveal" id="gpt-rescue"><h3>¿Puedo hacer backup de mis Custom GPTs y Gems?</h3><p>Sí. GPT Rescue (gratis en todos los planes) exporta los Custom GPTs y Gems que creaste a archivos tuyos. <a href="/chatcairn/guides/backup-custom-gpts.html">Cómo exportar tus Custom GPTs y Gems</a>.</p></article><article class="card reveal"><h3>¿Puedo pedir un reembolso?</h3><p>Sí, dentro de los 14 días de la compra. Respondé al recibo o escribinos a <a href="mailto:lgdventures.hq@gmail.com">lgdventures.hq@gmail.com</a>.</p></article></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:24px">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <span class="kicker">Contacto</span>
+        <h2>¿Feedback o un sitio que se rompió?</h2>
+        <p>Los sitios de IA cambian seguido. Avisanos y casi siempre publicamos un arreglo en días.</p>
+        <div class="mail">
+          <a href="mailto:lgdventures.hq@gmail.com?subject=ChatCairn">lgdventures.hq@gmail.com</a>
+          <button class="copy" type="button" data-copy="lgdventures.hq@gmail.com" aria-live="polite">
+            <svg class="cp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>
+            <svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg>
+            <span class="txt">Copiar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="/chatcairn/es/"><img src="/chatcairn/logo.png" alt="" width="22" height="22">ChatCairn</a>
+    <nav aria-label="Pie">
+      <a href="/">LGD Ventures</a>
+      <a href="https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc?utm_source=chatcairn_site&amp;utm_medium=landing_footer&amp;utm_campaign=launch" rel="noopener">Chrome Web Store</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi?utm_source=chatcairn_site&amp;utm_medium=landing_edge_footer&amp;utm_campaign=launch" rel="noopener">Edge Add-ons</a>
+      <a href="/chatcairn/guides/">Guías</a>
+      <a href="/chatcairn/guides/backup-custom-gpts.html">Exportar Custom GPTs y Gems</a>
+      <a href="/chatcairn/privacy.html">Privacidad</a>
+      <a href="/chatcairn/terms.html">Términos</a>
+      <a href="mailto:lgdventures.hq@gmail.com">Contacto</a>
+      <a href="https://x.com/ChatCairn" target="_blank" rel="me noopener" aria-label="ChatCairn on X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-2px;margin-right:6px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+      <a href="https://bsky.app/profile/chatcairn.bsky.social" target="_blank" rel="me noopener" aria-label="ChatCairn on Bluesky"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-2px;margin-right:6px"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>Bluesky</a>
+    </nav>
+    <section class="ft-more" aria-labelledby="ft-more-h">
+      <h2 id="ft-more-h">Más de LGD Ventures</h2>
+      <ul>
+        <li><a href="https://lgdventures.github.io/meetcrate/?utm_source=lgd_site&amp;utm_medium=xpromo_chatcairn"><b>MeetCrate</b></a><span>Exportá en lote reuniones de Read AI y Fathom a Markdown, TXT, SRT o JSON. Extensión para Chrome y Edge.</span></li>
+        <li><a href="https://lgdventures.github.io/backtrail/?utm_source=lgd_site&amp;utm_medium=xpromo_chatcairn"><b>BackTrail</b></a><span>Hasta 500 páginas de Atrás por pestaña, incluso después de reiniciar. Extensión para Chrome y Edge.</span></li>
+      </ul>
+    </section>
+    <div class="ft-bottom">
+      <p class="legal">© 2026 LGD Ventures. ChatCairn no está afiliado a OpenAI, Anthropic, Google ni xAI.</p>
+      <a class="ft-badge" href="https://semilaunch.com" target="_blank" rel="noopener"><img src="/chatcairn/assets/semilaunch-badge.png" alt="Featured on SemiLaunch" width="220" height="80" loading="lazy" decoding="async"></a>
+    </div>
+  </div>
+</footer>
+<script>
+/* Buy buttons carry the live checkout links statically (works without JS); /chatcairn/config.js can override them and the prices. Store install links are static in the HTML (per-placement UTM). */
+(function () {
+  var C = window.CHATCAIRN || {};
+  document.querySelectorAll('[data-price]').forEach(function (s) { var p = s.getAttribute('data-price') === 'lifetime' ? C.PRICE_LIFETIME : C.PRICE_MONTHLY; if (p) s.textContent = p; });
+  document.querySelectorAll('[data-buy]').forEach(function (a) { var u = a.getAttribute('data-buy') === 'lifetime' ? C.CHECKOUT_LIFETIME : C.CHECKOUT_MONTHLY; if (u) a.href = u; });
+  // First-party checkout passthrough (no cookies/storage/3rd-party): valid ?aff= and ?utm_* from this page URL are copied onto every Lemon Squeezy checkout link. Runs after the config.js rewrite above. UTMs become checkout[custom][utm_*] (brackets URL-encoded OK); only present+valid values are added; enabled= and other existing params are kept.
+  try {
+    var q = new URLSearchParams(location.search);
+    var aff = q.get('aff');
+    var okAff = aff && /^[A-Za-z0-9_-]{1,64}$/.test(aff);
+    var okUtm = /^[A-Za-z0-9._~ -]{1,64}$/;
+    var utms = {};
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+      var v = q.get(k);
+      if (v && okUtm.test(v)) utms[k] = v;
+    });
+    if (okAff || Object.keys(utms).length) {
+      document.querySelectorAll('a[href]').forEach(function (a) {
+        try {
+          var x = new URL(a.href);
+          if (x.hostname !== 'lgdventures.lemonsqueezy.com' || x.pathname.indexOf('/checkout/buy/') !== 0) return;
+          if (okAff) x.searchParams.set('aff', aff);
+          Object.keys(utms).forEach(function (k) { x.searchParams.set('checkout[custom][' + k + ']', utms[k]); });
+          a.href = x.toString();
+        } catch (e) {}
+      });
+    }
+  } catch (e) {}
+  // Narrow screens: a #pricing landing (guides, extension buy buttons) opens on the Pro card, so the buy buttons are visible without scrolling.
+  var narrow = window.matchMedia('(max-width:640px)'); var userMoved = false;
+  function toPro() {
+    if (userMoved || location.hash !== '#pricing' || !narrow.matches) return;
+    var pro = document.getElementById('pro'), nav = document.querySelector('.nav'); if (!pro) return;
+    var y = 0, el = pro; while (el) { y += el.offsetTop; el = el.offsetParent; } // layout position (ignores the reveal transform)
+    window.scrollTo(0, Math.max(0, y - ((nav && nav.offsetHeight) || 64) - 12));
+  }
+  ['wheel', 'touchstart', 'keydown'].forEach(function (ev) { window.addEventListener(ev, function () { userMoved = true; }, { passive: true, once: true }); });
+  // the browser re-applies the fragment scroll while fonts/images settle, so re-anchor a few times until the user interacts
+  function settle() { [0, 120, 400, 900, 1600].forEach(function (ms) { setTimeout(toPro, ms); }); }
+  if (document.readyState === 'complete') settle(); else window.addEventListener('load', settle);
+  toPro();
+  window.addEventListener('hashchange', function () { userMoved = false; settle(); });
+})();
+</script>
+<script src="/assets/site.js" defer></script>
+<script data-goatcounter="https://lgdventures.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

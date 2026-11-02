@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ChatCairn — Privacy Policy</title>
-<meta name="description" content="How ChatCairn handles your data: everything stays in your browser, no analytics.">
+<meta name="description" content="How ChatCairn handles your data: chats stay in your browser; the extension has no analytics. This site uses cookieless visit counting.">
 <link rel="canonical" href="https://lgdventures.github.io/chatcairn/privacy.html">
 <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:title" content="ChatCairn — Privacy Policy">
-<meta property="og:description" content="How ChatCairn handles your data: everything stays in your browser, no analytics.">
+<meta property="og:description" content="How ChatCairn handles your data: chats stay in your browser; the extension has no analytics. This site uses cookieless visit counting.">
 <meta property="og:url" content="https://lgdventures.github.io/chatcairn/privacy.html">
 <meta property="og:image" content="https://lgdventures.github.io/chatcairn/og.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="ChatCairn — your AI conversations, saved and searchable">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ChatCairn — Privacy Policy">
-<meta name="twitter:description" content="How ChatCairn handles your data: everything stays in your browser, no analytics.">
+<meta name="twitter:description" content="How ChatCairn handles your data: chats stay in your browser; the extension has no analytics. This site uses cookieless visit counting.">
 <meta name="twitter:image" content="https://lgdventures.github.io/chatcairn/og.png">
 <link rel="icon" href="/chatcairn/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/chatcairn/favicon-16.png" type="image/png" sizes="16x16">
@@ -55,14 +55,14 @@
   <section class="doc">
     <div class="wrap">
       <div class="prose">
-<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>The short version:</strong> your chats, notes and tasks stay in your browser. No account, no ChatCairn servers, no analytics, and we never sell data.</div></div>
+<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>The short version:</strong> your chats, notes and tasks stay in your browser. No account, no ChatCairn servers; the extension has no analytics, and we never sell data. This website uses cookieless visit counting (GoatCounter).</div></div>
 
-<h2>Summary</h2><p>ChatCairn is a browser extension for Microsoft Edge and Google Chrome by LGD Ventures that saves, searches and exports your AI conversations and lets you turn highlights into notes and tasks. <strong>Everything is stored locally in your browser.</strong> LGD Ventures runs no servers that receive your conversations, notes or usage data, and ChatCairn contains no analytics, tracking or ads.</p>
+<h2>Summary</h2><p>ChatCairn is a browser extension for Microsoft Edge and Google Chrome by LGD Ventures that saves, searches and exports your AI conversations and lets you turn highlights into notes and tasks. <strong>Everything is stored locally in your browser.</strong> LGD Ventures runs no servers that receive your conversations, notes or usage data, and the ChatCairn extension contains no analytics, tracking or ads.</p>
 <h2>What ChatCairn reads, and when</h2><ul><li><strong>The conversation you choose to save.</strong> When you click Save or Export, or save a highlight as a note/task, ChatCairn reads that one conversation from the open tab on chatgpt.com, chat.openai.com, claude.ai, gemini.google.com or grok.com. It does not read other tabs, other sites, or chats you did not choose to save.</li><li><strong>Same-site requests with your existing session (ChatGPT and Claude).</strong> To capture a conversation completely and accurately, ChatCairn may ask the site you are on for that same conversation through the site's own web endpoints (for example chatgpt.com/backend-api or claude.ai/api), using the session you are already logged in with. This happens only when you save, is read-only, and goes only to that same site. Any session token involved stays in memory for that single request and is never stored or sent anywhere else. If this fails, ChatCairn reads the visible page instead. Gemini and Grok are read from the page only.</li></ul>
 <h2>What is stored, and where</h2><p>Saved conversations, your notes and tasks (text, project, due date, done state), projects and settings are kept <strong>only in your browser</strong> (IndexedDB and chrome.storage.local). If you activate Pro, your license key and activation instance id are stored locally too. Uninstalling the extension deletes this data, so make a backup first.</p>
 <h2>Network requests ChatCairn makes</h2><ul><li><strong>The AI site you are on</strong> — only as described above, when you save.</li><li><strong>Lemon Squeezy License API</strong> (api.lemonsqueezy.com) — only if you use Pro: to activate, validate (about once a week) and deactivate your license. It sends your license key and an instance id; no chat content.</li><li><strong>Google Drive (optional, currently not available)</strong> — a planned Pro auto-backup will, only if you turn it on, upload backup files to a hidden app-data folder in <em>your own</em> Google Drive (scope drive.appdata, which cannot see your other Drive files). Google access tokens are kept in session memory only.</li></ul><p>No other requests are made. Checkout happens on Lemon Squeezy's website, which acts as merchant of record under its own privacy policy.</p>
 <h2>Backups and problem reports</h2><p>Manual backups are JSON files you download and keep yourself. “Report a problem” opens your own email app with technical counters (selector counts, version, browser) and no chat content; nothing is sent unless you send that email to lgdventures.hq@gmail.com. “Send feedback” in Settings works the same way: it opens an email with only the ChatCairn version and your browser name and version filled in.</p>
-<h2>Uninstall survey</h2><p>When you remove ChatCairn, your browser opens a short optional survey page on this site (lgdventures.github.io/chatcairn/uninstall/). The only information in its address is the ChatCairn version number, with no identifiers, chat data or usage data. The page has no analytics or tracking. If you choose to answer, it opens your own email app with the reasons you picked and your comment; nothing is sent unless you send that email.</p>
+<h2>Website</h2><p>Our website uses GoatCounter, a privacy-friendly analytics service, to count page visits. It sets no cookies and collects no personal data: only the page visited, the referring site, campaign tags in the link (UTM), browser type, screen size and country. The browser extensions do not include it.</p><h2>Uninstall survey</h2><p>When you remove ChatCairn, your browser opens a short optional survey page on this site (lgdventures.github.io/chatcairn/uninstall/). The only information in its address is the ChatCairn version number, with no identifiers, chat data or usage data. The page uses the same cookieless visit counter as the rest of this site (no cookies, no personal data). If you choose to answer, it opens your own email app with the reasons you picked and your comment; nothing is sent unless you send that email.</p>
 <h2>Export footer and share prompt</h2><p>Markdown, PDF and ZIP exports end with one line, “Made with ChatCairn”, and a link to this site (tagged utm_source=export_footer). It is plain text inside the file you export; ChatCairn adds nothing else and sends nothing. On the Free plan it is always there; Pro can turn it off in Settings. A few times at most (after your 10th saved chat, your first export and your first note from a highlight) ChatCairn may suggest sharing it. That prompt only copies a link to this site, or opens X, Reddit or your email app with a suggested message for you to post or send yourself. To limit how often it appears, ChatCairn keeps a few local counters in your browser (which prompts were shown, and whether you chose “Don’t show again”). They never leave your device, and ChatCairn never reads your contacts.</p>
 <h2>Sharing and selling</h2><p>We do not sell, rent or share your data. We do not use it for advertising, creditworthiness or any purpose other than ChatCairn's single purpose: saving, searching and exporting your AI conversations and the notes/tasks you create from them.</p>
 <h2>Microsoft Edge</h2><p>On Microsoft Edge, ChatCairn works exactly as described on this page. Your chats, notes and tasks stay in Edge’s local extension storage on your device, and nothing is sent to Microsoft or to us. Installs from Microsoft Edge Add-ons follow the <a href="https://learn.microsoft.com/en-us/legal/microsoft-edge/extensions/developer-policies">Microsoft Edge Add-ons developer policies</a>. Uninstalling ChatCairn from Edge removes all of its local data.</p>
@@ -90,5 +90,6 @@
   </div>
 </footer>
 <script src="/assets/site.js" defer></script>
+<script data-goatcounter="https://lgdventures.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
