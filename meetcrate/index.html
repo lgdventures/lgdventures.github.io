@@ -44,6 +44,8 @@
 .plan .amount{margin:14px 0 0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .plan .amount b{font-size:40px;letter-spacing:-.04em;font-weight:700;color:var(--text);line-height:1}
 .plan .amount span{color:var(--muted);font-size:15px}
+.ph-offer{margin:10px 0 0;padding:8px 12px;border-radius:10px;border:1px solid var(--line,rgba(127,127,127,.25));font-size:14px;line-height:1.45;color:var(--text)}
+.ph-offer code{font-weight:700;letter-spacing:.02em}
 .plan ul{flex:1}
 .plan .btns{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .plan .btns .btn{margin-top:0;width:100%}
@@ -162,6 +164,7 @@
           <h3>Pro</h3>
           <p class="amount"><b data-price="lifetime">$29</b><span>one-time</span></p>
           <p class="planned">Price as of Oct 2026. Pay once, no subscription.</p>
+          <p class="ph-offer" data-ph-offer hidden><b>Product Hunt launch offer:</b> use code <code>PRODUCTHUNT</code> for 30% off Pro (US$20.30 instead of US$29), until Nov 11.</p>
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Export all your meetings, not just the last 10</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One license for Read AI and Fathom</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>Remove the MeetCrate line from exports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg><span>One key, up to 3 browsers</span></li></ul>
           <div class="btns">
             <a class="btn btn-accent" href="https://lgdventures.lemonsqueezy.com/checkout/buy/ab15c028-0777-4bc6-b28c-db1e52b117d4" rel="noopener" data-buy="lifetime"><span>Get Pro · <span data-price="lifetime">$29</span> once</span></a>
@@ -264,6 +267,14 @@
       return u.toString();
     } catch (e) { return href; }
   }
+  function withDiscount(href, code) {
+    try {
+      var u = new URL(href, location.href);
+      if (u.hostname !== 'lgdventures.lemonsqueezy.com' || /checkout(%5B|\[)discount_code/i.test(u.search)) return href;
+      u.search = (u.search ? u.search + '&' : '?') + 'checkout[discount_code]=' + encodeURIComponent(code);
+      return u.toString();
+    } catch (e) { return href; }
+  }
   function safeUtm(v) {
     if (!v) return null;
     v = String(v).slice(0, 100);
@@ -278,6 +289,11 @@
     utms.campaign = safeUtm(sp.get('utm_campaign'));
   } catch (e) {}
   if (aff && !/^[A-Za-z0-9_-]{1,64}$/.test(aff)) aff = null;
+  // Product Hunt launch offer (T-178): show the line and prefill PRODUCTHUNT on Pro buy links until 2026-11-11 23:59:59 ART, then hide it automatically.
+  var PH_END = Date.parse('2026-11-11T23:59:59-03:00');
+  var phOn = Date.now() <= PH_END;
+  document.querySelectorAll('[data-ph-offer]').forEach(function (el) { if (phOn) el.removeAttribute('hidden'); else el.remove(); });
+  if (phOn) document.querySelectorAll('a[data-buy]').forEach(function (a) { a.href = withDiscount(a.href, 'PRODUCTHUNT'); });
   var need = !!(aff || utms.source || utms.medium || utms.campaign);
   if (need) document.querySelectorAll('a[href]').forEach(function (a) {
     var h = withCheckoutExtras(a.href, aff, utms);
