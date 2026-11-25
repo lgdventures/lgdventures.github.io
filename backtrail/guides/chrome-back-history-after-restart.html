@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-11-09">
-<meta property="article:modified_time" content="2026-11-09">
+<meta property="article:modified_time" content="2026-11-25">
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:title" content="Chrome Back History After Restart: What Happens and How to Keep It">
 <meta property="og:description" content="Chrome restores only about 6 Back pages per tab after a restart. See what that means for crashes and updates, and how BackTrail keeps up to 500 pages per tab in a side panel.">
@@ -39,7 +39,7 @@
   "@type": "Article",
   "headline": "Chrome Back History After Restart: What Happens and How to Keep It",
   "datePublished": "2026-11-09",
-  "dateModified": "2026-11-09",
+  "dateModified": "2026-11-25",
   "author": {
    "@type": "Organization",
    "name": "LGD Ventures",
@@ -179,6 +179,12 @@
 .ft-badge{display:inline-flex;margin-top:14px;border-radius:10px;opacity:.88;transition:opacity .15s,transform .15s}.ft-badge:hover{opacity:1;transform:translateY(-1px)}.ft-badge:focus-visible{outline:2px solid var(--accent);outline-offset:4px;opacity:1}.ft-badge img{display:block;width:160px;height:auto}
 @media (prefers-reduced-motion:reduce){.rel,.rel i svg{transition:none}.rel:hover{transform:none}}
 @media (max-width:480px){.brand .sub{display:none}.prose{font-size:16px}.cta-card .btn{width:100%!important;flex:1 1 100%!important}.cta-card .cta-btns{flex:1 1 100%}}
+.tw{margin-top:1.1em;overflow-x:auto;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);background:linear-gradient(to right,var(--surface) 30%,transparent) left/40px 100% no-repeat local,linear-gradient(to left,var(--surface) 30%,transparent) right/40px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.14),transparent) left/12px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.14),transparent) right/12px 100% no-repeat scroll,var(--surface)}
+.prose table{width:100%;min-width:640px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.prose th,.prose td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+.prose thead th,.prose thead td{color:var(--text);font-weight:600;background:var(--surface-2)}
+.prose tbody tr:last-child>*{border-bottom:0}
+.prose tbody th{color:var(--text);font-weight:600;white-space:nowrap}
 </style>
 <script src="/backtrail/config.js"></script>
 </head>
@@ -203,7 +209,7 @@
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">LGD Ventures</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/backtrail/">BackTrail</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <span aria-current="page">Back history after restart</span></nav>
       <h1>Chrome Back history after a restart</h1>
-      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-11-09">Nov 9, 2026</time> · Updated <time datetime="2026-11-09">Nov 9, 2026</time></span></p>
+      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-11-09">Nov 9, 2026</time> · Updated <time datetime="2026-11-25">Nov 25, 2026</time></span></p>
     </div>
   </section>
   <section class="doc">
@@ -237,6 +243,18 @@
 </ul>
 <p>History never leaves your browser. The extension has no account or analytics. See the <a href="/backtrail/privacy.html">privacy policy</a>.</p>
 
+<h2>Chrome Back vs History vs BackTrail</h2>
+<p>Chrome still brings the tab back after a restart, but the deep Back trail is gone from the native control. History can show that you visited a page. BackTrail keeps the ordered trail for that tab in its side panel.</p>
+<div class="tw" role="region" aria-label="Comparison of Chrome Back after a restart, Chrome History, and BackTrail" tabindex="0"><table>
+<thead><tr><td></td><th scope="col">Chrome Back after a restart</th><th scope="col">Chrome History</th><th scope="col">BackTrail</th></tr></thead>
+<tbody>
+<tr><th scope="row">What you get</th><td>The tab is restored, with only a short Back list still on the native Back control.</td><td>A list of websites you visited, which you can open from History. That list is not the ordered path of one tab.</td><td>The tab’s ordered trail in the BackTrail side panel, newest first, with times. It does not rebuild Chrome’s native Back menu.</td></tr>
+<tr><th scope="row">How many pages</th><td>About the last 6 Back pages per restored tab, as stated on the BackTrail landing FAQ. That figure is not a new measurement.</td><td>Your browsing history as Chrome records it, across tabs, not a per-tab trail.</td><td>Up to 500 pages per tab.</td></tr>
+<tr><th scope="row">What is stored</th><td>Chrome’s own session restore for that tab’s remaining Back list.</td><td>Sites you visited, in Chrome History.</td><td>URL, title, and time only. BackTrail does not read page content.</td></tr>
+<tr><th scope="row">Limits and price</th><td>Built into Chrome.</td><td>Built into Chrome.</td><td>Free: 500 pages per tab, Sites, Review, 60 one-click bulk closes, Closed tabs kept 7 days. Pro: USD 15 one-time; Closed 90 days, bulk close beyond those 60, up to 3 browsers.</td></tr>
+</tbody>
+</table></div>
+
 <div class="cta-card"><div><b>Keep up to 500 Back pages per tab</b><span>Chrome and Edge. No account. Free includes Sites, Review, and Closed for 7 days. Pro is USD 15 one-time (Closed 90 days, bulk close beyond free 60, up to 3 browsers).</span></div><div class="cta-btns"><a class="btn btn-accent" href="https://chromewebstore.google.com/detail/cmjfkhlioojeinhmjgfepoggnmoancnp?utm_source=guide_restart&amp;utm_medium=guide&amp;utm_campaign=backtrail_w46" rel="noopener" data-store="chrome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.2M8.9 13.8 4.8 6.6M15.1 13.8 11 21"/></svg><span>Add to Chrome, free</span></a><a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/pefddbpjdboihonoknjogogmckhpogpf?utm_source=guide_restart&amp;utm_medium=guide&amp;utm_campaign=backtrail_w46" rel="noopener" data-store="edge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.5A9 9 0 1 1 21 12c0 2.8-2.2 4.5-4.8 4.5-2.3 0-3.7-1.2-3.7-2.6 0-1 .6-1.6.6-2.6 0-1.9-1.8-3.3-4.1-3.3-2.7 0-4.7 2.2-4.7 4.6"/><path d="M8.6 20.3C6.6 18.6 6 16.4 6.9 14.6"/></svg><span>Get it for Edge</span></a></div></div>
 
 <h2>How to use it after a restart</h2>
@@ -257,7 +275,7 @@
 <h3>Session Buddy or OneTab instead?</h3>
 <p>Those tools focus on saving tab sets or sessions. BackTrail focuses on each tab's Back path across restarts. See the honest comparison: <a href="/backtrail/guides/backtrail-vs-session-buddy.html">BackTrail vs Session Buddy / OneTab</a>.</p>
 
-<p class="src">Facts: BackTrail landing FAQ (Chrome ~6; Free up to 500 pages/tab). Store links: Chrome Web Store id <code>cmjfkhlioojeinhmjgfepoggnmoancnp</code>, Edge Add-ons id <code>pefddbpjdboihonoknjogogmckhpogpf</code>. Checked 2026-11-09.</p>
+<p class="src">Sources, reviewed 2026-11-25 (America/Buenos_Aires): <a href="https://support.google.com/chrome/answer/95589?hl=en&amp;co=GENIE.Platform%3DDesktop" rel="noopener">Google Chrome Help, Check or delete your Chrome browsing history</a>; BackTrail landing FAQ (about 6 Back pages after a restart; Free up to 500 pages per tab; not a new measurement). Store link: Chrome Web Store id <code>cmjfkhlioojeinhmjgfepoggnmoancnp</code>.</p>
 
       </div>
       <aside class="related" aria-labelledby="rel-h"><span class="kicker">Related</span><h2 id="rel-h">More on BackTrail</h2><div class="rel-grid"><a class="rel" href="/backtrail/guides/backtrail-vs-session-buddy.html"><b>BackTrail vs Session Buddy / OneTab</b><span>Sessions, tab lists, and per-tab Back history: which job each tool does.</span><i>Read comparison<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a><a class="rel" href="/backtrail/?utm_source=guide_restart&amp;utm_medium=guide&amp;utm_campaign=backtrail_w46"><b>BackTrail landing</b><span>Features, Pro pricing (USD 15 one-time), privacy, and install for Chrome and Edge.</span><i>Open landing<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a></div></aside>

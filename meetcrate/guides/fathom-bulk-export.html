@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-11-09">
-<meta property="article:modified_time" content="2026-11-09">
+<meta property="article:modified_time" content="2026-11-25">
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:title" content="How to Bulk Export Fathom Meetings (2026)">
 <meta property="og:description" content="Bulk export Fathom meetings with your own official API key via MeetCrate: Markdown, TXT, SRT or JSON in one local ZIP. Free for 25 exports; Pro US$29 one-time. Not affiliated with Fathom.">
@@ -39,7 +39,7 @@
   "@type": "Article",
   "headline": "How to Bulk Export Fathom Meetings (2026)",
   "datePublished": "2026-11-09",
-  "dateModified": "2026-11-09",
+  "dateModified": "2026-11-25",
   "author": {
    "@type": "Organization",
    "name": "LGD Ventures",
@@ -217,7 +217,7 @@
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">LGD Ventures</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/meetcrate/">MeetCrate</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/meetcrate/guides/">Guides</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <span aria-current="page">Fathom bulk export</span></nav>
       <h1>How to Bulk Export Fathom Meetings (2026)</h1>
-      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-11-09">Nov 9, 2026</time> · Updated <time datetime="2026-11-09">Nov 9, 2026</time> · Sources linked inline</span></p>
+      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-11-09">Nov 9, 2026</time> · Updated <time datetime="2026-11-25">Nov 25, 2026</time> · Sources linked inline</span></p>
     </div>
   </section>
   <section class="doc">
@@ -225,12 +225,18 @@
       <div class="prose">
 
 <h2>How do you bulk export Fathom meetings?</h2>
-<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Quick answer:</strong> Use Fathom’s own export for one meeting at a time, or connect MeetCrate with your own Fathom API key and download a bulk ZIP (Markdown, TXT, SRT or JSON). Free for 25 exported meetings in total; Pro is US$29 one-time (as of Oct 2026). Runs locally in Chrome or Edge.</div></div>
+<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Quick answer:</strong> Fathom’s official help says transcripts cannot be downloaded directly: copy the transcript for one meeting and paste it, or connect MeetCrate with your own Fathom API key and download a bulk ZIP (Markdown, TXT, SRT or JSON). Free for 25 exported meetings in total; Pro is US$29 one-time (as of Oct 2026). Runs locally in Chrome or Edge.</div></div>
 
-<p>Last checked 2026-11-09. MeetCrate is <strong>not affiliated with Fathom</strong>. Names are trademarks of their owners. No Fathom logo appears on this page.</p>
+<p>Last checked 2026-11-25 (America/Buenos_Aires). Official Fathom steps cite <a href="https://help.fathom.video/en/articles/296000" rel="noopener">Fathom Help, Get a copy of your transcript</a> (edited 2026-02-05) and <a href="https://developers.fathom.ai/api-reference/recordings/get-transcript" rel="noopener">Fathom API, Get transcript</a>. MeetCrate is <strong>not affiliated with Fathom</strong>. Names are trademarks of their owners. No Fathom logo appears on this page. MeetCrate features follow the public facts for the published Chrome Web Store version 0.3.4.</p>
 
 <h2>Method 1 — Fathom’s own tools</h2>
-<p>Fathom lets you work with individual meeting recordings and transcripts in its product UI. For a full archive as separate files you own, many people either download meetings one by one or use Fathom’s official API with their own key.</p>
+<p>Per <a href="https://help.fathom.video/en/articles/296000" rel="noopener">Fathom Help</a>, transcripts cannot be downloaded directly. To copy one meeting:</p>
+<ol>
+<li>Open the recorded call in Fathom.</li>
+<li>Click <strong>Copy Transcript</strong> above the transcript.</li>
+<li>Paste it into a document or note.</li>
+</ol>
+<p>That is fine for one meeting. For a full archive as separate files you own, use Fathom’s official API with your own key, or MeetCrate below.</p>
 
 <h2>Method 2 — Fathom official API (your key)</h2>
 <p>Fathom exposes an official API. You create a personal API key in Fathom (Settings → API Access), then call the API yourself or with a tool you trust. You keep control of the key; revoke it in Fathom anytime.</p>
@@ -249,14 +255,16 @@
 
 <h2>Comparison</h2>
 <p><strong>Which should you use? It depends.</strong> One meeting: stay in Fathom. Custom automation: use Fathom’s API directly. A ready ZIP with transcripts, summaries and action items when available: use MeetCrate.</p>
-<div class="tw" role="region" aria-label="Comparison table" tabindex="0"><table>
-<thead><tr><td></td><th scope="col">Fathom UI</th><th scope="col">Fathom API</th><th scope="col">MeetCrate ZIP</th></tr></thead>
+<div class="tw" role="region" aria-label="Comparison of Fathom Copy Transcript, the Fathom API, and MeetCrate" tabindex="0"><table>
+<thead><tr><td></td><th scope="col">Fathom Copy Transcript</th><th scope="col">Fathom API</th><th scope="col">MeetCrate ZIP</th></tr></thead>
 <tbody>
-<tr><th scope="row">Bulk files</th><td>Manual / per meeting</td><td>Yes, if you build it</td><td>Yes, one ZIP</td></tr>
-<tr><th scope="row">Auth</th><td>Your Fathom login</td><td>Your API key</td><td>Your API key (local)</td></tr>
-<tr><th scope="row">Formats</th><td>Fathom’s own options</td><td>JSON you shape yourself</td><td>Markdown, TXT, SRT, JSON + index.csv</td></tr>
-<tr><th scope="row">Where data goes</th><td>Fathom / your download</td><td>Wherever your script writes</td><td>Your computer (local)</td></tr>
-<tr><th scope="row">Cost</th><td>Included in Fathom</td><td>Included in Fathom</td><td>Free 25 total; Pro US$29 once</td></tr>
+<tr><th scope="row">Bulk files</th><td>No (one meeting at a time)</td><td>Yes, if you build it</td><td>Yes, one ZIP</td></tr>
+<tr><th scope="row">Steps</th><td>Open the recording, click Copy Transcript, paste it somewhere else, repeat for every meeting.</td><td>Create an API key, request each transcript, write your own files.</td><td>Install MeetCrate from the Chrome Web Store, paste your Fathom API key, pick meetings, download one ZIP.</td></tr>
+<tr><th scope="row">Auth</th><td>Your Fathom login.</td><td>Your API key.</td><td>Your API key, stored only in the browser.</td></tr>
+<tr><th scope="row">Formats</th><td>Clipboard text. Official help: transcripts cannot be downloaded as a file from the app.</td><td>JSON transcript items (speaker, text, timestamp).</td><td>Markdown with YAML front matter, TXT, SRT, JSON, plus <code>index.csv</code>.</td></tr>
+<tr><th scope="row">What is kept</th><td>The copied transcript text for that meeting.</td><td>The transcript data you request; you shape other files yourself.</td><td>Transcript, summary, and action items when your Fathom plan provides them. Fathom’s free plan may not include AI action items.</td></tr>
+<tr><th scope="row">Where data goes</th><td>Your clipboard, until you paste it.</td><td>Wherever your script writes.</td><td>Your computer (local). MeetCrate has no account and no MeetCrate server that receives meetings.</td></tr>
+<tr><th scope="row">Limits and price</th><td>Included in Fathom.</td><td>Included in Fathom.</td><td>Free: 25 unique meetings exported in total. Pro: US$29 one-time, up to 3 browsers.</td></tr>
 </tbody>
 </table></div>
 
@@ -270,7 +278,7 @@
 <h3>What about action items on Fathom Free?</h3>
 <p>Fathom’s free plan does not include AI action items, so MeetCrate exports from that plan have none. Transcripts and other fields your plan provides still export.</p>
 
-<p class="src">Sources: MeetCrate 0.3.1 / live landing and privacy policy, checked 2026-11-09. MeetCrate is not affiliated with Fathom.</p>
+<p class="src">Sources, reviewed 2026-11-25 (America/Buenos_Aires): <a href="https://help.fathom.video/en/articles/296000" rel="noopener">Fathom Help, Get a copy of your transcript</a>; <a href="https://developers.fathom.ai/api-reference/recordings/get-transcript" rel="noopener">Fathom API, Get transcript</a>; MeetCrate public facts for published Chrome Web Store version 0.3.4. MeetCrate is not affiliated with Fathom.</p>
 
       </div>
       <aside class="related" aria-labelledby="rel-h"><span class="kicker">More guides</span><h2 id="rel-h">Keep your meeting notes useful</h2><div class="rel-grid"><a class="rel" href="/meetcrate/guides/export-read-ai-transcripts.html"><b>How to Export Read AI Transcripts in Bulk (2026)</b><span>Official Download vs API vs MeetCrate ZIP. Free 25 / Pro US$29.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a><a class="rel" href="/meetcrate/?utm_source=guide_fathom&amp;utm_medium=guide&amp;utm_campaign=meetcrate_w46#pricing"><b>MeetCrate pricing</b><span>Free for 25 exported meetings in total. Pro US$29 one-time.</span><i>See pricing<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a></div></aside>

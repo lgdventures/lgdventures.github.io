@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-11-09">
-<meta property="article:modified_time" content="2026-11-09">
+<meta property="article:modified_time" content="2026-11-25">
 <meta property="og:site_name" content="LGD Ventures">
 <meta property="og:title" content="How to Export Read AI Transcripts in Bulk (2026)">
 <meta property="og:description" content="Export Read AI transcripts and meetings in bulk: official one-by-one Download, the Read AI API, or a MeetCrate ZIP (Markdown, TXT, SRT, JSON). Free for 25 exports; Pro US$29 one-time.">
@@ -39,7 +39,7 @@
   "@type": "Article",
   "headline": "How to Export Read AI Transcripts in Bulk (2026)",
   "datePublished": "2026-11-09",
-  "dateModified": "2026-11-09",
+  "dateModified": "2026-11-25",
   "author": {
    "@type": "Organization",
    "name": "LGD Ventures",
@@ -217,7 +217,7 @@
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">LGD Ventures</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/meetcrate/">MeetCrate</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <a href="/meetcrate/guides/">Guides</a> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <span aria-current="page">Export Read AI transcripts</span></nav>
       <h1>How to Export Read AI Transcripts in Bulk (2026)</h1>
-      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-11-09">Nov 9, 2026</time> · Updated <time datetime="2026-11-09">Nov 9, 2026</time> · Sources linked inline</span></p>
+      <p class="meta"><span class="status live"><span class="dot"></span>Guide</span><span>Published <time datetime="2026-11-09">Nov 9, 2026</time> · Updated <time datetime="2026-11-25">Nov 25, 2026</time> · Sources linked inline</span></p>
     </div>
   </section>
   <section class="doc">
@@ -227,7 +227,7 @@
 <h2>How do you export Read AI transcripts in bulk?</h2>
 <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Quick answer:</strong> Read AI’s Download button saves one meeting report at a time. For a bulk ZIP (Markdown, TXT, SRT or JSON), install <a href="/meetcrate/?utm_source=guide_readai&amp;utm_medium=guide&amp;utm_campaign=meetcrate_w46#pricing">MeetCrate</a>, connect with Read AI’s official sign-in, and export. Free for 25 exported meetings in total; Pro is US$29 one-time (as of Oct 2026). Everything runs locally in Chrome or Edge.</div></div>
 
-<p>Last checked 2026-11-09. Official Read AI download steps cite <a href="https://support.read.ai/hc/en-us/articles/23833171061139-How-do-I-download-meeting-reports-transcripts-and-more">Read Help Center</a>. MeetCrate features were checked against the live landing and extension 0.3.1.</p>
+<p>Last checked 2026-11-25 (America/Buenos_Aires). Official Read AI download steps cite <a href="https://support.read.ai/hc/en-us/articles/23833171061139-How-do-I-download-meeting-reports-transcripts-and-more" rel="noopener">Read Help Center, How do I download meeting reports, transcripts, and more?</a> (page updated 2026-10-26). The official API overview is <a href="https://support.read.ai/hc/en-us/articles/49379985941523-Read-AI-API-and-MCP-Overview" rel="noopener">Read AI API and MCP Overview</a>. MeetCrate features follow the public facts for the published Chrome Web Store version 0.3.4.</p>
 
 <h2>Method 1 — Read AI’s own Download (one meeting at a time)</h2>
 <p>Per Read AI Help, anyone who can view a meeting report can download parts of it (unless a workspace admin turned Downloads off):</p>
@@ -255,14 +255,16 @@
 
 <h2>Comparison</h2>
 <p><strong>Which should you use? It depends.</strong> For one meeting, Read AI’s Download is enough. For a scripted pipeline, use the official API. For a ready ZIP of many meetings with speakers, summaries and action items, use MeetCrate.</p>
-<div class="tw" role="region" aria-label="Comparison table" tabindex="0"><table>
+<div class="tw" role="region" aria-label="Comparison of Read AI Download, the Read AI API, and MeetCrate" tabindex="0"><table>
 <thead><tr><td></td><th scope="col">Read AI Download</th><th scope="col">Read AI API</th><th scope="col">MeetCrate ZIP</th></tr></thead>
 <tbody>
 <tr><th scope="row">Bulk</th><td>No (one report at a time)</td><td>Yes, if you build it</td><td>Yes, one ZIP</td></tr>
-<tr><th scope="row">Formats</th><td>Per Download menu item</td><td>JSON you shape yourself</td><td>Markdown, TXT, SRT, JSON + index.csv</td></tr>
-<tr><th scope="row">Setup</th><td>None</td><td>OAuth, pagination, code</td><td>Install extension + connect</td></tr>
-<tr><th scope="row">Where data goes</th><td>Your downloads folder</td><td>Wherever your script writes</td><td>Your computer (local)</td></tr>
-<tr><th scope="row">Cost</th><td>Included in Read AI</td><td>Included in Read AI</td><td>Free 25 total; Pro US$29 once</td></tr>
+<tr><th scope="row">Steps</th><td>Open the report, click Download, choose one item, repeat for every meeting.</td><td>Create API credentials, list meetings, pull each transcript, write your own files.</td><td>Install MeetCrate from the Chrome Web Store, connect with Read AI’s official sign-in, pick meetings, download one ZIP.</td></tr>
+<tr><th scope="row">Formats</th><td>Recap (<code>.txt</code>) and Transcript (<code>.txt</code>). Recording, Trailer, and Highlights as <code>.mp4</code> only on Enterprise or Enterprise+ when playback is enabled.</td><td>JSON you shape yourself.</td><td>Markdown with YAML front matter, TXT, SRT, JSON, plus <code>index.csv</code>.</td></tr>
+<tr><th scope="row">What is kept</th><td>One item per click (the summary or the transcript, not a combined Markdown note). Workspace admins can turn Downloads off.</td><td>Meetings your account can already see, including the transcript when you request it.</td><td>Speakers, transcript, summary, and action items when the source provides them, in files on your computer.</td></tr>
+<tr><th scope="row">Setup</th><td>None, unless a workspace admin hid Download.</td><td>OAuth, pagination, and code.</td><td>Install the extension and connect.</td></tr>
+<tr><th scope="row">Where data goes</th><td>Your downloads folder.</td><td>Wherever your script writes.</td><td>Your computer (local). MeetCrate has no account and no MeetCrate server that receives meetings.</td></tr>
+<tr><th scope="row">Limits and price</th><td>Included in Read AI, unless Downloads is disabled for the workspace.</td><td>Included in Read AI (official overview: API and MCP are available on all plans, including Free, if Downloads is on in a workspace).</td><td>Free: 25 unique meetings exported in total. Pro: US$29 one-time, up to 3 browsers.</td></tr>
 </tbody>
 </table></div>
 
@@ -276,7 +278,7 @@
 <h3>What is inside each file?</h3>
 <p>Title, date, duration, participants, summary, action items and the full transcript with speakers and timestamps. Read AI meetings also include chapters, key questions and topics when Read AI has them.</p>
 
-<p class="src">Sources: <a href="https://support.read.ai/hc/en-us/articles/23833171061139-How-do-I-download-meeting-reports-transcripts-and-more">Read Help Center (download)</a>; <a href="https://support.read.ai/hc/en-us/articles/49379985941523-Read-AI-API-and-MCP-Overview">Read AI API overview</a>; MeetCrate 0.3.1 / live landing, checked 2026-11-09. MeetCrate is not affiliated with Read AI.</p>
+<p class="src">Sources, reviewed 2026-11-25 (America/Buenos_Aires): <a href="https://support.read.ai/hc/en-us/articles/23833171061139-How-do-I-download-meeting-reports-transcripts-and-more" rel="noopener">Read Help Center, How do I download meeting reports, transcripts, and more?</a> (updated 2026-10-26); <a href="https://support.read.ai/hc/en-us/articles/49379985941523-Read-AI-API-and-MCP-Overview" rel="noopener">Read AI API and MCP Overview</a> (updated 2026-10-29); MeetCrate public facts for published Chrome Web Store version 0.3.4. MeetCrate is not affiliated with Read AI.</p>
 
       </div>
       <aside class="related" aria-labelledby="rel-h"><span class="kicker">More guides</span><h2 id="rel-h">Keep your meeting notes useful</h2><div class="rel-grid"><a class="rel" href="/meetcrate/guides/fathom-bulk-export.html"><b>How to Bulk Export Fathom Meetings (2026)</b><span>Official API key, local ZIP with Markdown, TXT, SRT or JSON, Free 25 / Pro US$29.</span><i>Read guide<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a><a class="rel" href="/meetcrate/?utm_source=guide_readai&amp;utm_medium=guide&amp;utm_campaign=meetcrate_w46#pricing"><b>MeetCrate pricing</b><span>Free for 25 exported meetings in total. Pro US$29 one-time.</span><i>See pricing<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a></div></aside>
