@@ -1,15 +1,16 @@
 # LGD Ventures
 
-> LGD Ventures is a small, independent software studio that builds private, single-purpose browser extensions for people who work online. Products keep user data on the user's device: no accounts and no analytics in the extensions.
+> LGD Ventures is a small, independent software studio that builds focused tools for people who work online. Products keep user data on the user's device: no accounts and no analytics in the extensions.
 
 Contact: lgdventures.hq@gmail.com · Site: https://lgdventures.dev/
-Facts below are as of Oct 2026.
+Facts below are as of Nov 2026.
 
 ## Products
 
-- [ChatCairn](https://lgdventures.dev/chatcairn/): a Chrome extension for people who use AI chatbots that saves ChatGPT, Claude, Gemini and Grok chats into one local, searchable library, exports them to Markdown or PDF, and turns highlights into notes and tasks. Free: up to 50 saved chats and 10 notes/tasks (exports carry a small "Made with ChatCairn" line). Pro: $4.99/month or $69 one-time, sold on the ChatCairn site. Chrome Web Store: https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc · Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi (version 0.4.0, live on both).
-- [MeetCrate](https://lgdventures.dev/meetcrate/): a Chrome and Edge extension for Read AI users that exports every meeting at once (transcripts, summaries and action items as Markdown, TXT, SRT or JSON in one ZIP) through Read AI's official sign-in, read-only. Free: the 10 most recent meetings. Pro: $29 one-time, sold on the MeetCrate site. Live on the Chrome Web Store and Microsoft Edge Add-ons.
+- [ChatCairn](https://lgdventures.dev/chatcairn/): a Chrome and Edge extension for people who use AI chatbots that saves ChatGPT, Claude, Gemini, Grok and Perplexity chats into one local, searchable library, exports them to Markdown or PDF, and turns highlights into notes and tasks. Free: up to 30 saved chats and 10 notes/tasks (exports carry a small "Made with ChatCairn" line). Pro: $4.99/month or $69 one-time, sold on the ChatCairn site. Chrome Web Store: https://chromewebstore.google.com/detail/mnpjimmmommjcaoblccngodapolhamlc · Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/hgaggannjdbhnbmaffgeiiajopmedkhi.
+- [MeetCrate](https://lgdventures.dev/meetcrate/): a Chrome and Edge extension that exports Read AI and Fathom meeting transcripts, summaries and action items as Markdown, TXT, SRT or JSON in one ZIP. Read AI uses official sign-in, read-only; Fathom uses a user-pasted API key. Free: first 25 meetings. Pro: $29 one-time, sold on the MeetCrate site. Live on the Chrome Web Store and Microsoft Edge Add-ons.
 - [BackTrail](https://lgdventures.dev/backtrail/): a Chrome and Edge extension that keeps every tab's full Back history in the side panel, restores it after the browser restarts, and recovers history that was already lost. Free; nothing leaves the browser. Live on the Chrome Web Store (https://chromewebstore.google.com/detail/cmjfkhlioojeinhmjgfepoggnmoancnp) and Microsoft Edge Add-ons (https://microsoftedge.microsoft.com/addons/detail/pefddbpjdboihonoknjogogmckhpogpf). Pro: $15 one-time, sold on the BackTrail site.
+- LGD Pro Pack: a $79 one-time bundle that unlocks ChatCairn Pro, MeetCrate Pro and BackTrail Pro with a single license key, sold on the product sites.
 
 ## Guides (ChatCairn)
 
@@ -23,4 +24,4 @@ Facts below are as of Oct 2026.
 - [Privacy](https://lgdventures.dev/privacy.html) · [Terms](https://lgdventures.dev/terms.html)
 - [ChatCairn privacy](https://lgdventures.dev/chatcairn/privacy.html) · [MeetCrate privacy](https://lgdventures.dev/meetcrate/privacy.html) · [BackTrail privacy](https://lgdventures.dev/backtrail/privacy.html)
 
-Not affiliated with OpenAI, Anthropic, Google, xAI, Microsoft or Read AI.
+Not affiliated with OpenAI, Anthropic, Google, xAI, Microsoft, Read AI or Fathom.
